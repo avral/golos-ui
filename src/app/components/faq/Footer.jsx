@@ -5,7 +5,7 @@ export default class Footer extends PureComponent {
     render() {
 
         return (
-            <div></div>
+            <div>footer</div>
         );
     }
 }

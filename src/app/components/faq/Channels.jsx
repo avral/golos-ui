@@ -5,7 +5,7 @@ export default class Channels extends PureComponent {
     render() {
 
         return (
-            <div></div>
+            <div>channels</div>
         );
     }
 }

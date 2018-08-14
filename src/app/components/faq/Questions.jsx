@@ -5,7 +5,7 @@ export default class Questions extends PureComponent {
     render() {
 
         return (
-            <div></div>
+            <div>Questions</div>
         );
     }
 }
