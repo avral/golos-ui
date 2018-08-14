@@ -16,7 +16,7 @@ export default class Faq extends Component {
     render() {
         return (
             <Wrapper>
-                <Container align="center" wrap="wrap" column="column">
+                <Container column={true}>
                     <Header/>
                     <Questions/>
                     <Channels/>
