@@ -67,8 +67,19 @@ export default class Question extends PureComponent {
         super(props);
         this.state = {
             showAnswer: false,
+            answer: {
+                __html: this.addLinkToUrls(props.question.answer),
+            },
         };
+        console.log(this.state);
         this.changeAnswerState = this.changeAnswerState.bind(this);
+    }
+
+    addLinkToUrls(str) {
+        return str.replace(
+            /(https?:[^ )]+)/g,
+            '<a href="$1" target="_blank">$1</a>'
+        );
     }
 
     changeAnswerState() {
@@ -79,7 +90,8 @@ export default class Question extends PureComponent {
 
     render() {
         const { question } = this.props;
-        const { showAnswer } = this.state;
+        const { showAnswer, answer } = this.state;
+
         return (
             <Wrapper>
                 <Switcher
@@ -87,7 +99,10 @@ export default class Question extends PureComponent {
                     onClick={this.changeAnswerState}
                 />
                 <Title>{question.title}</Title>
-                <Answer showAnswer={showAnswer}>{question.answer}</Answer>
+                <Answer
+                    showAnswer={showAnswer}
+                    dangerouslySetInnerHTML={answer}
+                />
             </Wrapper>
         );
     }
