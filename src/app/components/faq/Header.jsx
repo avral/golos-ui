@@ -76,7 +76,7 @@ const BlueButton = Button.extend`
 const WhiteButton = Button.extend`
     width: 138px;
     margin-left: 15px;
-    background: none;
+    background-color: #fff;
     border: 1px solid rgba(149, 149, 149, 0.3);
     
     color: #393636;	
@@ -87,8 +87,8 @@ const WhiteButton = Button.extend`
     line-height: 23px;	
     text-align: center;
     
-    &:hover {
-        background-color: #fff;
+    &:hover {  
+        background: none;
     }
     
     @media (max-width: 1200px) {
