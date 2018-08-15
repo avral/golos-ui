@@ -15,7 +15,7 @@ const Wrapper = styled.div`
     }
 `;
 
-const Title =  styled.div`
+const Title = styled.div`
     color: #212121;	
     font-family: "SF Pro Display";	
     font-size: 20px;	
@@ -70,7 +70,7 @@ export default class Question extends PureComponent {
     changeAnswerState() {
         this.setState({
             showAnswer: !this.state.showAnswer
-        })
+        });
     }
 
     render() {

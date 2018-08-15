@@ -15,7 +15,7 @@ const Wrapper = Flex.extend.attrs({
     }
 `;
 
-const Body = styled.div`
+const MainBlock = styled.div`
     padding: 60px;
     
     @media (max-width: 1200px) {
@@ -117,20 +117,21 @@ export default class Header extends PureComponent {
     render() {
         return (
             <Wrapper>
-                <Body>
-                <Title>Часто задаваемые вопросы</Title>
-                <Description>
-                    На этой странице собраны самые популярные вопросы пользователей, обращавшихся в техподдержку Golos.io
-                </Description>
-                <ButtonsBlock>
-                    <BlueButton>
-                        <Icon name="telegram" size="16px"/>Телеграмм
-                    </BlueButton>
-                    <WhiteButton color="white">
-                        <Icon name="envelope" size="16px"/>Почта
-                    </WhiteButton>
-                </ButtonsBlock>
-                </Body>
+                <MainBlock>
+                    <Title>Часто задаваемые вопросы</Title>
+                    <Description>
+                        На этой странице собраны самые популярные вопросы пользователей, обращавшихся в техподдержку
+                        Golos.io
+                    </Description>
+                    <ButtonsBlock>
+                        <BlueButton>
+                            <Icon name="telegram" size="16px"/>Телеграмм
+                        </BlueButton>
+                        <WhiteButton color="white">
+                            <Icon name="envelope" size="16px"/>Почта
+                        </WhiteButton>
+                    </ButtonsBlock>
+                </MainBlock>
                 <Image/>
             </Wrapper>
         );
