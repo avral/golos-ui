@@ -5,6 +5,10 @@ import Question from './Question';
 
 const Wrapper = styled.div`
     padding: 20px 64px 40px;
+    
+     @media (max-width: 1200px) {
+        padding: 30px 16px 16px;
+    }
 `;
 
 export default class QuestionsList extends PureComponent {

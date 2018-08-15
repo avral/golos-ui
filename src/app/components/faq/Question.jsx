@@ -9,6 +9,10 @@ const Wrapper = styled.div`
     border-radius: 6px;	
     background-color: #FFFFFF;	
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5), 0 2px 12px 0 rgba(0,0,0,0.06);
+    
+    @media (max-width: 1200px) {
+        padding: 14px 34px 14px 16px;
+    }
 `;
 
 const Title =  styled.div`
@@ -17,11 +21,16 @@ const Title =  styled.div`
     font-size: 20px;	
     font-weight: bold;	
     line-height: 34px;
+    
+    @media (max-width: 1200px) {
+        font-size: 18px;
+        line-height: 24px;
+    }
 `;
 
 const Answer = styled.div`
     height: ${props => props.showAnswer ? 'auto' : '0'};
-    margin: ${props => props.showAnswer ? '11px 0 5px' : '0'};
+    margin-top: ${props => props.showAnswer ? '11px' : '0'};
     color: #959595;	
     font-family: "SF Pro Text";	
     font-size: 16px;	
@@ -38,6 +47,11 @@ const Switcher = styled.div`
     right: 20px;
     cursor: pointer;
     background: url('/images/new/faq/${props => props.showAnswer ? 'chevron-up.png' : 'chevron-down.png'}') no-repeat center;
+    
+    @media (max-width: 1200px) {
+        top: 26px;
+        right: 16px;
+    }
 `;
 
 export default class Question extends PureComponent {

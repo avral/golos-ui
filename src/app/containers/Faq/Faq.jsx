@@ -11,6 +11,12 @@ const Wrapper = styled.div`
     background-color: #ffffff;
 `;
 
+const FaqContainer = Container.extend`
+    @media (max-width: 1200px) {
+        margin: 0;
+    }
+`;
+
 const QUESTIONS_LIST = [
     {
         title: 'Почему я должен кому-то отправлять СМС при регистрации? А вдруг у меня украдут деньги с баланса?',
@@ -24,12 +30,12 @@ export default class Faq extends Component {
     render() {
         return (
             <Wrapper>
-                <Container column>
+                <FaqContainer column>
                     <Header/>
                     <QuestionsList questions={QUESTIONS_LIST}/>
                     <Channels/>
                     <Footer/>
-                </Container>
+                </FaqContainer>
             </Wrapper>
         );
     }
