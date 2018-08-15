@@ -115,13 +115,12 @@ const Image = styled.div`
 export default class Header extends PureComponent {
 
     render() {
-
         return (
             <Wrapper>
                 <Body>
                 <Title>Часто задаваемые вопросы</Title>
-                <Description>На этой странице собраны самые популярные вопросы пользователей, обращавшихся в
-                    техподдержку Golos.io
+                <Description>
+                    На этой странице собраны самые популярные вопросы пользователей, обращавшихся в техподдержку Golos.io
                 </Description>
                 <ButtonsBlock>
                     <BlueButton>
