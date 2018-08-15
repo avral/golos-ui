@@ -24,6 +24,24 @@ const Card = styled(LinkTo)`
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
     margin: 10px;
     cursor: pointer;
+
+    @media (max-width: 744px) {
+        flex-grow: 1;
+    }
+
+    @media (max-width: 510px) {
+        display: none;
+        &:nth-child(2) {
+            display: flex;
+        }
+        &:nth-child(7) {
+            display: flex;
+        }
+        &:nth-child(10) {
+            display: flex;
+        }
+        padding-left: 15vw;
+    }
 `;
 
 const Text = styled.p`
@@ -35,6 +53,10 @@ const Text = styled.p`
     letter-spacing: 0.37px;
     line-height: 18px;
     font-weight: bold;
+
+    @media (max-width: 744px) {
+        width: 160px;
+    }
 `;
 
 const CustomIcon = Icon.extend.attrs({
