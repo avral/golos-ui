@@ -94,7 +94,7 @@ const Title = styled.p`
 
 const CardsWrapper = Flex.extend.attrs({
     wrap: 'wrap',
-    justify: 'flex-start'
+    justify: 'flex-start',
 })`
     margin: -10px;
 `;

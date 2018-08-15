@@ -186,7 +186,6 @@
     "node-watch": "^0.5.5",
     "optimize-css-assets-webpack-plugin": "^4.0.2",
     "postcss-loader": "^2.1.5",
-    "prettier": "1.14.2",
     "progress-bar-webpack-plugin": "^1.11.0",
     "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0",

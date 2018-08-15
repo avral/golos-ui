@@ -36,7 +36,7 @@ const Image = styled.div`
     background-size: 242px 177px;
 
     @media (max-width: 830px) {
-        width: 100%; 
+        width: 100%;
         height: 238px;
         background-position: center;
         background-size: auto 238px;
