@@ -28,7 +28,7 @@ const MainBlock = styled.div`
 const Title = styled.h1`
     max-width: 600px;
     color: #393636;
-    font-family: 'SF Pro Display';
+    font-family: 'Open Sans', sans-serif;
     font-size: 34px;
     font-weight: 900;
     letter-spacing: 0.37px;
@@ -39,7 +39,7 @@ const Description = styled.div`
     max-width: 600px;
     margin: 12px 0 37px;
     color: #959595;
-    font-family: 'SF Pro Text';
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     letter-spacing: -0.26px;
     line-height: 24px;
@@ -61,7 +61,7 @@ const ButtonsBlock = styled.div`
 const BlueButton = Button.extend`
     width: 138px;
     color: #ffffff;
-    font-family: 'SF Pro Text';
+    font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     font-weight: bold;
     line-height: 18px;

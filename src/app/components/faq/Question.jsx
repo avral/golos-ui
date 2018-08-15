@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 
 const Title = styled.div`
     color: #212121;
-    font-family: 'SF Pro Display';
+    font-family: 'Open Sans', sans-serif;
     font-size: 20px;
     font-weight: bold;
     line-height: 34px;
@@ -32,7 +32,7 @@ const Answer = styled.div`
     height: ${props => (props.showAnswer ? 'auto' : '0')};
     margin-top: ${props => (props.showAnswer ? '11px' : '0')};
     color: #959595;
-    font-family: 'SF Pro Text';
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     letter-spacing: -0.26px;
     line-height: 24px;
