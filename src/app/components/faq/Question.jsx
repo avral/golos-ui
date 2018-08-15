@@ -6,9 +6,10 @@ const Wrapper = styled.div`
     position: relative;
     width: 100%;
     padding: 15px 45px 15px 20px;
+    margin-bottom: 20px;
     border-radius: 6px;
     background-color: #ffffff;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
 
     @media (max-width: 1200px) {
         padding: 14px 34px 14px 16px;
@@ -65,7 +66,7 @@ export default class Question extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            showAnswer: true,
+            showAnswer: false,
         };
         this.changeAnswerState = this.changeAnswerState.bind(this);
     }
