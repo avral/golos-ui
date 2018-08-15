@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Container from '../../components/Container';
 import Header from '../../components/faq/Header';
@@ -17,7 +17,6 @@ const FaqContainer = Container.extend`
 `;
 
 export default class Faq extends Component {
-
     constructor() {
         super();
         this.questions = require('./questions.json');
@@ -27,10 +26,10 @@ export default class Faq extends Component {
         return (
             <Wrapper>
                 <FaqContainer column>
-                    <Header/>
-                    <QuestionsList questions={this.questions}/>
-                    <Channels/>
-                    <Footer/>
+                    <Header />
+                    <QuestionsList questions={this.questions} />
+                    <Channels />
+                    <Footer />
                 </FaqContainer>
             </Wrapper>
         );
