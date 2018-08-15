@@ -58,14 +58,14 @@
   {
     "inscription": "Вконтакте",
     "thumbnail": "ic_vk",
-    "link": "ic_vk",
+    "link": "https://vk.com/goloschain",
     "width": "30",
     "height": "20"
   },
   {
     "inscription": "контакты для СМИ: pr@golos.io",
     "thumbnail": "ic_mail",
-    "link": "/",
+    "link": "mailto:pr@golos.io",
     "width": "28",
     "height": "19"
   }

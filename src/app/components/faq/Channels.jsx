@@ -20,7 +20,10 @@ const Title = styled.p`
     margin-bottom: 40px;
 `;
 
-const CardsWrapper = Flex.extend`
+const CardsWrapper = Flex.extend.attrs({
+    justify: 'flex-start',
+    wrap: 'wrap',
+})`
     margin: -10px;
 `;
 
@@ -38,10 +41,10 @@ export default class Channels extends PureComponent {
         return (
             <ChannelsList>
                 <Title>Официальные каналы</Title>
-                <CardsWrapper justify="flex-start" wrap="wrap">
-                    {channels.map((channel, index) => (
-                        <ChannelsCard key={index} channel={channel} />
-                    ))}
+                <CardsWrapper>
+                    {channels.map((channel, index) => {
+                        return <ChannelsCard key={index} channel={channel} />;
+                    })}
                 </CardsWrapper>
             </ChannelsList>
         );
