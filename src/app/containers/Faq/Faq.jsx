@@ -20,6 +20,7 @@ export default class Faq extends Component {
     constructor() {
         super();
         this.questions = require('./questions.json');
+        this.channels = require('./channels.json');
     }
 
     render() {
@@ -28,7 +29,7 @@ export default class Faq extends Component {
                 <FaqContainer column>
                     <Header />
                     <QuestionsList questions={this.questions} />
-                    <Channels />
+                    <Channels channels={this.channels} />
                     <Footer />
                 </FaqContainer>
             </Wrapper>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router';
 import Icon from '../golos-ui/Icon/Icon';
+import PropTypes from 'prop-types';
 
 const LinkTo = ({ children, className, link }) => {
     return (
@@ -45,8 +46,17 @@ const CustomIcon = Icon.extend.attrs({
 `;
 
 export default class ChannelsCard extends Component {
+    static propTypes = {
+        channel: PropTypes.object.isRequired,
+    };
     render() {
-        const { inscription, thumbnail, width, height, link } = this.props.card;
+        const {
+            inscription,
+            thumbnail,
+            width,
+            height,
+            link,
+        } = this.props.channel;
         return (
             <Card link={link}>
                 <CustomIcon name={thumbnail} width={width} height={height} />
