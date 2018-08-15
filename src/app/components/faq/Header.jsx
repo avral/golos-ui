@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
-import Button from '../golos-ui/Button/Button';
 import Icon from '../golos-ui/Icon';
 import Flex from '../Flex';
 
@@ -58,16 +57,31 @@ const ButtonsBlock = styled.div`
     }
 `;
 
-const BlueButton = Button.extend`
+const Button = styled.a`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    margin-right: 15px;
     width: 138px;
-    color: #ffffff;
+    height: 34px;
+    text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
     font-weight: bold;
+`;
+
+const BlueButton = Button.extend`
+    color: #ffffff;
     line-height: 18px;
-    text-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5),
-        0 2px 12px 0 rgba(0, 0, 0, 0.15);
+    text-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
     letter-spacing: 1px;
+    background: #2879ff;
+
+    &:hover {
+        background: #0e69ff;
+        color: #fff;
+    }
 
     @media (max-width: 1200px) {
         margin-left: 15px;
@@ -75,26 +89,26 @@ const BlueButton = Button.extend`
 `;
 
 const WhiteButton = Button.extend`
-    width: 138px;
     margin-left: 15px;
     background-color: #fff;
     border: 1px solid rgba(149, 149, 149, 0.3);
 
     color: #393636;
-    font-family: Roboto;
-    font-size: 12px;
-    font-weight: bold;
     letter-spacing: 1.2px;
     line-height: 23px;
-    text-align: center;
 
     &:hover {
         background: none;
+        color: #393636;
     }
 
     @media (max-width: 1200px) {
         margin-left: 0px;
     }
+`;
+
+const ButtonLabel = styled.div`
+    margin-left: 8px;
 `;
 
 const Image = styled.div`
@@ -124,13 +138,16 @@ export default class Header extends PureComponent {
                         пользователей, обращавшихся в техподдержку Golos.io
                     </Description>
                     <ButtonsBlock>
-                        <BlueButton>
-                            <Icon name="telegram" size="16px" />
-                            Телеграмм
+                        <BlueButton
+                            href="https://t.me/golos_support"
+                            target="_blank"
+                        >
+                            <Icon name="telegram" size="16px" fill="#fff" />
+                            <ButtonLabel>Телеграмм</ButtonLabel>
                         </BlueButton>
-                        <WhiteButton color="white">
+                        <WhiteButton href="mailto:pr@golos.io" target="_blank">
                             <Icon name="envelope" size="16px" />
-                            Почта
+                            <ButtonLabel>Почта</ButtonLabel>
                         </WhiteButton>
                     </ButtonsBlock>
                 </MainBlock>

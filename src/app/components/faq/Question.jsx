@@ -71,7 +71,6 @@ export default class Question extends PureComponent {
                 __html: this.addLinkToUrls(props.question.answer),
             },
         };
-        console.log(this.state);
         this.changeAnswerState = this.changeAnswerState.bind(this);
     }
 
