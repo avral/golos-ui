@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 import Container from '../../components/Container';
 import Header from '../../components/faq/Header';
-import Questions from '../../components/faq/Questions';
+import QuestionsList from '../../components/faq/QuestionsList';
 import Channels from '../../components/faq/Channels';
 import Footer from '../../components/faq/Footer';
 
@@ -11,14 +11,22 @@ const Wrapper = styled.div`
     background-color: #ffffff;
 `;
 
+const QUESTIONS_LIST = [
+    {
+        title: 'Почему я должен кому-то отправлять СМС при регистрации? А вдруг у меня украдут деньги с баланса?',
+        answer: 'Верификация по номеру телефона нужна исключительно для предотвращения автоматических ' +
+            'спам-регистраций. Мы не взимаем плату за СМС, сообщение тарифицируется вашим мобильным оператором.'
+    }
+];
+
 export default class Faq extends Component {
 
     render() {
         return (
             <Wrapper>
-                <Container column={true}>
+                <Container column>
                     <Header/>
-                    <Questions/>
+                    <QuestionsList questions={QUESTIONS_LIST}/>
                     <Channels/>
                     <Footer/>
                 </Container>
