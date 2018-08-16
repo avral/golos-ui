@@ -103,7 +103,7 @@ const WhiteButton = Button.extend`
     }
 
     @media (max-width: 1200px) {
-        margin-left: 0px;
+        margin-left: 0;
     }
 `;
 

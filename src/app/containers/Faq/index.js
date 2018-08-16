@@ -1,1 +1,6 @@
-export { default } from './Faq';
+import Faq from './Faq';
+
+module.exports = {
+    path: 'faq',
+    component: Faq
+};

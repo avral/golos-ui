@@ -21,7 +21,7 @@ export default {
         } else if (route.page === 'Start') {
             cb(null, [require('@pages/Landings/Start')]);
         } else if (route.page === 'Faq') {
-            cb(null, [require('@pages/Faq')]);
+            cb(null, [require('../src/app/containers/Faq')]);
         } else if (route.page === 'Login') {
             cb(null, [require('@pages/Login')]);
         } else if (route.page === 'Privacy') {

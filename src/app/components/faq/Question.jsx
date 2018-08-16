@@ -68,13 +68,13 @@ export default class Question extends PureComponent {
         this.state = {
             showAnswer: false,
             answer: {
-                __html: this.addLinkToUrls(props.question.answer),
+                __html: Question.addLinkToUrls(props.question.answer),
             },
         };
         this.changeAnswerState = this.changeAnswerState.bind(this);
     }
 
-    addLinkToUrls(str) {
+    static addLinkToUrls(str) {
         return str.replace(
             /(https?:[^ )]+)/g,
             '<a href="$1" target="_blank">$1</a>'
