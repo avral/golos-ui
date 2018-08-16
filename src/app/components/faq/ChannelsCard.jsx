@@ -27,20 +27,11 @@ const Card = styled(LinkTo)`
 
     @media (max-width: 744px) {
         flex-grow: 1;
+        justify-content: center;
     }
 
     @media (max-width: 510px) {
-        display: none;
-        &:nth-child(2) {
-            display: flex;
-        }
-        &:nth-child(7) {
-            display: flex;
-        }
-        &:nth-child(10) {
-            display: flex;
-        }
-        padding-left: 15vw;
+        display: ${props => props.showOnMobile ? 'flex' : 'none'};
     }
 `;
 
@@ -55,7 +46,7 @@ const Text = styled.p`
     font-weight: bold;
 
     @media (max-width: 744px) {
-        width: 160px;
+        width: 150px;
     }
 `;
 
@@ -78,9 +69,10 @@ export default class ChannelsCard extends Component {
             width,
             height,
             link,
+            showOnMobile
         } = this.props.channel;
         return (
-            <Card link={link}>
+            <Card link={link} showOnMobile={showOnMobile}>
                 <CustomIcon name={thumbnail} width={width} height={height} />
                 <Text>{inscription}</Text>
             </Card>
