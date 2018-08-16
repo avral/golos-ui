@@ -60,7 +60,10 @@ const Switcher = styled.div`
 
 export default class Question extends PureComponent {
     static propTypes = {
-        question: PropTypes.object.isRequired,
+        question: PropTypes.shape({
+            title: PropTypes.string.isRequired,
+            answer: PropTypes.string.isRequired
+        }).isRequired,
     };
 
     constructor(props) {

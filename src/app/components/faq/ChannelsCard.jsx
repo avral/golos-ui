@@ -60,7 +60,20 @@ const CustomIcon = Icon.extend.attrs({
 
 export default class ChannelsCard extends Component {
     static propTypes = {
-        channel: PropTypes.object.isRequired,
+        channel: PropTypes.shape({
+            inscription: PropTypes.string.isRequired,
+            thumbnail: PropTypes.string.isRequired,
+            link: PropTypes.string.isRequired,
+            width: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.number
+            ]).isRequired,
+            height: PropTypes.oneOfType([
+                PropTypes.string,
+                PropTypes.number
+            ]).isRequired,
+            showOnMobile: PropTypes.bool.isRequired
+        }).isRequired,
     };
     render() {
         const {
