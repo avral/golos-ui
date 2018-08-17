@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import Icon from '../golos-ui/Icon';
 import Container from '../Container/Container';
+import tt from 'counterpart';
 
 const Wrapper = styled.div`
     background-color: #f9f9f9;
@@ -77,7 +78,7 @@ const BlueButton = Button.extend`
     text-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
     letter-spacing: 1px;
     background: #2879ff;
-    transition: .2s;
+    transition: 0.2s;
 
     &:hover {
         background: #0e69ff;
@@ -97,7 +98,7 @@ const WhiteButton = Button.extend`
     margin-left: 15px;
     background-color: #ffffff;
     border: 1px solid rgba(149, 149, 149, 0.3);
-    transition: .2s;
+    transition: 0.2s;
 
     color: #393636;
     letter-spacing: 1.2px;
@@ -143,10 +144,9 @@ export default class Header extends PureComponent {
             <Wrapper>
                 <HeaderContainer>
                     <MainBlock>
-                        <Title>Часто задаваемые вопросы</Title>
+                        <Title>{tt('faq_jsq.page_title')}</Title>
                         <Description>
-                            На этой странице собраны самые популярные вопросы
-                            пользователей, обращавшихся в техподдержку Golos.io
+                            {tt('faq_jsq.page_description')}
                         </Description>
                         <ButtonsBlock>
                             <BlueButton
@@ -154,14 +154,16 @@ export default class Header extends PureComponent {
                                 target="_blank"
                             >
                                 <Icon name="telegram" size="16px" fill="#fff" />
-                                <ButtonLabel>Телеграмм</ButtonLabel>
+                                <ButtonLabel>
+                                    {tt('faq_jsq.telegram')}
+                                </ButtonLabel>
                             </BlueButton>
                             <WhiteButton
                                 href="mailto:support@golos.io"
                                 target="_blank"
                             >
                                 <Icon name="envelope" size="16px" />
-                                <ButtonLabel>Почта</ButtonLabel>
+                                <ButtonLabel>{tt('faq_jsq.email')}</ButtonLabel>
                             </WhiteButton>
                         </ButtonsBlock>
                     </MainBlock>

@@ -12,8 +12,17 @@ const Wrapper = styled.div`
 export default class Faq extends Component {
     constructor() {
         super();
-        this.questions = require('./questions.json');
-        this.channels = require('./channels.json');
+        let lang;
+        if (process.env.BROWSER) {
+            lang = localStorage.getItem('language');
+        }
+
+        this.questions = require(lang === 'en'
+            ? './questions_EN.json'
+            : './questions_RU.json');
+        this.channels = require(lang === 'en'
+            ? './channels_EN.json'
+            : './channels_RU.json');
     }
 
     render() {

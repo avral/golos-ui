@@ -4,6 +4,7 @@ import Flex from '../Flex/Flex';
 import ChannelsCard from './ChannelsCard';
 import PropTypes from 'prop-types';
 import Container from '../Container/Container';
+import tt from 'counterpart';
 
 const ChannelsList = styled.div`
     background-color: #f8f8f8;
@@ -42,7 +43,7 @@ export default class Channels extends PureComponent {
         return (
             <ChannelsList>
                 <Container column>
-                    <Title>Официальные каналы</Title>
+                    <Title>{tt('faq_jsq.official_channels')}</Title>
                     <CardsWrapper>
                         {channels.map((channel, index) => {
                             return (

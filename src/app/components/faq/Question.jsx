@@ -44,7 +44,7 @@ const Answer = styled.div`
 
 const Switcher = Flex.extend.attrs({
     justify: 'center',
-    align: 'center'
+    align: 'center',
 })`
     position: absolute;
     top: 18px;
@@ -52,8 +52,8 @@ const Switcher = Flex.extend.attrs({
     cursor: pointer;
     width: 30px;
     height: 30px;
-    transform: rotate(${props => props.showAnswer ? '0' : '180'}deg);
-    color: #${props => props.showAnswer ? '212121': 'bbbaba'}
+    transform: rotate(${props => (props.showAnswer ? '0' : '180')}deg);
+    color: #${props => (props.showAnswer ? '212121' : 'bbbaba')};
 
     @media (max-width: 1200px) {
         top: 5px;
@@ -103,7 +103,7 @@ export default class Question extends PureComponent {
                     showAnswer={showAnswer}
                     onClick={this.changeAnswerState}
                 >
-                    <Icon name="chevron-top" height="7" width="12"/>
+                    <Icon name="chevron-top" height="7" width="12" />
                 </Switcher>
                 <Title>{question.title}</Title>
                 <Answer
