@@ -42,15 +42,16 @@ const Answer = styled.div`
 
 const Switcher = styled.div`
     position: absolute;
-    width: 12px;
-    height: 7px;
-    top: 34px; 
-    right: 20px;
+    width: 30px;
+    height: 30px;
+    top: 18px; 
+    right: 12px;
     cursor: pointer;
     background: url('/images/new/faq/${props =>
         props.showAnswer
             ? 'chevron-up.png'
             : 'chevron-down.png'}') no-repeat center;
+    background-size: 12px 7px;
     
     @media (max-width: 1200px) {
         top: 26px;
