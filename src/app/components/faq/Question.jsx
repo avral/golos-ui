@@ -80,8 +80,8 @@ export default class Question extends PureComponent {
 
     static addLinkToUrls(str) {
         return str.replace(
-            /(https?:[^ )]+)/g,
-            '<a href="$1" target="_blank">$1</a>'
+            /\[([^\]]*)\]\((https?:[^ )]+)\)/g,
+            '<a href="$2" target="_blank">$1</a>'
         );
     }
 
