@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Question from './Question';
-import Flex from '../Flex/Flex';
+import Container from '../Container/Container';
 
-const Wrapper = styled.div`
+const Wrapper = Container.extend.attrs({
+    column: 1,
+})`
     padding: 20px 64px 40px;
-    max-width: 1200px;
 
     @media (max-width: 1200px) {
         padding: 30px 16px 16px;
@@ -25,13 +25,11 @@ export default class QuestionsList extends PureComponent {
     render() {
         const { questions } = this.props;
         return (
-            <Flex justify="center">
-                <Wrapper>
-                    {questions.map((question, index) => (
-                        <Question key={index} question={question} />
-                    ))}
-                </Wrapper>
-            </Flex>
+            <Wrapper>
+                {questions.map((question, index) => (
+                    <Question key={index} question={question} />
+                ))}
+            </Wrapper>
         );
     }
 }
