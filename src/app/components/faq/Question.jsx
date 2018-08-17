@@ -42,7 +42,10 @@ const Answer = styled.div`
     overflow: hidden;
 `;
 
-const Switcher = Flex.extend`
+const Switcher = Flex.extend.attrs({
+    justify: 'center',
+    align: 'center'
+})`
     position: absolute;
     top: 18px;
     right: 12px;
@@ -97,8 +100,6 @@ export default class Question extends PureComponent {
         return (
             <Wrapper>
                 <Switcher
-                    justify="center"
-                    align="center"
                     showAnswer={showAnswer}
                     onClick={this.changeAnswerState}
                 >
