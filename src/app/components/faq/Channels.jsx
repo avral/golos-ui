@@ -54,6 +54,7 @@ export default class Channels extends PureComponent {
 
     render() {
         const { channels } = this.props;
+
         return (
             <ChannelsList>
                 <Wrapper column>

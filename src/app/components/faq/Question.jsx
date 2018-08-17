@@ -53,7 +53,9 @@ const Switcher = Flex.extend.attrs({
     width: 30px;
     height: 30px;
     transform: rotate(${props => (props.showAnswer ? '0' : '180')}deg);
+    transition: transform 0.25s;
     color: #${props => (props.showAnswer ? '212121' : 'bbbaba')};
+    user-select: none;
 
     @media (max-width: 1200px) {
         top: 5px;
@@ -77,7 +79,6 @@ export default class Question extends PureComponent {
                 __html: Question.addLinkToUrls(props.question.answer),
             },
         };
-        this.changeAnswerState = this.changeAnswerState.bind(this);
     }
 
     static addLinkToUrls(str) {
@@ -87,11 +88,11 @@ export default class Question extends PureComponent {
         );
     }
 
-    changeAnswerState() {
+    changeAnswerState = () => {
         this.setState({
             showAnswer: !this.state.showAnswer,
         });
-    }
+    };
 
     render() {
         const { question } = this.props;

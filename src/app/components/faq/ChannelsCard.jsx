@@ -81,6 +81,7 @@ export default class ChannelsCard extends Component {
             link,
             showOnMobile,
         } = this.props.channel;
+
         return (
             <Card link={link} showOnMobile={showOnMobile}>
                 <CustomIcon name={thumbnail} width={width} height={height} />

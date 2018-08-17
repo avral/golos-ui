@@ -54,14 +54,12 @@ const Image = styled.div`
 `;
 
 export default class Footer extends PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = {
-            footer_message: {
-                __html: tt('faq_jsq.footer_message'),
-            },
-        };
-    }
+    state = {
+        footer_message: {
+            __html: tt('faq_jsq.footer_message'),
+        },
+    };
+
     render() {
         return (
             <Wrapper>
