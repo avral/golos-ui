@@ -14,7 +14,7 @@ const Wrapper = Container.extend`
     padding: 60px 24px;
     
     @media (max-width: 1200px) {
-        padding: 60px 0;
+        padding: 40px 0;
     } 
 `;
 
