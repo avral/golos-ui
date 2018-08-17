@@ -54,8 +54,8 @@ const Switcher = styled.div`
     background-size: 12px 7px;
     
     @media (max-width: 1200px) {
-        top: 26px;
-        right: 16px;
+        top: 5px;
+        right: 6px;
     }
 `;
 
