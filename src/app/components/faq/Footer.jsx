@@ -1,8 +1,11 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
-import Flex from '../Flex/Flex';
+import Container from '../Container/Container';
 
-const Wrapper = Flex.extend`
+const Wrapper = Container.extend.attrs({
+    justify: 'space-between',
+    align: 'center',
+})`
     background: #ffffff;
     padding: 20px 64px;
 
@@ -51,11 +54,15 @@ const Image = styled.div`
 export default class Footer extends PureComponent {
     render() {
         return (
-            <Wrapper justify="space-between" align="center">
+            <Wrapper>
                 <Text>
-                    Мы НИКОГДА не попросим ваши приватные ключи или деньги. Если
+                    Мы никогда не попросим ваши приватные ключи или деньги. Если
                     кто-то представляется членами команды Golos.io и просит
-                    такую информацию, напишите нам на почту pr@golos.io.
+                    такую информацию, напишите нам на почту&nbsp;
+                    <a href="mailto:pr@golos.io" target="_blank">
+                        pr@golos.io
+                    </a>
+                    .
                 </Text>
                 <Image />
             </Wrapper>

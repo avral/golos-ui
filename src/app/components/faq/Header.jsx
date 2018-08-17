@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import Icon from '../golos-ui/Icon';
-import Flex from '../Flex';
+import Container from '../Container/Container';
 
-const Wrapper = Flex.extend.attrs({
-    auto: true,
-})`
+const Wrapper = styled.div`
     background-color: #f9f9f9;
+`;
 
+const HeaderContainer = Container.extend`
     @media (max-width: 1200px) {
         flex-direction: column-reverse;
         align-items: center;
@@ -77,10 +77,15 @@ const BlueButton = Button.extend`
     text-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.15);
     letter-spacing: 1px;
     background: #2879ff;
+    transition: .2s;
 
     &:hover {
         background: #0e69ff;
         color: #fff;
+    }
+
+    &:focus {
+        color: #ffffff;
     }
 
     @media (max-width: 1200px) {
@@ -90,8 +95,9 @@ const BlueButton = Button.extend`
 
 const WhiteButton = Button.extend`
     margin-left: 15px;
-    background-color: #fff;
+    background-color: #ffffff;
     border: 1px solid rgba(149, 149, 149, 0.3);
+    transition: .2s;
 
     color: #393636;
     letter-spacing: 1.2px;
@@ -99,6 +105,10 @@ const WhiteButton = Button.extend`
 
     &:hover {
         background: none;
+        color: #393636;
+    }
+
+    &:focus {
         color: #393636;
     }
 
@@ -131,27 +141,32 @@ export default class Header extends PureComponent {
     render() {
         return (
             <Wrapper>
-                <MainBlock>
-                    <Title>Часто задаваемые вопросы</Title>
-                    <Description>
-                        На этой странице собраны самые популярные вопросы
-                        пользователей, обращавшихся в техподдержку Golos.io
-                    </Description>
-                    <ButtonsBlock>
-                        <BlueButton
-                            href="https://t.me/golos_support"
-                            target="_blank"
-                        >
-                            <Icon name="telegram" size="16px" fill="#fff" />
-                            <ButtonLabel>Телеграмм</ButtonLabel>
-                        </BlueButton>
-                        <WhiteButton href="mailto:pr@golos.io" target="_blank">
-                            <Icon name="envelope" size="16px" />
-                            <ButtonLabel>Почта</ButtonLabel>
-                        </WhiteButton>
-                    </ButtonsBlock>
-                </MainBlock>
-                <Image />
+                <HeaderContainer>
+                    <MainBlock>
+                        <Title>Часто задаваемые вопросы</Title>
+                        <Description>
+                            На этой странице собраны самые популярные вопросы
+                            пользователей, обращавшихся в техподдержку Golos.io
+                        </Description>
+                        <ButtonsBlock>
+                            <BlueButton
+                                href="https://t.me/golos_support"
+                                target="_blank"
+                            >
+                                <Icon name="telegram" size="16px" fill="#fff" />
+                                <ButtonLabel>Телеграмм</ButtonLabel>
+                            </BlueButton>
+                            <WhiteButton
+                                href="mailto:support@golos.io"
+                                target="_blank"
+                            >
+                                <Icon name="envelope" size="16px" />
+                                <ButtonLabel>Почта</ButtonLabel>
+                            </WhiteButton>
+                        </ButtonsBlock>
+                    </MainBlock>
+                    <Image />
+                </HeaderContainer>
             </Wrapper>
         );
     }

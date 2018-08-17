@@ -1,9 +1,11 @@
 import React, { PureComponent } from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Question from './Question';
+import Container from '../Container/Container';
 
-const Wrapper = styled.div`
+const Wrapper = Container.extend.attrs({
+    column: 1,
+})`
     padding: 20px 64px 40px;
 
     @media (max-width: 1200px) {
