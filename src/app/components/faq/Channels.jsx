@@ -7,9 +7,15 @@ import Container from '../Container/Container';
 import tt from 'counterpart';
 
 const ChannelsList = styled.div`
-    background-color: #f8f8f8;
-    width: 100%;
+    background-color: #f9f9f9;
+`;
+
+const Wrapper = Container.extend`
     padding: 60px 24px;
+    
+    @media (max-width: 1200px) {
+        padding: 60px 0;
+    } 
 `;
 
 const Title = styled.p`
@@ -20,6 +26,14 @@ const Title = styled.p`
     letter-spacing: 0.37px;
     line-height: 41px;
     margin-bottom: 40px;
+    
+    @media (max-width: 1200px) {
+        text-align: center;
+    } 
+    
+    @media (max-width: 744px) {
+        font-size: 30px;
+    }
 `;
 
 const CardsWrapper = Flex.extend.attrs({
@@ -42,7 +56,7 @@ export default class Channels extends PureComponent {
         const { channels } = this.props;
         return (
             <ChannelsList>
-                <Container column>
+                <Wrapper column>
                     <Title>{tt('faq_jsq.official_channels')}</Title>
                     <CardsWrapper>
                         {channels.map((channel, index) => {
@@ -51,7 +65,7 @@ export default class Channels extends PureComponent {
                             );
                         })}
                     </CardsWrapper>
-                </Container>
+                </Wrapper>
             </ChannelsList>
         );
     }
