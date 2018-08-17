@@ -70,9 +70,7 @@ export default class Question extends PureComponent {
         super(props);
         this.state = {
             showAnswer: false,
-            answer: {
-                __html: Question.addLinkToUrls(props.question.answer),
-            },
+            answer: Question.addLinkToUrls(props.question.answer),
         };
         this.changeAnswerState = this.changeAnswerState.bind(this);
     }
@@ -103,7 +101,7 @@ export default class Question extends PureComponent {
                 <Title>{question.title}</Title>
                 <Answer
                     showAnswer={showAnswer}
-                    dangerouslySetInnerHTML={answer}
+                    dangerouslySetInnerHTML={{__html: answer}}
                 />
             </Wrapper>
         );

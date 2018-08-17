@@ -4,7 +4,7 @@ import Icon from '../golos-ui/Icon';
 import Flex from '../Flex';
 
 const Wrapper = Flex.extend.attrs({
-    auto: true,
+    auto: 1,
 })`
     background-color: #f9f9f9;
 
