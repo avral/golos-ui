@@ -63,8 +63,8 @@ export default {
             else cb(null, [require('@pages/SubmitPostServerRender')]);
         } else if (route.page === 'UserProfile') {
             cb(null, [require('@pages/UserProfile')]);
-        // } else if (route.page === 'UserProfile') {
-        //     cb(null, [require('src/app/containers/UserProfile').default]);
+            // } else if (route.page === 'UserProfile') {
+            //     cb(null, [require('src/app/containers/UserProfile').default]);
         } else if (route.page === 'Market') {
             cb(null, [require('@pages/MarketLoader')]);
         } else if (route.page === 'Post') {
