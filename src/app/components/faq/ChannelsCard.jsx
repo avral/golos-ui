@@ -24,6 +24,11 @@ const Card = styled(LinkTo)`
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
     margin: 10px;
     cursor: pointer;
+    transition: .2s;
+    
+    &:hover {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    }
 
     @media (max-width: 744px) {
         flex-grow: 1;
@@ -31,7 +36,7 @@ const Card = styled(LinkTo)`
     }
 
     @media (max-width: 510px) {
-        display: ${props => props.showOnMobile ? 'flex' : 'none'};
+        display: ${props => (props.showOnMobile ? 'flex' : 'none')};
     }
 `;
 
@@ -60,15 +65,11 @@ export default class ChannelsCard extends Component {
             inscription: PropTypes.string.isRequired,
             thumbnail: PropTypes.string.isRequired,
             link: PropTypes.string.isRequired,
-            width: PropTypes.oneOfType([
-                PropTypes.string,
-                PropTypes.number
-            ]).isRequired,
-            height: PropTypes.oneOfType([
-                PropTypes.string,
-                PropTypes.number
-            ]).isRequired,
-            showOnMobile: PropTypes.bool.isRequired
+            width: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+                .isRequired,
+            height: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+                .isRequired,
+            showOnMobile: PropTypes.bool.isRequired,
         }).isRequired,
     };
     render() {
@@ -78,7 +79,7 @@ export default class ChannelsCard extends Component {
             width,
             height,
             link,
-            showOnMobile
+            showOnMobile,
         } = this.props.channel;
         return (
             <Card link={link} showOnMobile={showOnMobile}>

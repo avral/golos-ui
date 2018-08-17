@@ -3,15 +3,9 @@ import styled from 'styled-components';
 import Flex from '../Flex/Flex';
 import ChannelsCard from './ChannelsCard';
 import PropTypes from 'prop-types';
-
-const Wrapper = Flex.extend.attrs({
-    justify: 'center',
-})`
-    background-color: #f9f9f9;
-`;
+import Container from '../Container/Container';
 
 const ChannelsList = styled.div`
-    max-width: 1200px;
     background-color: #f8f8f8;
     width: 100%;
     padding: 60px 24px;
@@ -46,8 +40,8 @@ export default class Channels extends PureComponent {
     render() {
         const { channels } = this.props;
         return (
-            <Wrapper justify="center">
-                <ChannelsList>
+            <ChannelsList>
+                <Container column>
                     <Title>Официальные каналы</Title>
                     <CardsWrapper>
                         {channels.map((channel, index) => {
@@ -56,8 +50,8 @@ export default class Channels extends PureComponent {
                             );
                         })}
                     </CardsWrapper>
-                </ChannelsList>
-            </Wrapper>
+                </Container>
+            </ChannelsList>
         );
     }
 }
