@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import Icon from '../golos-ui/Icon';
 import Flex from '../Flex';
+import tt from 'counterpart';
 
 const Wrapper = Flex.extend.attrs({
     auto: 1,
@@ -132,22 +133,19 @@ export default class Header extends PureComponent {
         return (
             <Wrapper>
                 <MainBlock>
-                    <Title>Часто задаваемые вопросы</Title>
-                    <Description>
-                        На этой странице собраны самые популярные вопросы
-                        пользователей, обращавшихся в техподдержку Golos.io
-                    </Description>
+                    <Title> {tt('faq_jsq.page_title')}</Title>
+                    <Description>{tt('faq_jsq.page_description')}</Description>
                     <ButtonsBlock>
                         <BlueButton
                             href="https://t.me/golos_support"
                             target="_blank"
                         >
                             <Icon name="telegram" size="16px" fill="#fff" />
-                            <ButtonLabel>Телеграмм</ButtonLabel>
+                            <ButtonLabel> {tt('faq_jsq.telegram')}</ButtonLabel>
                         </BlueButton>
                         <WhiteButton href="mailto:pr@golos.io" target="_blank">
                             <Icon name="envelope" size="16px" />
-                            <ButtonLabel>Почта</ButtonLabel>
+                            <ButtonLabel> {tt('faq_jsq.email')}</ButtonLabel>
                         </WhiteButton>
                     </ButtonsBlock>
                 </MainBlock>

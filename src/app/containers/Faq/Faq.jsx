@@ -19,7 +19,7 @@ const FaqContainer = Container.extend`
 export default class Faq extends Component {
     constructor() {
         super();
-        this.questions = require('./questions.json');
+        this.questions = require('./questions_RU.json');
         this.channels = require('./channels.json');
     }
 

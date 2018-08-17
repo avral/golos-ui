@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import Flex from '../Flex/Flex';
+import tt from 'counterpart';
 
 const Wrapper = Flex.extend`
     background: #ffffff;
@@ -52,11 +53,7 @@ export default class Footer extends PureComponent {
     render() {
         return (
             <Wrapper justify="space-between" align="center">
-                <Text>
-                    Мы НИКОГДА не попросим ваши приватные ключи или деньги. Если
-                    кто-то представляется членами команды Golos.io и просит
-                    такую информацию, напишите нам на почту pr@golos.io.
-                </Text>
+                <Text>{tt('faq_jsq.footer_message')}</Text>
                 <Image />
             </Wrapper>
         );
