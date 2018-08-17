@@ -62,7 +62,7 @@ export default class Question extends PureComponent {
     static propTypes = {
         question: PropTypes.shape({
             title: PropTypes.string.isRequired,
-            answer: PropTypes.string.isRequired
+            answer: PropTypes.string.isRequired,
         }).isRequired,
     };
 
@@ -70,7 +70,9 @@ export default class Question extends PureComponent {
         super(props);
         this.state = {
             showAnswer: false,
-            answer: Question.addLinkToUrls(props.question.answer),
+            answer: {
+                __html: Question.addLinkToUrls(props.question.answer),
+            },
         };
         this.changeAnswerState = this.changeAnswerState.bind(this);
     }
@@ -101,7 +103,7 @@ export default class Question extends PureComponent {
                 <Title>{question.title}</Title>
                 <Answer
                     showAnswer={showAnswer}
-                    dangerouslySetInnerHTML={{__html: answer}}
+                    dangerouslySetInnerHTML={answer}
                 />
             </Wrapper>
         );
