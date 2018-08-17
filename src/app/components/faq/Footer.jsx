@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import Container from '../Container/Container';
+import tt from 'counterpart';
 
 const Wrapper = Container.extend.attrs({
     justify: 'space-between',
@@ -52,18 +53,18 @@ const Image = styled.div`
 `;
 
 export default class Footer extends PureComponent {
+    constructor(props) {
+        super(props);
+        this.state = {
+            footer_message: {
+                __html: tt('faq_jsq.footer_message'),
+            },
+        };
+    }
     render() {
         return (
             <Wrapper>
-                <Text>
-                    Мы никогда не попросим ваши приватные ключи или деньги. Если
-                    кто-то представляется членами команды Golos.io и просит
-                    такую информацию, напишите нам на почту&nbsp;
-                    <a href="mailto:pr@golos.io" target="_blank">
-                        pr@golos.io
-                    </a>
-                    .
-                </Text>
+                <Text dangerouslySetInnerHTML={this.state.footer_message} />
                 <Image />
             </Wrapper>
         );
