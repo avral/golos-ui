@@ -12,10 +12,10 @@ const ChannelsList = styled.div`
 
 const Wrapper = Container.extend`
     padding: 60px 24px;
-    
+
     @media (max-width: 1200px) {
         padding: 40px 0;
-    } 
+    }
 `;
 
 const Title = styled.p`
@@ -26,11 +26,11 @@ const Title = styled.p`
     letter-spacing: 0.37px;
     line-height: 41px;
     margin-bottom: 40px;
-    
+
     @media (max-width: 1200px) {
         text-align: center;
-    } 
-    
+    }
+
     @media (max-width: 744px) {
         font-size: 30px;
     }
