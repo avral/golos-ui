@@ -25,6 +25,7 @@ const Text = styled.p`
     font-size: 16px;
     font-weight: 500;
     letter-spacing: -0.26px;
+    text-align: left;
 
     @media (max-width: 830px) {
         width: 100%;
