@@ -62,6 +62,7 @@ const availableDomains = [
     'golos.today',
     'cpeda.space',
     'linkedin.com',
+    'golosboard.com',
 ];
 
 class App extends React.Component {
