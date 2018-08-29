@@ -63,6 +63,7 @@ const availableDomains = [
     'cpeda.space',
     'linkedin.com',
     'golosboard.com',
+    'instagram.com',
 ];
 
 class App extends React.Component {
