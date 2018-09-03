@@ -21,13 +21,13 @@ const Card = styled(LinkTo)`
     padding: 0 20px;
     border-radius: 8.53px;
     background-color: #ffffff;
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .06);
     margin: 10px;
     cursor: pointer;
     transition: 0.2s;
 
     &:hover {
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .3);
     }
 
     @media (max-width: 744px) {
