@@ -24,6 +24,7 @@ const Title = styled.div`
     font-size: 20px;
     font-weight: bold;
     line-height: 34px;
+    cursor: pointer;
 
     @media (max-width: 1200px) {
         font-size: 18px;
@@ -106,7 +107,7 @@ export default class Question extends PureComponent {
                 >
                     <Icon name="chevron-top" height="7" width="12" />
                 </Switcher>
-                <Title>{question.title}</Title>
+                <Title onClick={this.changeAnswerState}>{question.title}</Title>
                 <Answer
                     showAnswer={showAnswer}
                     dangerouslySetInnerHTML={answer}
