@@ -108,6 +108,7 @@ class Welcome extends Component {
                     tagsLoading={tagsLoading}
                     tagsActiveId={tagsActiveId}
                     tagsCards={tagsCards}
+                    onTagClick={this._onTagClick}
                 />
                 <Differences />
                 <Mobile />
@@ -119,6 +120,10 @@ class Welcome extends Component {
             </div>
         );
     }
+
+    _onTagClick = tag => {
+        this.fetchTagContents(tag);
+    };
 }
 
 export default connect(
