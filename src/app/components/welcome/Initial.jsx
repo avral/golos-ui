@@ -94,7 +94,7 @@ export default class Initial extends PureComponent {
                                                     : ''
                                             }
                                             onClick={() =>
-                                                this.fetchTagContents(tag)
+                                                this.props.onTagClick(tag)
                                             }
                                         >
                                             {tag.name}
@@ -105,7 +105,10 @@ export default class Initial extends PureComponent {
                             {tagsLoading ? (
                                 <div className="columns align-self-middle">
                                     <center>
-                                        <LoadingIndicator type="circle" size="90px" />
+                                        <LoadingIndicator
+                                            type="circle"
+                                            size="90px"
+                                        />
                                     </center>
                                 </div>
                             ) : (
