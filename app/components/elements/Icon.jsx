@@ -85,6 +85,7 @@ const icons = new Map([
     ['flag', require('app/assets/icons/flag.svg')],
     ['new/vk', require('app/assets/icons/new/vk.svg')],
     ['new/facebook', require('app/assets/icons/new/facebook.svg')],
+    ['new/twitter', require('app/assets/icons/new/twitter.svg')],
     ['new/telegram', require('app/assets/icons/new/telegram.svg')],
     ['new/home', require('app/assets/icons/new/home.svg')],
     ['new/blogging', require('app/assets/icons/new/blogging.svg')],
