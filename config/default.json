@@ -48,7 +48,7 @@
       "styleSrc": "'self' 'unsafe-inline' cdnjs.cloudflare.com fonts.googleapis.com",
       "imgSrc": "* data:",
       "fontSrc": "data: fonts.gstatic.com",
-      "connectSrc": "'self' cyber.fund wss://ws.golos.io *.facebook.com www.google-analytics.com api.segment.io api.blocktrades.us query.yahooapis.com api.blockcypher.com api.mixpanel.com mc.yandex.ru mc.yandex.ru",
+      "connectSrc": "'self' cyber.fund wss://api.golos.blckchnd.com/ws *.facebook.com www.google-analytics.com api.segment.io api.blocktrades.us query.yahooapis.com api.blockcypher.com api.mixpanel.com mc.yandex.ru mc.yandex.ru",
       "reportUri": "/api/v1/csp_violation",
       "objectSrc": "'self'",
       "pluginTypes": "application/pdf",
@@ -120,8 +120,8 @@
     "sender_id": false
   },
   "upload_image": "https://images.golos.io",
-  "ws_connection_client": "wss://ws.golos.io",
-  "ws_connection_server": "wss://ws.golos.io",
+  "ws_connection_client": "wss://api.golos.blckchnd.com/ws",
+  "ws_connection_server": "wss://api.golos.blckchnd.com/ws",
   "chain_id": "782a3039b478c839e4cb0c941ff4eaeb7df40bdd68bd441afd444b9da763de12",
   "metrics": {
     "name": "golos",
