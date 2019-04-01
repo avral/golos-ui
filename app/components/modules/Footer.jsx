@@ -101,34 +101,9 @@ class Footer extends React.Component {
                             name: tt('navigation.welcome'),
                             url: '/welcome',
                         },
-                        {
-                            name: tt('navigation.faq'),
-                            url: '/faq',
-                        },
-                        {
-                            name: tt('g.golos_fest'),
-                            url: '/@golosio',
-                        },
                         // { name: 'Подписка на рассылку', url: '' },
-                        {
-                            name: tt('g.team'),
-                            url: '/about#team',
-                        },
                     ],
                     [
-                        {
-                            name: tt('navigation.feedback'),
-                            url: '/submit?type=submit_feedback',
-                        },
-                        {
-                            name: tt('navigation.privacy_policy'),
-                            url:
-                                '/ru--konfidenczialxnostx/@golos/politika-konfidencialnosti',
-                        },
-                        {
-                            name: tt('navigation.terms_of_service'),
-                            url: TERMS_OF_SERVICE_URL,
-                        },
                     ],
                 ],
             },
@@ -138,38 +113,19 @@ class Footer extends React.Component {
                 width: 'medium-3',
                 items: [
                     {
-                        name: 'Facebook',
-                        url: 'https://www.facebook.com/www.golos.io',
-                        icon: 'new/facebook',
+                        name: 'Twitter',
+                        url: 'https://twitter.com/GolosClassic',
+                        icon: 'new/twitter',
                         size: '1_5x',
                     },
                     {
-                        name: 'VK',
-                        url: 'https://vk.com/goloschain',
-                        icon: 'new/vk',
-                        size: '2x',
-                    },
-                    {
                         name: 'Telegram',
-                        url: 'https://t.me/golos_support',
+                        url: 'https://t.me/golos_id',
                         icon: 'new/telegram',
                         size: '1_5x',
                     },
                 ],
             },
-            {
-                name: 'Приложения',
-                columnAlign: 'left',
-                width: 'medium-2',
-                items: [
-                    // { name: 'IOS', url: '' },
-                    {
-                        name: 'Android',
-                        url:
-                            'https://play.google.com/store/apps/details?id=io.golos.golos',
-                    },
-                ],
-            }
         );
 
         return (
@@ -183,7 +139,7 @@ class Footer extends React.Component {
                     <div className="row">
                         <div className="small-12 medium-12 columns">
                             <span className="text-left">
-                                © 2018 Golos.io - социальная платформа,
+                                © 2018 Golos - социальная платформа,
                                 сообщество блогеров, медиасеть, разработанная на
                                 Медиаблокчейне ГОЛОС
                             </span>
