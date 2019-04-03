@@ -82,7 +82,7 @@
     •   [Бумага о Голосе](https://golos.io/ru--golos/@golos/golos-russkoyazychnaya-socialno-mediinaya-blokchein-platforma)
     •   [Бумага про Стим](https://steemit.com/ru/@hipster/bumaga-pro-stim-chast-1)
     •   [Голос: общественное медиа как база для социальной активности](https://golos.io/ru--golos/@marina/golos-obshestvennoe-media-kak-baza-dlya-socialnoi-aktivnosti)
-    •   [План развития блокчейн Голос и клиента Golos.io](https://docs.google.com/document/d/1WQF1xxmCMxzEA95Gnxw4FHViX_6pjVoUlBnItCepOmE/edit)
+    •   [План развития блокчейн Голос и клиента Golos.id](https://docs.google.com/document/d/1WQF1xxmCMxzEA95Gnxw4FHViX_6pjVoUlBnItCepOmE/edit)
     •   [Делегаты и их роль на платформе Голос](https://golos.io/ru--golos/@on0tole/delegaty-i-ikh-rol-na-platforme-golos)
     •   [Официальная Вики проекта Голос](https://wiki.golos.io/)
     •   [Официальный репозиторий на GitHub](https://github.com/GolosChain)

@@ -48,7 +48,7 @@ export default class Hero extends PureComponent {
                 <Row className="row align-middle">
                     <div className="column small-12 medium-7">
                         <Greeting>
-                            Добро пожаловать <br /> на Golos.io
+                            Добро пожаловать <br /> на Golos.id
                         </Greeting>
                         <Congratulations>
                             Мы рады вас видеть!

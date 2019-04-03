@@ -15,7 +15,7 @@ class Start extends React.Component {
     render() {
         let {simple} = this.state
         let simpleAnswer = <p className='landing-start-block-text'>
-            <b>{'Golos.io '}</b>
+            <b>{'Golos.id '}</b>
             — это блог-платформа на <span data-tip='Блокчейн — распределенная база данных'>блокчейне <ReactTooltip type='light' effect="solid" /></span>, где
             пользователи могут публиковать записи и голосовать за понравившиеся статьи.
             Голосуя за понравившуюся статью, они вознаграждают ее своими «голосами», которые
@@ -31,7 +31,7 @@ class Start extends React.Component {
             <div className='landing-start'>
                 <div className='landing-start-block'>
                     <div className='column large-12 medium-12 small-12'>
-                        <h1>Golos.io</h1>
+                        <h1>Golos.id</h1>
                         <h2>Блог-платформа следующего поколения</h2>
                     </div>
                     <div className='row'>
@@ -116,7 +116,7 @@ class Start extends React.Component {
                             <div className='column large-3 medium-3 small-6'>
                                     <Icon name='blockchain' size='10x'/>
                                 <h5>Инновационная модель</h5>
-                                <p className='landing-start-block-icon-text'>Golos.io работает на блокчейне, а
+                                <p className='landing-start-block-icon-text'>Golos.id работает на блокчейне, а
                                     значит информация пользователей принадлежит только им</p>
 
                             </div>
@@ -208,7 +208,7 @@ class Start extends React.Component {
                             <div className='column large-12 medium-12 small-12'>
                                 <p className='landing-start-block-text landing-start-block-center'>
                                     У нас есть собственная <a href='https://wiki.golos.io/'>Википедия</a>,
-                                    со всей информацией про блог-платформу Golos.io. Кроме того, мы
+                                    со всей информацией про блог-платформу Golos.id. Кроме того, мы
                                     оперативно ответим на любой технический вопрос в нашей группе в <a href='https://t.me/golos_support'>Телеграме</a>.</p>
                             </div>
                         </div>

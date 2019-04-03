@@ -1,5 +1,5 @@
 {
-  "name": "Golos.io",
+  "name": "Golos.id",
   "repository": {
     "type": "git",
     "url": "https://github.com/GolosChain/tolstoy.git"
@@ -25,7 +25,7 @@
     "build-storybook": "build-storybook",
     "release-tag": "node scripts/release_tag.js"
   },
-  "author": "Golos.io",
+  "author": "Golos.id",
   "license": "MIT",
   "dependencies": {
     "assert": "^1.4.1",

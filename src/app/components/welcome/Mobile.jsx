@@ -55,7 +55,7 @@ export default class Mobile extends PureComponent {
                     <div className="columns small-12 medium-6">
                         <Header>
                             И да, вы можете пользоваться<br />
-                            Golos.io через браузер или<br />
+                            Golos.id через браузер или<br />
                             приложение для Android
                         </Header>
                         <SubHeader>

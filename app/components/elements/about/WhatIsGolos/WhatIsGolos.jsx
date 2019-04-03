@@ -7,7 +7,7 @@ export default class WhatIsGolos extends PureComponent {
                 <div className="row">
                     <div className="small-12 medium-12 large-centered columns columns WhatIsGolos__video">
                         <h1>
-                            Golos.io — это блог-платформа, построенная на медиаблокчейне Голос.
+                            Golos.id — это блог-платформа, построенная на медиаблокчейне Голос.
                         </h1>
                         <div>
                             <iframe
@@ -27,7 +27,7 @@ export default class WhatIsGolos extends PureComponent {
                             Изначально блокчейн Голос был создан по лицензии от
                             STEEM.inc и рассчитан, в основном, на русскоязычное
                             сообщество. В процессе роста и развития появилось
-                            множество различных нововведений, и сейчас Golos.io
+                            множество различных нововведений, и сейчас Golos.id
                             - это проект со своей структурой, экономикой и
                             правилами, география которого постоянно расширяется.
                         </p>

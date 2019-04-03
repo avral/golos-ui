@@ -93,7 +93,7 @@ class CTABlock extends PureComponent {
 
         return (
             <div className="ctablock__text-regular">
-                Сообщество <b>Golos.io</b> {ctaInfo.regularStartText}{' '}
+                Сообщество <b>Golos.id</b> {ctaInfo.regularStartText}{' '}
                 <b>{user}</b> заработал более{' '}
                 <span className="ctablock__text-regular">
                     <LocalizedCurrency

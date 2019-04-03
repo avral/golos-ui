@@ -98,7 +98,7 @@ class PostForm extends React.Component {
         try {
             isLoaded = this._tryLoadDraft();
         } catch (err) {
-            console.warn('[Golos.io] Draft recovering failed:', err);
+            console.warn('[Golos.id] Draft recovering failed:', err);
         }
 
         if (!isLoaded && editMode) {
@@ -471,7 +471,7 @@ class PostForm extends React.Component {
                 localStorage.setItem(DRAFT_KEY, json);
             }
         } catch (err) {
-            console.warn('[Golos.io] Draft not saved:', err);
+            console.warn('[Golos.id] Draft not saved:', err);
         }
     };
 

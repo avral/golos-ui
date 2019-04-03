@@ -16,7 +16,7 @@ class Hardfork extends React.Component {
                             <p><b>Хардфорк</b> блокчейна «Голос» — это <b>серьезный апгрейд блокчейна</b>, разрабатываемый для вывода Голоса на <b>конкурентные позиции в мире</b>.</p>
                         </div>
                         <div className="text-block-main column large-8 medium-8 small-12">
-                            <p>Блог-платформа <Link className="link" to="/@golosio" >Golos.io</Link> является клиентом блокчейна «Голос», то есть работает
+                            <p>Блог-платформа <Link className="link" to="/@golosio" >Golos.id</Link> является клиентом блокчейна «Голос», то есть работает
                                 на его «движке».
                             </p>
                             <p>Хардфорк блокчейна приведет <br></br>

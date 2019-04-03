@@ -146,7 +146,7 @@
     "terms_of_service_section": ", пункт 5.5.7"
   },
   "g":{
-    "golos_fest" : "Golos.io News",
+    "golos_fest" : "Golos.id News",
     "APP_NAME":"Golos",
     "24_hour":"24 ore",
     "30_day":"30 zile",
@@ -632,7 +632,7 @@
     "feedback_welcome":{
       "dear_users":"Stimați utilizatori!",
       "message1":"Sunteți pe pagina „feedback-ul“, al echipei Golos. Aici puteți lăsa comentariile și sugestiile dumneavoastră cu privire la activitatea platformei noastre, și să ne anunțați despre erori detectate. Mesajul dvs. va fi postat public.",
-      "message2":"Vă rugăm să nu postați aici alte mesaje ce nu sunt legate de funcționarea Golos și blokchain, sau de blog-platforma GOLOS.io!",
+      "message2":"Vă rugăm să nu postați aici alte mesaje ce nu sunt legate de funcționarea Golos și blokchain, sau de blog-platforma GOLOS.id!",
       "message3":"Dacă ați ajuns la această pagină din greșeală și doriți să publicați o postare obișnuită la alte teme - apăsați",
       "message4":" în colțul din dreapta de sus al paginii.",
       "message5":"Mulțumim!"
@@ -960,6 +960,6 @@
     "telegram": "telegram",
     "email": "email",
     "official_channels": "Official channels",
-    "footer_message": "Мы никогда не попросим ваши приватные ключи или деньги. Если кто-то представляется членами команды Golos.io и просит такую информацию, напишите нам на почту <a href='mailto:pr@golos.io' target='_blank'>pr@golos.io</a>."
+    "footer_message": "Мы никогда не попросим ваши приватные ключи или деньги. Если кто-то представляется членами команды Golos.id и просит такую информацию, напишите нам на почту <a href='mailto:pr@golos.io' target='_blank'>pr@golos.io</a>."
   }
 }

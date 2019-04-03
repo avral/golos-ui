@@ -16,7 +16,7 @@
     "showOnMobile": true
   },
   {
-    "inscription": "Новости и анонсы Golos.io",
+    "inscription": "Новости и анонсы Golos.id",
     "thumbnail": "ic_newspaper",
     "link": "/@golosio",
     "width": "26",
@@ -56,7 +56,7 @@
     "showOnMobile": true
   },
   {
-    "inscription": "Лучшее на Golos.io",
+    "inscription": "Лучшее на Golos.id",
     "thumbnail": "ic_like",
     "link": "https://t.me/golos_best",
     "width": "28",

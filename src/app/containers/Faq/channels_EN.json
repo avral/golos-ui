@@ -8,7 +8,7 @@
     "showOnMobile": false
   },
   {
-    "inscription": "Golos.io news and updates",
+    "inscription": "Golos.id news and updates",
     "thumbnail": "ic_newspaper",
     "link": "/@golosio",
     "width": "26",
@@ -48,7 +48,7 @@
     "showOnMobile": true
   },
   {
-    "inscription": "Best of Golos.io",
+    "inscription": "Best of Golos.id",
     "thumbnail": "ic_like",
     "link": "https://t.me/golos_best",
     "width": "28",

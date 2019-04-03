@@ -74,7 +74,7 @@ export const PUBLIC_API = {
   cashout:   'getDiscussionsByCashoutAsync',
   payout:     'getDiscussionsByPayoutAsync',
 }
-export const SEO_TITLE = 'GOLOS.io Блоги'
+export const SEO_TITLE = 'GOLOS.id Блоги'
 
 export const SEGMENT_ANALYTICS_KEY = 'F7tldQJxt491gXYqDGi5TkTT4wFpSPps'
 
@@ -88,7 +88,7 @@ export const SMS_SERVICES = {
   '380':   '+380931777772'
 }
 
-export const ANDROID_APP_NAME = 'Golos.io'
+export const ANDROID_APP_NAME = 'Golos.id'
 export const ANDROID_PACKAGE = 'io.golos.golos'
 //export const ANDROID_APP_URL = `https://play.google.com/store/apps/details?id=${ANDROID_PACKAGE}`
 export const ANDROID_URL_SCHEME = 'golosioapp'

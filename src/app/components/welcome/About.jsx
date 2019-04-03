@@ -72,7 +72,7 @@ export default class About extends PureComponent {
             <Root>
                 <Row className="row align-middle">
                     <div className="columns">
-                        <Header>Golos.io</Header>
+                        <Header>Golos.id</Header>
                         <SubHeader>
                             Это уникальные тексты и мысли, которых нет в других
                             частях Интернета. <br />

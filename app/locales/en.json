@@ -18,7 +18,7 @@
     "terms_of_service_section": ", section 5.5.7"
   },
   "g": {
-    "golos_fest" : "Golos.io News",
+    "golos_fest" : "Golos.id News",
     "APP_NAME" : "Golos",
     "APP_NAME_account": "%(APP_NAME)s account",
     "24_hour": "24 hour",
@@ -28,7 +28,7 @@
     "all_langs": "All languages",
     "amount": "Amount",
     "and": "and",
-    "announcement_text": "Golos.io: Грантовая программа поддержки молодых авторов и уникального контента",
+    "announcement_text": "Golos.id: Грантовая программа поддержки молодых авторов и уникального контента",
     "please": "Please",
     "read_only_mode": "Из-за технического обслуживания серверов мы работаем в режиме чтения. Извините за неудобство.",
     "read_only_mode_notify": "Ведутся технические работы",
@@ -876,7 +876,7 @@
     "select_another_number": "Select another phone",
     "waiting_from_you": "Waiting SMS message with confirmation code %(code)s from your number to our verification number %(phone)s.",
     "waiting_from_you_line_1": "Please, send SMS with text %(code)s on %(phone)s",
-    "waiting_from_you_line_2": "Golos.io interested in registration real people, not robots. We ask you to send SMS.",
+    "waiting_from_you_line_2": "Golos.id interested in registration real people, not robots. We ask you to send SMS.",
     "attempts_10": "Confirmation was attempted a moment ago. You can try again only in 10 seconds",
     "attempts_300": "Confirmation was attempted a moment ago. You can try again only in 5 minutes"
   },
@@ -1087,6 +1087,6 @@
     "telegram": "telegram",
     "email": "email",
     "official_channels": "Official channels",
-    "footer_message": "Мы никогда не попросим ваши приватные ключи или деньги. Если кто-то представляется членами команды Golos.io и просит такую информацию, напишите нам на почту <a href='mailto:pr@golos.io' target='_blank'>pr@golos.io</a>."
+    "footer_message": "Мы никогда не попросим ваши приватные ключи или деньги. Если кто-то представляется членами команды Golos.id и просит такую информацию, напишите нам на почту <a href='mailto:pr@golos.io' target='_blank'>pr@golos.io</a>."
   }
 }

@@ -85,7 +85,7 @@ export default function extractMeta(chain_data, rp) {
         const accountname = account && account.name && account.name || '';
         let {name, about, profile_image} = normalizeProfile(account);
         if(name == null) name = accountname;
-        if(about == null) about = "Join thousands on Golos.io who share, post and earn rewards.";
+        if(about == null) about = "Join thousands on Golos.id who share, post and earn rewards.";
         if(profile_image == null) profile_image = TWITTER_SHARE_IMAGE;
         // Set profile tags
         const title = `@${accountname}`;

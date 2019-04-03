@@ -92,7 +92,7 @@ class Footer extends React.Component {
 
         menuItems.push(
             {
-                name: 'Golos.io',
+                name: 'Golos.id',
                 columnAlign: 'left',
                 width: 'medium-4 space-between-columns',
                 items: [

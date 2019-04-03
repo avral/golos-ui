@@ -129,7 +129,7 @@
   },
   "newrelic": {
     "license_key": "newrelic license key",
-    "app_name": "Golos.io",
+    "app_name": "Golos.id",
     "log_level": "info"
   },
   "blockcypher_token": "blockcypher token",

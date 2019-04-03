@@ -5,7 +5,7 @@ export default class LandingJoinUs extends React.Component {
 	render() {
 		const mainTexts = [
 			'Доска Почёта Голоса',
-			'Приложение Golos.io для Android',
+			'Приложение Golos.id для Android',
 			'Расширение GolosNotify для браузера Google Chrome',
 			'База данных Голоса',
 			'Статистический инструмент',

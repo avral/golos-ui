@@ -6,7 +6,7 @@ export default class LandingDistribution extends React.Component {
 			<section className="Distribution" id="pie">
 				<div className="row text-center Distribution__headers">
 					<div className="small-12 columns">
-						<h2 className="blue" id="distribution">Golos.io в цифрах</h2>
+						<h2 className="blue" id="distribution">Golos.id в цифрах</h2>
 					</div>
 				</div>
 				<hr />
