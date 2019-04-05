@@ -104,6 +104,7 @@ function* onUserLogin() {
   // console.log(`||||||||||||||||||||||||||||||||||| STARTING CHANNEL LISTENER `)
   const currentUser = yield select(state => state.user.get('current'));
   const channelName = currentUser.get('username');
+  // TODO Add this setting
   const pushServiceUrl = yield select(state => state.offchain.get('config').get('push_server_url'));
   // console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ `, pushServiceUrl)
   if (channelName && pushServiceUrl) {
