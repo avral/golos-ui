@@ -143,7 +143,7 @@ export const replyAction = (dispatch, remarkable) => ({
         delete meta.links;
     }
 
-    meta.app = 'golos.io/0.1';
+    meta.app = 'golos.id/0.1';
 
     if (isStory) {
         meta.format = isHtml ? 'html' : 'markdown';
