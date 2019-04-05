@@ -153,7 +153,8 @@ function TopRightMenu({account, savings_withdraws, price_per_golos, globalprops,
         ];
 
         if ($STM_Config.is_sandbox) {
-            user_menu.splice(2, 0, {link: '#', icon: 'chatboxes', onClick: showMessages, value: tt('g.messages')});
+          // TODO Figured it out, how it works?
+          //user_menu.splice(2, 0, {link: '#', icon: 'chatboxes', onClick: showMessages, value: tt('g.messages')});
         }
       
         const voting_power_percent = account.get('voting_power') / 100
