@@ -45,7 +45,7 @@ const availableLinks = [
 ];
 
 const availableDomains = [
-    'golos.io',
+    'golos.id',
     'golos.blog',
     'golostools.com',
     'github.com',
