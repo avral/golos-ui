@@ -73,40 +73,7 @@ class Footer extends React.Component {
 
         const menuItems = [];
 
-        if (currentSupply > 0) {
-            menuItems.push({
-                name: 'Всего выплачено',
-                columnAlign: 'left',
-                width: 'medium-3',
-                items: [
-                    {
-                        name: (
-                            <LocalizedCurrency amount={currentSupply} short />
-                        ),
-                        url: 'https://explorer.golos.io',
-                        className: 'big',
-                    },
-                ],
-            });
-        }
-
         menuItems.push(
-            {
-                name: 'Golos.id',
-                columnAlign: 'left',
-                width: 'medium-4 space-between-columns',
-                items: [
-                    [
-                        {
-                            name: tt('navigation.welcome'),
-                            url: '/welcome',
-                        },
-                        // { name: 'Подписка на рассылку', url: '' },
-                    ],
-                    [
-                    ],
-                ],
-            },
             {
                 name: 'Социальные сети',
                 columnAlign: 'left',
@@ -122,6 +89,12 @@ class Footer extends React.Component {
                         name: 'Telegram',
                         url: 'https://t.me/golos_id',
                         icon: 'new/telegram',
+                        size: '1_5x',
+                    },
+                    {
+                        name: 'GitHub',
+                        url: 'https://github.com/golos-classic',
+                        icon: 'github',
                         size: '1_5x',
                     },
                 ],
