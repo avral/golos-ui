@@ -14,6 +14,7 @@ const icons = new Map([
     ['chatbox', require('app/assets/icons/chatbox.svg')],
     ['facebook', require('app/assets/icons/facebook.svg')],
     ['twitter', require('app/assets/icons/twitter.svg')],
+    ['github', require('app/assets/icons/github.svg')],
     ['linkedin', require('app/assets/icons/linkedin.svg')],
     ['pencil', require('app/assets/icons/pencil.svg')],
     ['vk', require('app/assets/icons/vk.svg')],
