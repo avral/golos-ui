@@ -114,13 +114,12 @@ function TopRightMenu({account, savings_withdraws, price_per_golos, globalprops,
         )
     }
     additional_menu.push(
-        { link: '/welcome', value: tt("navigation.welcome") },
-        { link: '/faq', value: tt("navigation.faq") },
-        { link: WIKI_URL, value: tt('navigation.wiki'), target: 'blank' },
         { link: '/market', value: tt('userwallet_jsx.market') },
-        { link: '/~witnesses', value: tt("navigation.witnesses") },
-        { link: 'http://golostools.com/', value: tt('navigation.APP_NAME_app_center', { APP_NAME }), target: 'blank' },
-        { link: '/recover_account_step_1', value: tt('header_jsx.stolen_account_recovery')},
+        { link: 'https://rudex.org', value: 'Купи продай GOLOS/GBG', target: 'blank' },
+
+        { link: 'https://ropox.app/', value: 'Инструмент ropox.app', target: 'blank' },
+        { link: 'https://golos.cf/', value: 'Обозреватель golos.cf', target: 'blank' },
+
     );
     const navAdditional = <LinkWithDropdown
         closeOnClickOutside

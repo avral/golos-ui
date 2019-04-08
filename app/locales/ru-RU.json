@@ -886,7 +886,7 @@
     "transfer_to_savings": "Перевести в сейф",
     "power_up": "Увеличить Силу Голоса",
     "power_down": "Уменьшить Силу Голоса",
-    "market": "Биржа",
+    "market": "Внутренняя Биржа",
     "convert_to_LIQUID_TOKEN": "Перевести в %(LIQUID_TOKEN)s",
     "withdraw_LIQUID_TOKEN": "Вывести %(LIQUID_TOKEN)s на текущий баланс",
     "withdraw_DEBT_TOKENS": "Вывести %(DEBT_TOKENS)s на текущий баланс",
