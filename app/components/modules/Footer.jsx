@@ -101,11 +101,16 @@ class Footer extends React.Component {
             },
         );
 
+          //<iframe data-aa='1148807' src='//ad.a-ads.com/1148807?size=728x90' scrolling='no' style={{width: '728px', height: '90px', border:'0px', padding: '0', overflow:'hidden'}} allowtransparency='true'></iframe>
+
         return (
             <section className="Footer">
                 <div className="Footer__menus">
                     <div className="row" id="footer">
                         {this._renderMenus(menuItems)}
+                        
+          <iframe data-aa='1148805' src='//acceptable.a-ads.com/1148805' scrolling='no' style={{ width: '100%', 'max-width': '728px', border: '0px', padding: '0', overflow: 'hidden'}} allowtransparency='true'></iframe>
+
                     </div>
                 </div>
                 <div className="Footer__description">
