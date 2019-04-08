@@ -109,8 +109,8 @@ class Footer extends React.Component {
                     <div className="row" id="footer">
                         {this._renderMenus(menuItems)}
                         
-                        <iframe sandbox data-aa='1148805' src='//acceptable.a-ads.com/1148805' scrolling='no'
-                                style={{ width: '100%', 'max-width': '728px', border: '0px', padding: '0', overflow: 'hidden'}}
+                        <iframe sandbox="allow-same-origin allow-scripts" data-aa='1148805' src='//acceptable.a-ads.com/1148805' scrolling='no'
+                                style={{ width: '100%', maxWidth: '728px', border: '0px', padding: '0', overflow: 'hidden'}}
                                 allowtransparency='true'>
                         </iframe>
 
