@@ -2,6 +2,13 @@ HTML {
   height: 100%;
 }
 
+
+.sticky-right-ad {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 7rem;
+}
+
 .App {
   // min-height: 100vh;
   padding-top: 5rem;
