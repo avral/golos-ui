@@ -115,6 +115,7 @@ function TopRightMenu({account, savings_withdraws, price_per_golos, globalprops,
     }
     additional_menu.push(
         { link: '/market', value: tt('userwallet_jsx.market') },
+        { link: '/~witnesses', value: tt("navigation.witnesses") },
         { link: 'https://rudex.org', value: 'Купи продай GOLOS/GBG', target: 'blank' },
 
         { link: 'https://ropox.app/', value: 'Инструмент ropox.app', target: 'blank' },
