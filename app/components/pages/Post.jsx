@@ -181,6 +181,8 @@ class Post extends React.Component {
                         <PostFull post={post} cont={content} aiPosts={aiPosts} />
                     </div>
                 </div>
+
+                {/* Disable promo for registration FIXME
                 {!current_user && <div className="row">
                 <CTABlock post={post}/>
 
@@ -198,6 +200,20 @@ class Post extends React.Component {
                         </div>
                     </div>
                 </div>}
+
+                */}
+
+                <div className="row hfeed">
+                  <iframe data-aa="1150095" src="//acceptable.a-ads.com/1150095" scrolling="no" style={{
+                    border: '0px',
+                    padding: '0',
+                    maxWidth: '50rem',
+                    margin: '0 auto',
+                    width: '100%',
+                    overflow: 'hidden'}} allowtransparency="true"></iframe>
+                </div>
+
+          
                 <div id="comments" className="Post_comments row hfeed">
                     <div className="column large-12">
                         <div className="Post_comments__content">
