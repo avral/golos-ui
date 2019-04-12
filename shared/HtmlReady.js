@@ -298,6 +298,8 @@ function linkifyNode(state, child) {
 
 function linkify(state, content) {
     // hashtag
+    content = content.replace(/(?:https?:)\/\/(golos.io|golos.blog)/, 'https://golos.id')
+
     content = content.replace(/(^|\s)(#[-a-zа-яёґєії\d]+)/gi, tag => {
         // Don't allow numbers to be tags
         if (/#[\d]+$/.test(tag)) {
