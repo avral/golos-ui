@@ -111,6 +111,7 @@ const icons = new Map([
     ['editor/plus', require('app/assets/icons/editor/plus.svg')],
     ['editor/cross', require('app/assets/icons/editor/cross.svg')],
     ['editor/eye', require('app/assets/icons/editor/eye.svg')],
+    ['editor/k', require('app/assets/icons/editor/k.svg')],
     ['editor-toolbar/bold', require('app/assets/icons/editor-toolbar/bold.svg')],
     ['editor-toolbar/italic', require('app/assets/icons/editor-toolbar/italic.svg')],
     ['editor-toolbar/header', require('app/assets/icons/editor-toolbar/header.svg')],
