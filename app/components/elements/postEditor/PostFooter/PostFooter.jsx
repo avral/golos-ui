@@ -11,12 +11,13 @@ import { NSFW_TAG } from 'app/utils/tags';
 import './PostFooter.scss';
 
 export default class PostFooter extends PureComponent {
-    propTypes = {
+    static propTypes = {
         editMode: PropTypes.bool,
         tags: PropTypes.array,
         postDisabled: PropTypes.bool,
         disabledHint: PropTypes.string,
         onPayoutTypeChange: PropTypes.func.isRequired,
+        onCurationPercentChange: PropTypes.func.isRequired,
         onTagsChange: PropTypes.func.isRequired,
         onPostClick: PropTypes.func.isRequired,
         onResetClick: PropTypes.func.isRequired,
@@ -77,8 +78,10 @@ export default class PostFooter extends PureComponent {
                         nsfw={this.props.tags.includes(NSFW_TAG)}
                         onNsfwClick={this._onNsfwClick}
                         payoutType={this.props.payoutType}
+                        curationPercent={this.props.curationPercent}
                         editMode={editMode}
                         onPayoutChange={this.props.onPayoutTypeChange}
+                        onCurationPercentChange={this.props.onCurationPercentChange}
                     />
                     <div className="PostFooter__buttons">
                         <div className="PostFooter__button">

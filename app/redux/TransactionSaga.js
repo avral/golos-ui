@@ -359,7 +359,20 @@ function* preBroadcast_comment({operation, username}) {
             percent_steem_dollars = 10000, // 10000 === 100%
             allow_votes = true,
             allow_curation_rewards = true,
+            curator_rewards_percent = null,
         } = comment_options
+
+        const extensions = [];
+
+        // beneficiaries
+        // extensions.push(
+        //     [0, { beneficiaries: [{ account: 'golosio', weight: 1000 }] }]
+        // )
+
+        if (curator_rewards_percent) {
+            extensions.push([ 2, { percent: curator_rewards_percent }])
+        }
+
         comment_op.push(
             ['comment_options', {
                 author,
@@ -368,8 +381,7 @@ function* preBroadcast_comment({operation, username}) {
                 percent_steem_dollars,
                 allow_votes,
                 allow_curation_rewards,
-                // extensions: /* $STM_Config.isTestnet ? [] : */ [ [ 0, { beneficiaries: [{ account: '', weight: 1000 }] } ] ]
-                extensions: /* $STM_Config.isTestnet ? [] : */ []
+                extensions,
             }]
         )
     }
