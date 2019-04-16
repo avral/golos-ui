@@ -100,9 +100,11 @@ function _parseHtml(html, mutate) {
         anchors: new Set(),
     };
 
-    const doc = DOMParser.parseFromString(html, 'text/html');
+    if (html == '') {
+      html = '<html></html>'
+    }
 
-    const savedDocumentElement = doc.documentElement;
+    const doc = DOMParser.parseFromString(html, 'text/html');
 
     traverse(doc, state);
 
