@@ -16,7 +16,6 @@
   }
 
   &_page &__work-area {
-    height: calc(100% - 80px);
     overflow-y: auto;
   }
 
@@ -26,6 +25,7 @@
   }
 
   &_page &__content {
+    margin-bottom: 10px;
     padding: 0 8px;
   }
 
