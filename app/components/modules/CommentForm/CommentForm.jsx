@@ -38,6 +38,7 @@ class CommentForm extends React.Component {
             emptyBody: true,
             postError: null,
             uploadingCount: 0,
+            disabled: false
         };
 
         this._saveDraftLazy = throttle(this._saveDraft, 300, {
@@ -104,9 +105,9 @@ class CommentForm extends React.Component {
     render() {
         const { editMode } = this.props;
 
-        const { text, emptyBody, postError, uploadingCount } = this.state;
+        const { text, emptyBody, postError, uploadingCount, disabled } = this.state;
 
-        const allowPost = uploadingCount === 0 && !emptyBody;
+        const allowPost = uploadingCount === 0 && !emptyBody && !disabled;
 
         return (
             <div
@@ -270,6 +271,8 @@ class CommentForm extends React.Component {
             data.__config.comment_options = {};
         }
 
+        this.setState({ disabled: true });
+
         this.props.onPost(
             data,
             () => {
@@ -278,9 +281,11 @@ class CommentForm extends React.Component {
                 } catch (err) {}
 
                 this.props.onSuccess();
+                this.setState({ disabled: false });
             },
             err => {
                 this.refs.footer.showPostError(err.toString().trim());
+                this.setState({ disabled: false });
             }
         );
     };
