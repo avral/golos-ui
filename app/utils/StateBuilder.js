@@ -191,14 +191,26 @@ export default async function getState(api, url, options, offchain = {}) {
                 args.filter_tags = state.filter_tags = options.IGNORE_TAGS
             }
         }
-        const discussions = await api.gedDiscussionsBy(discussionsType, args)
         
+        const requests = []
         const discussion_idxes = {}
         discussion_idxes[discussionsType] = []
 
+        // Load 3 top from promo for trending
+        if (discussionsType == 'trending') {
+          requests.push(api.gedDiscussionsBy('promoted', {...args, limit: 3}))
+        }
+
+        requests.push(api.gedDiscussionsBy(discussionsType, args))
+        const responses = await Promise.all(requests)
+
+        const discussions = [].concat(...responses)
+
         discussions.forEach(discussion => {
             const link = `${discussion.author}/${discussion.permlink}`
-            discussion_idxes[discussionsType].push(link)
+            if (!discussion_idxes[discussionsType].includes(link)) {
+              discussion_idxes[discussionsType].push(link)
+            }
             state.content[link] = discussion
         })
         

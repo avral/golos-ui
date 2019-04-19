@@ -278,7 +278,11 @@ export default createModule({
                 }
 
                 newState = newState.updateIn(dataPath, List(), posts => {
-                    const links = data.map(v => `${v.author}/${v.permlink}`);
+                    const links = [];
+                    data.map(v => {
+                      let link = `${v.author}/${v.permlink}`
+                      if (!links.includes(link)) links.push(link)
+                    })
 
                     if (startPermLink) {
                         return posts.withMutations(posts => {
