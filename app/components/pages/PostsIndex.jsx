@@ -177,6 +177,14 @@ class PostsIndex extends React.Component {
         const json_metadata = account ? account.toJS().json_metadata : {}
         const metaData = account ? o2j.ifStringParseJSON(json_metadata) : {}
 
+        let promo_posts
+        if (['created', 'hot', 'trending'].includes(order) && posts && posts.size) {
+          const slice_step = order == 'trending' ? 3 : 1
+
+          promo_posts = posts.slice(0, slice_step)
+          posts = posts.slice(slice_step)
+        }
+
         return (
             <div className={'PostsIndex row' + (fetching ? ' fetching' : '')}>
                 <div className="PostsIndex__left column small-collapse">
@@ -191,6 +199,21 @@ class PostsIndex extends React.Component {
                         />
                     </div>
                     {/* markNotificationRead*/}
+                    {(promo_posts && promo_posts.size) ? <div>
+                        <PostsList
+                            ref={this.listRef}
+                            posts={promo_posts ? promo_posts : Immutable.List()}
+                            loading={false}
+                            category={category}
+                            loadMore={this.loadMore}
+                            showSpam={showSpam}
+                            />
+
+                        <hr style={{ borderColor: 'goldenrod' }}>
+                        </hr>
+                      </div> : null}
+
+
                     {(!fetching && (posts && !posts.size)) ? <Callout>{emptyText}</Callout> :
                         <PostsList
                             ref={this.listRef}
