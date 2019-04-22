@@ -199,6 +199,8 @@ export default async function getState(api, url, options, offchain = {}) {
         // Load 3 top from promo for trending
         if (discussionsType == 'trending') {
           requests.push(api.gedDiscussionsBy('promoted', {...args, limit: 3}))
+        } else if (['created', 'hot'].includes(discussionsType)) {
+          requests.push(api.gedDiscussionsBy('promoted', {...args, limit: 1}))
         }
 
         requests.push(api.gedDiscussionsBy(discussionsType, args))

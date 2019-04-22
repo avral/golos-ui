@@ -329,9 +329,10 @@ export function* fetchData(action) {
 
         const data = yield call([api, api[call_name]], ...args);
 
-        if (order == 'trending' && !args[0].start_author) {
-          // Add top 3 from trending
-          args[0].limit = 3
+        if (['created', 'hot', 'trending'].includes(order) && !args[0].start_author) {
+          // Add top 3 from promo to tranding and 1 to hot, created
+          args[0].limit = order == 'trending' ? 3 : 1
+
           const promo_posts = yield call([api, api[PUBLIC_API.promoted]], ...args);
           posts = posts.concat(promo_posts)
         }
