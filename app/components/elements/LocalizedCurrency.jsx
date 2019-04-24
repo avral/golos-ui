@@ -22,6 +22,7 @@ class LocalizedCurrency extends React.Component {
     currency: PropTypes.string,
     rounding: PropTypes.bool,
     short: PropTypes.bool,
+    gold: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -65,7 +66,8 @@ class LocalizedCurrency extends React.Component {
       fractionDigits,
       rounding,
       short,
-      vesting_shares
+      vesting_shares,
+      gold
     } = this.props
 
     if (! process.env.BROWSER
@@ -146,7 +148,7 @@ class LocalizedCurrency extends React.Component {
         : (lang == 'en') ? (symbol + ' ' + currencyAmount) : (currencyAmount + ' ' + symbol)
     }
 
-    return <span>{localizedCurrency(amount, { maximumFractionDigits: fractionDigits })}</span>
+    return <span style={gold ? {color: 'darkgoldenrod'} : null}>{localizedCurrency(amount, { maximumFractionDigits: fractionDigits })}</span>
   }
 }
 

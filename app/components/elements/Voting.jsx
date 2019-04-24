@@ -213,7 +213,7 @@ class Voting extends React.Component {
         }
         const payoutEl = <DropdownMenu el="div" items={payoutItems}>
             <span style={payout_limit_hit ? {opacity: '0.33'} : {}}>
-                <LocalizedCurrency amount={payout} className={max_payout === 0 ? 'strikethrough' : ''} />
+                <LocalizedCurrency gold={(promoted > 0)} amount={payout} className={max_payout === 0 ? 'strikethrough' : ''} />
                 {payoutItems.length > 0 && <Icon name="dropdown-arrow" />}
             </span>
         </DropdownMenu>;
