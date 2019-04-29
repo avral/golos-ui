@@ -8,6 +8,7 @@ import Userpic from 'app/components/elements/Userpic';
 import { browserHistory } from 'react-router';
 import { LinkWithDropdown } from 'react-foundation-components/lib/global/dropdown';
 import VerticalMenu from 'app/components/elements/VerticalMenu';
+import LocaleSelect from 'app/components/elements/LocaleSelect';
 import LoadingIndicator from 'app/components/elements/LoadingIndicator';
 import NotifiCounter from 'app/components/elements/NotifiCounter';
 import tt from 'counterpart';
@@ -161,6 +162,7 @@ function TopRightMenu({account, savings_withdraws, price_per_golos, globalprops,
 
         return (
             <ul className={mcn + mcl}>
+            		<LocaleSelect />
                 {searchItem}
                 <li className="delim show-for-medium" />
                 {submitStory}
@@ -213,6 +215,7 @@ function TopRightMenu({account, savings_withdraws, price_per_golos, globalprops,
 
     return (
         <ul className={mcn + mcl}>
+            <LocaleSelect />
             {searchItem}
             <li className="delim show-for-medium" />
             {!probablyLoggedIn && !externalTransfer && <li className={scn}>
