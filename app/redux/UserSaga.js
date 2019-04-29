@@ -127,17 +127,18 @@ function* usernamePasswordLogin(action) {
         const username = current.get('username')
         yield fork(loadFollows, "getFollowingAsync", username, 'blog')
         yield fork(loadFollows, "getFollowingAsync", username, 'ignore')
-        if(process.env.BROWSER) {
-          const notification_channel_created = yield select(state => state.user.get('notification_channel_created'))
-          if (!notification_channel_created) {
-            // console.log(']]]]]]]]]]]]]]]]]]]]]]] ', notification_channel_created)
-            const {onUserLogin} = PushNotificationSaga;
-            // clientside
-            // when logged in
-            // start listening to the personal server event channel
-            yield call(onUserLogin);
-          }
-        }
+        // TODO Deploy notofication services
+        //if(process.env.BROWSER) {
+        //  const notification_channel_created = yield select(state => state.user.get('notification_channel_created'))
+        //  if (!notification_channel_created) {
+        //    // console.log(']]]]]]]]]]]]]]]]]]]]]]] ', notification_channel_created)
+        //    const {onUserLogin} = PushNotificationSaga;
+        //    // clientside
+        //    // when logged in
+        //    // start listening to the personal server event channel
+        //    yield call(onUserLogin);
+        //  }
+        //}
     }
 }
 
