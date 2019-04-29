@@ -8,6 +8,8 @@ import ru from 'react-intl/locale-data/ru';
 import uk from 'react-intl/locale-data/uk';
 import sr from 'react-intl/locale-data/sr';
 import ro from 'react-intl/locale-data/ro';
+import cookie from "react-cookie";
+import { LOCALE_COOKIE_KEY } from 'app/client_config';
 
 addLocaleData([...en, ...ru, ...uk, ...sr, ...ro]);
 
@@ -39,8 +41,15 @@ class Translator extends React.Component {
 }
 
 export default connect((state, props) => {
+    let locale = state.user.get('locale')
+
+    if (process.env.BROWSER) {
+        const l = cookie.load(LOCALE_COOKIE_KEY)
+        if (l) locale = l;
+    }
+
     return {
         ...props,
-        locale: state.user.get('locale'),
+        locale,
     };
 })(Translator);
