@@ -248,15 +248,24 @@ class PostOptions extends React.PureComponent {
     };
 
     componentDidMount() {
+      // FIXME Dirty hack
+      // retry api call
       api.getChainPropertiesAsync().then(r => {
         this.setState({
           minCurationPercent: r.min_curation_percent,
           maxCurationPercent: r.max_curation_percent
         })
       }).catch(e => {
-        this.setState({
-          minCurationPercent: 50000,
-          maxCurationPercent: 90000
+        api.getChainPropertiesAsync().then(r => {
+          this.setState({
+            minCurationPercent: r.min_curation_percent,
+            maxCurationPercent: r.max_curation_percent
+          })
+        }).catch(e => {
+          this.setState({
+            minCurationPercent: 5000,
+            maxCurationPercent: 9000
+          })
         })
       })
     };
