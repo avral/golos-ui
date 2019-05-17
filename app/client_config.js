@@ -44,8 +44,8 @@ export const LANGUAGES = {
   ro: 'Română',
 }
 // First element always is USD, it needs to be correct fetch yahoo exchange rates from server side
-export const CURRENCIES = ['USD', 'RUB', 'UAH', 'BYN', 'EUR', 'CNY', 'GEL', 'KZT', 'GBG', 'GOLOS']
-export const DEFAULT_CURRENCY = CURRENCIES[0]
+export const CURRENCIES = ['GBG', 'GOLOS']
+export const DEFAULT_CURRENCY = 'GOLOS'
 export const CURRENCY_COOKIE_KEY = 'gls.currency'
 export const FRACTION_DIGITS = 2 // default amount of decimal digits
 export const FRACTION_DIGITS_MARKET = 3 // accurate amount of deciaml digits (example: used in market)
