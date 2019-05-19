@@ -6,6 +6,7 @@ import Topics from './Topics';
 import constants from 'app/redux/constants';
 import shouldComponentUpdate from 'app/utils/shouldComponentUpdate';
 import PostsList from 'app/components/cards/PostsList';
+import GolosMarket from 'app/components/elements/GolosMarket';
 import {isFetchingOrRecentlyUpdated} from 'app/utils/StateFunctions';
 import {Link} from 'react-router';
 // import MarkNotificationRead from 'app/components/elements/MarkNotificationRead';
@@ -225,6 +226,16 @@ class PostsIndex extends React.Component {
                         />}
                 </div>
                 <div className="PostsIndex__topics column shrink show-for-large">
+
+                    <div className="c-sidebar__module">
+                        <div className="c-sidebar__header">
+                            <h3 className="c-sidebar__h3">Coin Marketplace</h3>
+                        </div>
+                        <div className="c-sidebar__content">
+                            <GolosMarket />
+                        </div>
+                    </div>
+
                     <Topics
                         categories={categories}
                         order={topics_order}

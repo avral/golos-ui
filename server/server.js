@@ -14,6 +14,7 @@ import useRedirects from './redirects';
 import useGeneralApi from './api/general';
 import useTestnetApi from './testnet_api';
 import useAccountRecoveryApi from './api/account_recovery';
+import { GolosMarket } from './utils/GolosMarket';
 // import useNotificationsApi from './api/notifications';
 import useRegistrationApi from './api/registration';
 import {proxyRoutes as useProxyRoutes} from './api/proxy';
@@ -58,6 +59,13 @@ function convertEntriesToArrays(obj) {
         return result;
     }, {});
 }
+
+// Fetch cached currency data for homepage (if it fails, it will be `null`!)
+const golosMarket = new GolosMarket();
+app.use(function*(next) {
+    this.golosMarketData = yield golosMarket.get();
+    yield next;
+});
 
 // some redirects
 app.use(function*(next) {

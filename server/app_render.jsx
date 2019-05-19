@@ -105,7 +105,8 @@ async function appRender(ctx) {
           ErrorPage,
           tarantool: Tarantool.instance('tarantool'),
           chainproxy: Tarantool.instance('chainproxy'),
-          metrics
+          metrics,
+          golosMarket: ctx.golosMarketData
         });
 
         if (metrics) metrics.timing(`universalRender.time`, new Date() - start)
