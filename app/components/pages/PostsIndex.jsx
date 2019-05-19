@@ -55,6 +55,15 @@ class PostsIndex extends React.Component {
         }
     }
 
+    componentDidMount () {
+        const script = document.createElement("script");
+
+        script.src = "https://files.coinmarketcap.com/static/widget/currency.js";
+        script.async = true;
+
+        document.body.appendChild(script);
+    }
+
     getPosts(order, category) {
         let select_tags = cookie.load(SELECT_TAGS_KEY);
         select_tags = typeof select_tags === 'object' ? select_tags.sort().join('/') : '';
@@ -225,6 +234,19 @@ class PostsIndex extends React.Component {
                         />}
                 </div>
                 <div className="PostsIndex__topics column shrink show-for-large">
+
+                <div className="coinmarketcap-currency-widget"
+                    data-currencyid={this.props.currencyid}
+                    data-base="RUB"
+                    data-secondary="USD"
+                    data-ticker="false"
+                    data-rank="false"
+                    data-marketcap="true"
+                    data-volume="true"
+                    data-stats="USD"
+                    data-statsticker="false">
+                </div>
+
                     <Topics
                         categories={categories}
                         order={topics_order}
@@ -262,6 +284,8 @@ module.exports = {
     path: ':order(/:category)',
     component: connect(
         (state) => {
+          const picked_curr = localStorage.getItem('xchange.picked')
+
             return {
                 discussions: state.global.get('discussion_idx'),
                 status: state.global.get('status'),
@@ -270,7 +294,8 @@ module.exports = {
                 loggedIn: !!state.user.get('current'),
                 username: state.user.getIn(['current', 'username']) || state.offchain.get('account'),
                 fetching: state.global.get('fetching'),
-                categories: state.global.get('tag_idx')
+                categories: state.global.get('tag_idx'),
+                currencyid: picked_curr ? {GOLOS: 1480, GBG: 1542}[picked_curr] : 1480,
             };
         },
         (dispatch) => {
