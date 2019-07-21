@@ -36,10 +36,11 @@ class PostsList extends PureComponent {
     };
 
     state = {
-        thumbSize: 'desktop',
-        nsfwPref: 'warn',
-        showPost: null,
-        visitedPosts: [],
+      id: Math.random().toString(36).substr(2, 9),
+      thumbSize: 'desktop',
+      nsfwPref: 'warn',
+      showPost: null,
+      visitedPosts: [],
     };
 
     readNsfwPref() {
@@ -141,7 +142,7 @@ class PostsList extends PureComponent {
     }
 
     scrollListener = throttle(() => {
-        const el = window.document.getElementById('posts_list');
+        const el = window.document.getElementById('posts_list_' + this.state.id);
         if (!el) return;
         const scrollTop =
             window.pageYOffset !== undefined
@@ -251,7 +252,7 @@ class PostsList extends PureComponent {
             ));
 
         return (
-            <div id="posts_list" className="PostsList">
+            <div id={'posts_list_' + this.state.id} className="PostsList">
                 <ul
                     className="PostsList__summaries hfeed"
                     itemScope
