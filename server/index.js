@@ -27,7 +27,8 @@ global.$STM_Config = {
     lang_server : config.get('lang_server'),
     /* isTestnet: config.get('is_testnet'), */
     is_sandbox: config.get('is_sandbox') === 'false' ? false : true,
-    push_server_url: config.get('wss_push_service_url')
+    push_server_url: config.get('wss_push_service_url'),
+    ads_per_post: config.get('ads_per_post')
 };
 
 const WebpackIsomorphicTools = require('webpack-isomorphic-tools');
