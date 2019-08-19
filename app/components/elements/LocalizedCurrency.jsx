@@ -104,7 +104,12 @@ class LocalizedCurrency extends React.Component {
       if (symbol.localeCompare(DEBT_TOKEN_SHORT) == 0) {
         currencyAmount = number;
       } else if (symbol.localeCompare(LIQUID_TICKER) == 0) {
-        currencyAmount = number > 0 ? number / xchangePair : 0;
+        // number -> Выплаты поста в GBG
+        // xchangePair -> Цена GBG (сейчас 0.6591358054886239)
+        if (xchangePair > 1)
+          currencyAmount = number > 0 ? number / xchangePair : 0;
+        else
+          currencyAmount = number > 0 ? number * xchangePair : 0;
       } else {
         currencyAmount = number * (xchangeGold / 31103.4768) * xchangePair;
       }
