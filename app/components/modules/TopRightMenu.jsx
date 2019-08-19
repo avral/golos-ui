@@ -120,7 +120,8 @@ function TopRightMenu({account, savings_withdraws, price_per_golos, globalprops,
         { link: 'https://rudex.org', value: 'Купи продай GOLOS/GBG', target: 'blank' },
 
         { link: 'https://ropox.app/', value: 'Инструмент ropox.app', target: 'blank' },
-        { link: 'https://golos.cf/', value: 'Обозреватель golos.cf', target: 'blank' },
+        { link: 'https://explorer.golos.id/', value: 'Обозреватель GOLOS', target: 'blank' },
+        { link: 'https://golos.cf/', value: 'Инструмент golos.cf', target: 'blank' },
 
     );
     const navAdditional = <LinkWithDropdown
