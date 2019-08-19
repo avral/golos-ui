@@ -177,8 +177,14 @@ class Voting extends React.Component {
         const promoted = parsePayoutAmount(post_obj.get('promoted'));
         const total_author_payout = parsePayoutAmount(post_obj.get('total_payout_value'));
         const total_curator_payout = parsePayoutAmount(post_obj.get('curator_payout_value'));
+        const pending_author_payout_golos_value = parsePayoutAmount(post_obj.get('pending_author_payout_golos_value'))
 
-        let payout = pending_payout + total_author_payout + total_curator_payout;
+        const xchangePair = localStorage.getItem('xchange.pair')
+
+        const author_golos_payout_value = parsePayoutAmount(post_obj.get('author_golos_payout_value'))
+
+        //let payout = pending_payout + total_author_payout + total_curator_payout;
+        let payout = ((author_golos_payout_value + pending_author_payout_golos_value) / (1 - (curationPercent / 100))) * xchangePair;
         if (payout < 0.0) payout = 0.0;
         if (payout > max_payout) payout = max_payout;
         const payout_limit_hit = payout >= max_payout;
