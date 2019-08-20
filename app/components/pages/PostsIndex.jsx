@@ -41,7 +41,11 @@ class PostsIndex extends React.Component {
 
     constructor() {
         super();
-        this.state = {}
+
+        this.state = {
+          currencyid: 0
+        }
+
         this.loadMore = this.loadMore.bind(this);
         this.shouldComponentUpdate = shouldComponentUpdate(this, 'PostsIndex')
         this.loadSelected = this.loadSelected.bind(this);
@@ -62,6 +66,12 @@ class PostsIndex extends React.Component {
         script.async = true;
 
         document.body.appendChild(script);
+
+        const picked_curr = localStorage.getItem('xchange.picked')
+
+        this.setState({
+          currencyid: picked_curr ? {GOLOS: 1480, GBG: 1542}[picked_curr] : 1480
+        })
     }
 
     getPosts(order, category) {
@@ -233,7 +243,7 @@ class PostsIndex extends React.Component {
                 <div className="PostsIndex__topics column shrink show-for-large">
 
                 <div className="coinmarketcap-currency-widget"
-                    data-currencyid={this.props.currencyid}
+                    data-currencyid={this.state.currencyid}
                     data-base="RUB"
                     data-secondary="USD"
                     data-ticker="false"
@@ -281,7 +291,6 @@ module.exports = {
     path: ':order(/:category)',
     component: connect(
         (state) => {
-          const picked_curr = localStorage.getItem('xchange.picked')
 
             return {
                 discussions: state.global.get('discussion_idx'),
@@ -292,7 +301,6 @@ module.exports = {
                 username: state.user.getIn(['current', 'username']) || state.offchain.get('account'),
                 fetching: state.global.get('fetching'),
                 categories: state.global.get('tag_idx'),
-                currencyid: picked_curr ? {GOLOS: 1480, GBG: 1542}[picked_curr] : 1480,
             };
         },
         (dispatch) => {

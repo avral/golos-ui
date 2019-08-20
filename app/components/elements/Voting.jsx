@@ -49,9 +49,10 @@ class Voting extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            showWeight: false,
-            myVote: null,
-            weight: 10000
+          xchangePair: 0,
+          showWeight: false,
+          myVote: null,
+          weight: 10000
         };
 
         this.voteUp = e => {
@@ -105,6 +106,9 @@ class Voting extends React.Component {
     componentDidMount() {
         const {username, active_votes} = this.props;
         this._checkMyVote(username, active_votes)
+
+        const xchangePair = localStorage.getItem('xchange.pair') || 0;
+        this.setState({ xchangePair });
     }
 
     componentWillReceiveProps(nextProps) {
@@ -179,12 +183,11 @@ class Voting extends React.Component {
         const total_curator_payout = parsePayoutAmount(post_obj.get('curator_payout_value'));
         const pending_author_payout_golos_value = parsePayoutAmount(post_obj.get('pending_author_payout_golos_value'))
 
-        const xchangePair = localStorage.getItem('xchange.pair')
 
         const author_golos_payout_value = parsePayoutAmount(post_obj.get('author_golos_payout_value'))
 
         //let payout = pending_payout + total_author_payout + total_curator_payout;
-        let payout = ((author_golos_payout_value + pending_author_payout_golos_value) / (1 - (curationPercent / 100))) * xchangePair;
+        let payout = ((author_golos_payout_value + pending_author_payout_golos_value) / (1 - (curationPercent / 100))) * this.state.xchangePair;
         if (payout < 0.0) payout = 0.0;
         if (payout > max_payout) payout = max_payout;
         const payout_limit_hit = payout >= max_payout;
