@@ -185,6 +185,7 @@ class Voting extends React.Component {
 
 
         const author_golos_payout_value = parsePayoutAmount(post_obj.get('author_golos_payout_value'))
+        // TODO Взять логику расчета выплат из нового кода app/redux/selectors/payout/common.js
 
         //let payout = pending_payout + total_author_payout + total_curator_payout;
         let payout = ((author_golos_payout_value + pending_author_payout_golos_value) / (1 - (curationPercent / 100))) * this.state.xchangePair;
