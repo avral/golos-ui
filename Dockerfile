@@ -9,9 +9,7 @@ RUN yarn global add sequelize sequelize-cli mysql mysql2
 
 COPY . /var/app
 
-RUN mkdir tmp && \
-#  npm test && \
-  npm run-script build
+RUN mkdir tmp && npm run-script build
 
 ENV PORT 8080
 ENV NODE_ENV production
