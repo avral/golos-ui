@@ -35,20 +35,20 @@
       ]
     },
     "server": {
-      "host": "golos.io",
+      "host": "golos.id",
       "protocol": "https"
     }
   },
-  "google_analytics_id": false,
+  "google_analytics_id": "UA-146157213-1",
   "helmet": {
     "directives": {
-      "defaultSrc": "'self' golos.io www.youtube.com *.facebook.com",
-      "childSrc": "'self' www.youtube.com w.soundcloud.com *.facebook.com player.vimeo.com chat.golos.io livejournal.com www.google.com/maps/ coub.com yandex.ru/map-widget/ music.yandex.ru deezer.com vk.com/video_ext.php ok.com/videoembed rutube.ru/play/embed/",
-      "scriptSrc": "'self' 'unsafe-inline' *.facebook.com cyber.fund www.google-analytics.com *.facebook.net js-agent.newrelic.com bam.nr-data.net cdn.polyfill.io cdn.segment.com *.mxpnl.com *.metabar.ru mc.yandex.ru chat.golos.io media.reformal.ru",
+      "defaultSrc": "'self' golos.id www.youtube.com *.facebook.com",
+      "childSrc": "'self' www.youtube.com w.soundcloud.com *.facebook.com player.vimeo.com *.coinmarketcap.com *.googleapis.com chat.golos.id livejournal.com www.google.com/maps/ coub.com yandex.ru/map-widget/ music.yandex.ru deezer.com vk.com/video_ext.php ok.com/videoembed rutube.ru/play/embed/",
+      "scriptSrc": "'self' 'unsafe-inline' *.facebook.com www.google-analytics.com *.facebook.net js-agent.newrelic.com bam.nr-data.net cdn.polyfill.io cdn.segment.com *.mxpnl.com *.metabar.ru mc.yandex.ru chat.golos.id media.reformal.ru",
       "styleSrc": "'self' 'unsafe-inline' cdnjs.cloudflare.com fonts.googleapis.com",
       "imgSrc": "* data:",
       "fontSrc": "data: fonts.gstatic.com",
-      "connectSrc": "'self' cyber.fund wss://api.golos.blckchnd.com/ws *.facebook.com www.google-analytics.com api.segment.io api.blocktrades.us query.yahooapis.com api.blockcypher.com api.mixpanel.com mc.yandex.ru mc.yandex.ru",
+      "connectSrc": "'self' wss://api.golos.blckchnd.com/ws *.facebook.com *.coinmarketcap.com *.googleapis.com kwww.google-analytics.com api.segment.io api.blocktrades.us query.yahooapis.com api.blockcypher.com api.mixpanel.com mc.yandex.ru mc.yandex.ru",
       "reportUri": "/api/v1/csp_violation",
       "objectSrc": "'self'",
       "pluginTypes": "application/pdf",
@@ -57,8 +57,8 @@
     "reportOnly": false,
     "setAllHeaders": true
   },
-  "img_proxy_prefix": "https://steemitimages.com/0x0/https://img.golos.io/proxy/",
-  "lang_server" : "https://lang.golos.io/",
+  "img_proxy_prefix": "https://steemitimages.com/",
+  "lang_server" : "https://lang.golos.id/",
   "ipfs_prefix": false,
   "mixpanel": false,
   "notify": {
@@ -97,7 +97,7 @@
   "server_session_secret": "exiKdyF+IwRIXJDmtGIl4vWUz4i3eVSISpfZoeYc0s4=",
   "session_cookie_key": "gls.session",
   "session_key": "golos",
-  "site_domain": "golos.io",
+  "site_domain": "golos.id",
   "tarantool": {
     "host": "localhost",
     "password": "",

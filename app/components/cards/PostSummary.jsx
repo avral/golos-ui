@@ -177,7 +177,7 @@ class PostSummary extends React.Component {
         if(pictures && p.image_link) {
           const prox = $STM_Config.img_proxy_prefix
           const size = (thumbSize == 'mobile') ? '800x600' : '256x128'
-          const url = (prox ? prox + size + '/' : '') + p.image_link
+          const url = (prox ? prox + size + '/' : '') + 'https://imgp.golos.io/0x0/' + p.image_link
           thumb = <PostSummaryThumb
               visitedClassName={visitedClassName}
               mobile={thumbSize == 'mobile'}
