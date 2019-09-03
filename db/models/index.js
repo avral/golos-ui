@@ -28,7 +28,8 @@ db.Sequelize = Sequelize;
 
 if(env === 'development') {
     // in dev, sync all table schema automatically for convenience
-    if (!process.env.DISABLE_DB) {
+    //if (!process.env.DISABLE_DB) { FIXME
+    if (true) {
         sequelize.sync();
     }
 }
