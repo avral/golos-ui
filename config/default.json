@@ -135,7 +135,7 @@
   "blockcypher_token": "blockcypher token",
   "is_testnet": false,
   "is_sandbox": false,
-  "openexchangerates_app_id": "app id",
+  "openexchangerates_app_id": "3dba19241aa74249bef8b3e9d4562178",
   "wss_push_service_url": "url",
   "ads_per_post": 20
 }
