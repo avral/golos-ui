@@ -245,7 +245,7 @@ function proxifyImages(doc) {
         if (!linksRe.local.test(url)) {
             node.setAttribute(
                 'src',
-                'https://steemitimages.com/0x0/https://imgp.golos.io/0x0/' + '0x0/' + url
+                'https://steemitimages.com/0x0/https://imgp.golos.io/0x0/' + url
             );
         }
     }
