@@ -18,7 +18,7 @@ import {Map} from 'immutable';
 import Author from 'app/components/elements/Author';
 import UserNames from 'app/components/elements/UserNames';
 import tt from 'counterpart';
-import { APP_ICON } from 'app/client_config';
+import { APP_ICON, CHANGE_IMAGE_PROXY_TO_STEEMIT_TIME } from 'app/client_config';
 import { detransliterate } from 'app/utils/ParsersAndFormatters';
 import PostSummaryThumb from 'app/components/elements/PostSummaryThumb'
 
@@ -176,8 +176,16 @@ class PostSummary extends React.Component {
         let thumb = null;
         if(pictures && p.image_link) {
           const prox = $STM_Config.img_proxy_prefix
-          const size = (thumbSize == 'mobile') ? '800x600' : '256x128'
-          const url = (prox ? prox + size + '/' : '') + 'https://imgp.golos.io/0x0/' + p.image_link
+          const size = (thumbSize == 'mobile') ? '800x600' : '256x512'
+
+          let url = (prox ? prox + size + '/' : '');
+          if (Date.parse(p.created) > CHANGE_IMAGE_PROXY_TO_STEEMIT_TIME) {
+            url += p.image_link
+          } else {
+            // Proxy old images from io fork
+            url += 'https://imgp.golos.io/0x0/' + p.image_link
+          }
+
           thumb = <PostSummaryThumb
               visitedClassName={visitedClassName}
               mobile={thumbSize == 'mobile'}
@@ -201,7 +209,9 @@ class PostSummary extends React.Component {
                 <div className="PostSummary__time_author_category_small show-for-small-only">
                     {author_category}
                 </div>
-                {thumb}
+                <div className="PostSummary__img-container">
+                  {thumb}
+                </div>
                 <div className="PostSummary__content">
                     <div className={'PostSummary__header show-for-medium ' + visitedClassName}>
                         {content_title}

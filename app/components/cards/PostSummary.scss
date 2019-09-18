@@ -39,7 +39,6 @@ ul.PostsList__summaries {
 .PostSummary__image {
   float: left;
   width: 130px;
-  height: 4.5rem;
   }
 
 .PostSummary__image_nsfw {
@@ -172,6 +171,26 @@ ul.PostsList__summaries {
 @media screen and (min-width: 39.9375em) {
   .PostSummary.with-image .PostSummary__reblogged_by .Icon.reblog {
     margin-left: -22px;
+  }
+
+  .PostSummary__img-container {
+      float: left;
+  }
+
+  .PostSummary__image_container {
+    overflow: hidden;
+    width: 130px;
+    height: 77px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .PostSummary__image_container-wrapper {
+    position: absolute;
+    width: 100% !important;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
 }
 
