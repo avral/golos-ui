@@ -14,12 +14,13 @@ import CloseButton from 'react-foundation-components/lib/global/close-button';
 import tt from 'counterpart';
 import LocalizedCurrency, { localizedCurrency } from 'app/components/elements/LocalizedCurrency';
 import { DEBT_TICKER } from 'app/client_config';
+import CalculatePayout from 'shared/CalculatePayout.js'
 
 const MAX_VOTES_DISPLAY = 20;
 const VOTE_WEIGHT_DROPDOWN_THRESHOLD = 1.0 * 1000.0 * 1000.0;
 
-class Voting extends React.Component {
 
+class Voting extends React.Component {
     static propTypes = {
         // HTML properties
         post: PropTypes.string.isRequired,
@@ -181,28 +182,20 @@ class Voting extends React.Component {
         const promoted = parsePayoutAmount(post_obj.get('promoted'));
         const total_author_payout = parsePayoutAmount(post_obj.get('total_payout_value'));
         const total_curator_payout = parsePayoutAmount(post_obj.get('curator_payout_value'));
-        const pending_author_payout_golos_value = parsePayoutAmount(post_obj.get('pending_author_payout_golos_value'))
 
+        const payout = CalculatePayout(post_obj)
 
-        const author_golos_payout_value = parsePayoutAmount(post_obj.get('author_golos_payout_value'))
-        // TODO Взять логику расчета выплат из нового кода app/redux/selectors/payout/common.js
-
-        //let payout = pending_payout + total_author_payout + total_curator_payout;
-        let payout = ((author_golos_payout_value + pending_author_payout_golos_value) / (1 - (curationPercent / 100))) * this.state.xchangePair;
-        if (payout < 0.0) payout = 0.0;
-        if (payout > max_payout) payout = max_payout;
-        const payout_limit_hit = payout >= max_payout;
+        const payout_limit_hit = payout.total >= max_payout;
         // Show pending payout amount for declined payment posts
-        if (max_payout === 0) payout = pending_payout;
+  
         const up = <Icon name={votingUpActive ? 'empty' : 'chevron-up-circle'} />;
         const classUp = 'Voting__button Voting__button-up' + (myVote > 0 ? ' Voting__button--upvoted' : '') + (votingUpActive ? ' votingUp' : '');
-
         // There is an "active cashout" if: (a) there is a pending payout, OR (b) there is a valid cashout_time AND it's NOT a comment with 0 votes.
         const cashout_active = pending_payout > 0 || (cashout_time.indexOf('1969') !== 0 && !(is_comment && total_votes == 0));
         const payoutItems = [];
 
         if(cashout_active) {
-            payoutItems.push({value: tt('voting_jsx.potential_payout') + ' ' + localizedCurrency(pending_payout) + ' (' + pending_payout.toFixed(3) + ' ' + DEBT_TICKER + ')'});
+            payoutItems.push({value: tt('voting_jsx.potential_payout') + ' ' + localizedCurrency(payout.total) + ' (' + payout.total.toFixed(3) + ' ' + DEBT_TICKER + ')'});
         }
         if(promoted > 0) {
             payoutItems.push({value: tt('voting_jsx.boost_payments') + ' ' + localizedCurrency(promoted)});
@@ -211,19 +204,19 @@ class Voting extends React.Component {
             payoutItems.push({value: <TimeAgoWrapper date={cashout_time} />});
         }
 
-        if(max_payout == 0) {
+        if(payout.isDeclined) {
             payoutItems.push({value: tt('voting_jsx.payouts_declined')})
         } else if (max_payout < 1000000) {
             payoutItems.push({value: tt('voting_jsx.max_accepted_payout') + localizedCurrency(max_payout)})
         }
         if(total_author_payout > 0) {
-            payoutItems.push({value: tt('voting_jsx.past_payouts') + ' ' + localizedCurrency(total_author_payout + total_curator_payout)});
-            payoutItems.push({value: ' - ' + tt('voting_jsx.authors') + ': ' + localizedCurrency(total_author_payout)});
-            payoutItems.push({value: ' - ' + tt('voting_jsx.curators') + ': ' + localizedCurrency(total_curator_payout)});
+            payoutItems.push({value: tt('voting_jsx.past_payouts') + ' ' + localizedCurrency(payout.author + payout.curator)});
+            payoutItems.push({value: ' - ' + tt('voting_jsx.authors') + ': ' + localizedCurrency(payout.author)});
+            payoutItems.push({value: ' - ' + tt('voting_jsx.curators') + ': ' + localizedCurrency(payout.curator)});
         }
         const payoutEl = <DropdownMenu el="div" items={payoutItems}>
             <span style={payout_limit_hit ? {opacity: '0.33'} : {}}>
-                <LocalizedCurrency gold={(promoted > 0)} amount={payout} className={max_payout === 0 ? 'strikethrough' : ''} />
+                <LocalizedCurrency gold={(promoted > 0)} amount={payout.total} className={payout.isDeclined ? 'strikethrough' : ''} />
                 {payoutItems.length > 0 && <Icon name="dropdown-arrow" />}
             </span>
         </DropdownMenu>;
