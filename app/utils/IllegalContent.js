@@ -8,6 +8,7 @@ jekasds
 bot-reporter
 filinlex
 
+prusha
 tuka
 artosha
 babaka
