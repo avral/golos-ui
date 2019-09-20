@@ -1,4 +1,6 @@
 import { PUBLIC_API } from 'app/client_config'
+import { getPinnedPosts } from 'app/utils/NormalizeProfile'
+
 
 import { reveseTag, prepareTrendingTags } from 'app/utils/tags'
 
@@ -123,6 +125,9 @@ export default async function getState(api, url, options, offchain = {}) {
                 default:
                     const blogEntries = await api.getBlogEntries(uname, 0, 20)
                     state.accounts[uname].blog = []
+
+                  let pinnedPosts = getPinnedPosts(account)
+                  blogEntries.unshift(...pinnedPosts)
 
                     for (let key in blogEntries) {
                         const { author, permlink } = blogEntries[key]

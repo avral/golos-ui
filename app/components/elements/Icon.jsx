@@ -37,6 +37,7 @@ const icons = new Map([
     ['flag1', require('app/assets/icons/flag1.svg')],
     ['flag2', require('app/assets/icons/flag2.svg')],
     ['reblog', require('app/assets/icons/reblog.svg')],
+    ['pin', require('app/assets/icons/pin.svg')],
     ['photo', require('app/assets/icons/photo.svg')],
     ['line', require('app/assets/icons/line.svg')],
     ['video', require('app/assets/icons/video.svg')],

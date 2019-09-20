@@ -209,7 +209,8 @@ class PostsList extends PureComponent {
         const postsInfo = [];
         let aiPosts = [];
 
-        posts.forEach(item => {
+        // Remove dublicates from posts
+        [...new Set(posts.toJS())].forEach(item => {
             if (showPost) {
                 aiPosts.push(item);
             }

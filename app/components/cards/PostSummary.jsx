@@ -6,6 +6,7 @@ import Icon from 'app/components/elements/Icon';
 import { connect } from 'react-redux';
 import user from 'app/redux/User';
 import Reblog from 'app/components/elements/Reblog';
+import PinPost from 'app/components/elements/PinPost';
 import Voting from 'app/components/elements/Voting';
 import {immutableAccessor} from 'app/utils/Accessors';
 import extractContent from 'app/utils/ExtractContent';
@@ -158,6 +159,9 @@ class PostSummary extends React.Component {
             <Voting post={post} showList={false} />
             <VotesAndComments post={post} commentsLink={comments_link} />
             <span className="PostSummary__time_author_category">
+            
+            {p.author == this.props.username ? <PinPost author={p.author} permlink={p.permlink} /> : null}
+
             {!p.parent_author && <Reblog author={p.author} permlink={p.permlink} />}
                 <span className="show-for-medium">
                     {author_category}

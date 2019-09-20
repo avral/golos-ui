@@ -1,5 +1,29 @@
 import linksRe from 'app/utils/Links';
 
+export function getPinnedPosts(account, links=false) {
+  let pinnedPosts = [];
+
+  try {
+      let json = account.json_metadata
+      pinnedPosts = (json && JSON.parse(json).pinnedPosts) || [];
+      if(typeof tags == 'string') {
+          pinnedPosts = [pinnedPosts];
+      } if(!Array.isArray(pinnedPosts)) {
+          pinnedPosts = [];
+      }
+  } catch(e) {
+      pinnedPosts = []
+  }
+
+  if (!links)
+    pinnedPosts = pinnedPosts.map(p => {
+      let [author, permlink] = p.split('/')
+      return {author, permlink, reblog_on: '1970-01-01T00:00:00'}
+    })
+
+  return pinnedPosts
+}
+
 function truncate(str, len) {
     if (str) {
         str = str.trim();

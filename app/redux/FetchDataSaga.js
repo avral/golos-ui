@@ -1,4 +1,5 @@
 import { call, put, select, fork, cancelled, takeLatest, takeEvery } from 'redux-saga/effects';
+import { getPinnedPosts } from 'app/utils/NormalizeProfile'
 import {loadFollows, fetchFollowCount} from 'app/redux/FollowSaga';
 import {getContent} from 'app/redux/SagaShared';
 import GlobalReducer from './GlobalReducer';
@@ -154,9 +155,12 @@ export function* fetchState(location_change_action) {
                     break
 
                     case 'blog':
-                    default:
-                        const blogEntries = yield call([api, api.getBlogEntriesAsync], uname, 0, 20)
-                        state.accounts[uname].blog = []
+                      default:
+                      const blogEntries = yield call([api, api.getBlogEntriesAsync], uname, 0, 20)
+                      state.accounts[uname].blog = []
+
+                      let pinnedPosts = getPinnedPosts(account)
+                      blogEntries.unshift(...pinnedPosts)
 
                         for (let key in blogEntries) {
                             const { author, permlink } = blogEntries[key]
