@@ -7,7 +7,10 @@ felixjasper
 jekasds
 bot-reporter
 filinlex
-
+u-u
+q-q
+sukabukadimka
+bambuka
 prusha
 tuka
 artosha
