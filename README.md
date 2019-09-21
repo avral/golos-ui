@@ -148,6 +148,6 @@ pm2 start config/process.json
 
 To report a non-critical issue, please file an issue on this GitHub project.
 
-If you find a security issue please report details to: https://github.com/GolosChain/tolstoy/issues
+If you find a security issue please report details to: https://github.com/avral/golos-ui/issues
 
 We will evaluate the risk and make a patch available before filing the issue.
