@@ -5,6 +5,7 @@ import { APP_DOMAIN } from 'app/client_config'
 
 webPush.setGCMAPIKey(config.get('notify.gcm_key'));
 
+// TODO Реализовать веб пуши
 function notify(account, nparams, title, body, url, pic) {
     if (!nparams.keys || !nparams.keys.auth) return Promise.resolve(false);
      var payload = JSON.stringify({

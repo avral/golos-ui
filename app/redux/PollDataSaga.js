@@ -12,7 +12,8 @@ let webpush_params = null;
 
 export default function* pollData() {
     while(true) {
-        yield call(wait, 20000);
+        //yield call(wait, 20000);
+        yield call(wait, 10000);
 
         const username = yield select(state => state.user.getIn(['current', 'username']));
         if (username) {

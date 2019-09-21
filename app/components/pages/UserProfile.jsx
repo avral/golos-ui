@@ -23,7 +23,7 @@ import IllegalContentMessage from 'app/components/elements/IllegalContentMessage
 import Tooltip from 'app/components/elements/Tooltip';
 import { LinkWithDropdown } from 'react-foundation-components/lib/global/dropdown';
 import VerticalMenu from 'app/components/elements/VerticalMenu';
-// import MarkNotificationRead from 'app/components/elements/MarkNotificationRead';
+import MarkNotificationRead from 'app/components/elements/MarkNotificationRead';
 import NotifiCounter from 'app/components/elements/NotifiCounter';
 import DateJoinWrapper from 'app/components/elements/DateJoinWrapper';
 import tt from 'counterpart';
@@ -203,7 +203,7 @@ export default class UserProfile extends React.Component {
                     showPowerdown={this.props.showPowerdown}
                     current_user={current_user}
                     withdrawVesting={this.props.withdrawVesting} />
-                {/* isMyAccount && <div><MarkNotificationRead fields="send,receive" account={account.name} /></div>*/}
+                { isMyAccount && <div><MarkNotificationRead fields="send,receive" account={account.name} /></div> }
                 </div>;
         }
         else if( section === 'curation-rewards' ) {
@@ -227,7 +227,7 @@ export default class UserProfile extends React.Component {
                         title={tt('user_profile.followers')}
                         account={account}
                         users={followers.get('blog_result')} />
-                    {/* isMyAccount && <div><MarkNotificationRead fields="send,receive" account={account.name} /></div>*/}
+                    { isMyAccount && <div><MarkNotificationRead fields="send,receive" account={account.name} /></div>}
                     </div>
             }
         }
@@ -251,6 +251,7 @@ export default class UserProfile extends React.Component {
                     tab_content = <Callout>{tt('user_profile.user_hasnt_made_any_posts_yet', {name: accountname})}</Callout>;
                 } else {
                   tab_content = (
+                      <div>
                         <PostsList
                             posts={posts}
                             loading={fetching}
@@ -258,6 +259,8 @@ export default class UserProfile extends React.Component {
                             loadMore={this.loadMore}
                             showSpam
                         />
+                        {isMyAccount && <div><MarkNotificationRead fields="comment_reply,post_reply" account={account.name} /></div>}
+                      </div>
                     );
                 }
            }
@@ -307,7 +310,7 @@ export default class UserProfile extends React.Component {
                                 loadMore={this.loadMore}
                                 showSpam={false}
                             />
-                            {/* isMyAccount && <div><MarkNotificationRead fields="send,receive" account={account.name} /></div>*/}
+                            {isMyAccount && <div><MarkNotificationRead fields="mention" account={account.name} /></div>}
                         </div>
                     );
                 }
@@ -322,7 +325,7 @@ export default class UserProfile extends React.Component {
 
                 <br />
                 <UserKeys account={accountImm} />
-                {/* isMyAccount && <div><MarkNotificationRead fields="send,receive" account={account.name} /></div>*/}
+                { isMyAccount && <div><MarkNotificationRead fields="send,receive" account={account.name} /></div>}
                 </div>;
         } else if( section === 'password' ) {
             walletClass = 'active'

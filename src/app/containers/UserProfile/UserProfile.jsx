@@ -6,6 +6,8 @@ import { Link } from 'react-router';
 import tt from 'counterpart';
 import { blockedUsers, blockedUsersContent } from 'app/utils/IllegalContent';
 import { isFetchingOrRecentlyUpdated } from 'app/utils/StateFunctions';
+import MarkNotificationRead from 'app/components/elements/MarkNotificationRead';
+
 
 import user from 'app/redux/User';
 import transaction from 'app/redux/Transaction';
@@ -175,7 +177,7 @@ export default class UserProfile extends Component {
                         current_user={current_user}
                         withdrawVesting={this.props.withdrawVesting}
                     />
-                    {/* isMyAccount && <div><MarkNotificationRead fields="send,receive" account={account.name} /></div>*/}
+                    {isMyAccount && <div><MarkNotificationRead fields="send,receive" account={account.name} /></div>}
                 </div>
             );
         } else if (section === 'curation-rewards') {
@@ -198,7 +200,7 @@ export default class UserProfile extends Component {
                             account={account}
                             users={followers.get('blog_result')}
                         />
-                        {/* isMyAccount && <div><MarkNotificationRead fields="send,receive" account={account.name} /></div>*/}
+                        {isMyAccount && <div><MarkNotificationRead fields="send,receive" account={account.name} /></div>}
                     </div>
                 );
             }
@@ -306,7 +308,7 @@ export default class UserProfile extends Component {
                                 loadMore={this.loadMore}
                                 showSpam={false}
                             />
-                            {/* isMyAccount && <div><MarkNotificationRead fields="send,receive" account={account.name} /></div>*/}
+                            {isMyAccount && <div><MarkNotificationRead fields="mention,comment_reply,post_reply" account={account.name} /></div>}
                         </div>
                     );
                 }
@@ -325,7 +327,7 @@ export default class UserProfile extends Component {
 
                     <br />
                     <UserKeys account={accountImm} />
-                    {/* isMyAccount && <div><MarkNotificationRead fields="send,receive" account={account.name} /></div>*/}
+                    { isMyAccount && <div><MarkNotificationRead fields="send,receive" account={account.name} /></div>}
                 </div>
             );
         } else if (section === 'password') {

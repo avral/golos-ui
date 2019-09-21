@@ -9,6 +9,7 @@ import PollDataSaga from 'app/redux/PollDataSaga';
 
 
 export default function* rootSaga() {
+  yield fork(PollDataSaga);
   yield fork(userWatches);
   yield fork(fetchDataWatches)
   yield fork(sharedWatches)

@@ -14,7 +14,7 @@ import useRedirects from './redirects';
 import useGeneralApi from './api/general';
 import useTestnetApi from './testnet_api';
 import useAccountRecoveryApi from './api/account_recovery';
-// import useNotificationsApi from './api/notifications';
+import useNotificationsApi from './api/notifications';
 import useRegistrationApi from './api/registration';
 import {proxyRoutes as useProxyRoutes} from './api/proxy';
 import {ratesRoutes as useRatesRoutes} from './api/rates';
@@ -168,6 +168,7 @@ app.use(
     })
 );
 
+// TODO Разобраться
 // app.use(
 //     mount('/service-worker.js', function*() {
 //         this.set('Cache-Control', 'public, max-age=7200000');
@@ -207,7 +208,7 @@ usePostJson(app);
 
 useAccountRecoveryApi(app);
 useGeneralApi(app);
-// useNotificationsApi(app);
+useNotificationsApi(app);
 useProxyRoutes(app);
 useRatesRoutes(app);
 
