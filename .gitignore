@@ -35,3 +35,4 @@ scripts/yarn.lock
 .env.*
 
 package-lock.json
+data
