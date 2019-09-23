@@ -34,18 +34,20 @@ const zeroedPayout = {
     isDeclined: false,
 };
 
-function calculateGolosPerGbg(result, rates) {
-    if (!result.isPending) {
-        const dateRates = rates.dates.get(result.lastPayout);
+function calculateGolosPerGbg() {
+    //if (!result.isPending) {
+    //    const dateRates = rates.dates.get(result.lastPayout);
 
-        if (dateRates) {
-            return dateRates.GBG.GOLOS;
-        } else {
-            result.needLoadRatesForDate = result.lastPayout;
-        }
-    }
+    //    if (dateRates) {
+    //        return dateRates.GBG.GOLOS;
+    //    } else {
+    //        result.needLoadRatesForDate = result.lastPayout;
+    //    }
+    //}
+    // TODO Браты GBG с внутреннего рынка
+    const gbgPerGolos = 0.53
 
-    return rates.actual.GBG.GOLOS;
+    return 1 / gbgPerGolos;
 }
 
 function extractFields(data, fieldsList) {
@@ -96,9 +98,9 @@ export default function (data) {
   let golosPerGbg =
       fields.authorGolos / (authorTotalGbg * golosPowerFraction - fields.authorGbg);
 
-  //if (!golosPerGbg) { TODO Разобраться как и для чего это
-  //    golosPerGbg = calculateGolosPerGbg(result, rates);
-  //}
+  if (!golosPerGbg) {
+      golosPerGbg = calculateGolosPerGbg();
+  }
 
   let gestsPerGolos;
 
