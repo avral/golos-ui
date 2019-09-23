@@ -4,7 +4,7 @@
   background-position-x: right;
   background-position-y: bottom;
   background-color: #fff;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   right: 0;
@@ -33,6 +33,7 @@
 
 @media(max-width: 63.9375em) {
   .leave-page {
+    height: 570px;
     background-size: cover;
     background-position: center;
   }
