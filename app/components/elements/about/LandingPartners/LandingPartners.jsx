@@ -11,7 +11,7 @@ export default class LandingPartners extends PureComponent {
                 </div>
                 <div className="row text-center LandingPartners__logos align-center align-middle">
                     <div className="small-6 medium-3 columns">
-                        <a href="https://explorer.golos.io/" target="blank">
+                        <a href="https://explorer.golos.id/" target="blank">
                             <img
                                 src="images/landing/l7.jpg"
                                 alt="Golos Explorer"

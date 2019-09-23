@@ -39,7 +39,7 @@ injectGlobal`
 
 
 const availableLinks = [
-    'https://www.facebook.com/www.golos.io',
+    'https://www.facebook.com/www.golos.id',
     'https://vk.com/goloschain',
     'https://t.me/golos_support',
 ];
@@ -255,7 +255,7 @@ class App extends React.Component {
                             />
                             <Link
                                 className="link"
-                                to="golosio/@golosio/golos-io-grantovaya-programma-podderzhki-molodykh-avtorov-i-unikalnogo-kontenta"
+                                to="golosio/@golosio/golos.id-grantovaya-programma-podderzhki-molodykh-avtorov-i-unikalnogo-kontenta"
                             >
                                 <Icon className="logo-icon" name={APP_ICON} />&nbsp;{tt(
                                     'g.announcement_text'

@@ -138,7 +138,7 @@ class Start extends React.Component {
                                 <div className='landing-start-person column large-3 medium-3 small-3'>
                                     <img
                                         className='landing-start-round-img'
-                                        src='https://imgp.golos.io/120x120/https://images.golos.io/DQmQh3z15LkKqHcBUUfZedzed6Y263rvzJ9F7gn3beUgXrR/vv_ava.jpg'/>
+                                        src='https://imgp.golos.id/120x120/https://images.golos.id/DQmQh3z15LkKqHcBUUfZedzed6Y263rvzJ9F7gn3beUgXrR/vv_ava.jpg'/>
                                     <p>
                                         <b>Познер Online</b>
                                     </p>
@@ -207,7 +207,7 @@ class Start extends React.Component {
                         <div className='row'>
                             <div className='column large-12 medium-12 small-12'>
                                 <p className='landing-start-block-text landing-start-block-center'>
-                                    У нас есть собственная <a href='https://wiki.golos.io/'>Википедия</a>,
+                                    У нас есть собственная <a href='https://wiki.golos.id/'>Википедия</a>,
                                     со всей информацией про блог-платформу Golos.id. Кроме того, мы
                                     оперативно ответим на любой технический вопрос в нашей группе в <a href='https://t.me/golos_support'>Телеграме</a>.</p>
                             </div>

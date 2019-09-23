@@ -66,14 +66,14 @@ const items = [
         description:
             'Виртуальный паспорт в мире блокчейна. Ключи подтверждают, что ваш аккаунт и токены принадлежат только вам. Распечатайте ключи. В отличие от настоящего паспорта, никто не сможет вам их восстановить.',
         url:
-            'https://wiki.golos.io/1-introduction/koshelek-klyuchi-viplati.html',
+            'https://wiki.golos.id/1-introduction/koshelek-klyuchi-viplati.html',
     },
     {
         header: 'Голосование',
         pic: 'monitor-like',
         description:
             'Каждый день у вас есть 40 голосов чтобы оценить чужие посты. Не упустите их, когда вы нажимаете кнопку «Голосовать за» под постом — топ Golos.id становится интереснее, а вы получаете награду за курирование.',
-        url: 'https://wiki.golos.io/2-rewards/curation_rewards.html',
+        url: 'https://wiki.golos.id/2-rewards/curation_rewards.html',
     },
     {
         header: 'Tеги',
@@ -81,7 +81,7 @@ const items = [
         description:
             'Это темы, по которым можно искать посты. Каждый пост должен иметь как минимум один тег. Вы можете подписаться не только на автора, но и на тег.',
         url:
-            'https://wiki.golos.io/1-introduction/interfeis-lichnogo-bloga.html',
+            'https://wiki.golos.id/1-introduction/interfeis-lichnogo-bloga.html',
     },
     {
         header: 'Посты',
@@ -89,7 +89,7 @@ const items = [
         description:
             'В отличие от других соцсетей, у нас есть не одна, а несколько лент. Новое — все, что только что опубликовали, актуальное — посты с активным обсуждением и популярное — здесь посты с самым большим вознаграждением.',
         url:
-            'https://wiki.golos.io/1-introduction/interfeis-lichnogo-bloga.html',
+            'https://wiki.golos.id/1-introduction/interfeis-lichnogo-bloga.html',
     },
     {
         header: 'Токены',
@@ -97,7 +97,7 @@ const items = [
         description:
             'Монеты блокчейна, на основе которого работает Golos.id. Все награды за посты, комментарии и курирование выплачиваются токенами. Их можно поменять на любые криптовалюты или привычные деньги на биржах.',
         url:
-            'https://wiki.golos.io/1-introduction/koshelek-klyuchi-viplati.html',
+            'https://wiki.golos.id/1-introduction/koshelek-klyuchi-viplati.html',
     },
     {
         header: 'Посты не удаляются',

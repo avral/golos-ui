@@ -200,7 +200,7 @@ export const wtns = [
         id: 1665,
         owner: 'golosio',
         created: '2018-01-10T07:39:48',
-        url: 'https://golos.io/@golosio',
+        url: 'https://golos.id/@golosio',
         votes: '39271138454921394',
         virtual_last_update: '2607443603880326661783852653',
         virtual_position: '246053009916421244517088133334808071999',

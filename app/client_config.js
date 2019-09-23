@@ -92,10 +92,10 @@ export const ANDROID_APP_NAME = 'Golos.id'
 export const ANDROID_PACKAGE = 'io.golos.golos'
 //export const ANDROID_APP_URL = `https://play.google.com/store/apps/details?id=${ANDROID_PACKAGE}`
 export const ANDROID_URL_SCHEME = 'golosioapp'
-export const ANDROID_DEEP_LINK_DOMAIN = 'golos.io';
-export const TERMS_OF_SERVICE_URL = 'https://golos.io/legal/terms_of_service.pdf';
-export const PRIVACY_POLICY_URL = 'https://golos.io/ru--konfidenczialxnostx/@golos/politika-konfidencialnosti';
-export const WIKI_URL = 'https://wiki.golos.io/';
-export const MARKDOWN_STYLING_GUIDE_URL = 'https://golos.io/ru--golos/@on0tole/osnovy-oformleniya-postov-na-golose-polnyi-kurs-po-rabote-s-markdown';
+export const ANDROID_DEEP_LINK_DOMAIN = 'golos.id';
+export const TERMS_OF_SERVICE_URL = 'https://golos.id/legal/terms_of_service.pdf';
+export const PRIVACY_POLICY_URL = 'https://golos.id/ru--konfidenczialxnostx/@golos/politika-konfidencialnosti';
+export const WIKI_URL = 'https://wiki.golos.id/';
+export const MARKDOWN_STYLING_GUIDE_URL = 'https://golos.id/ru--golos/@on0tole/osnovy-oformleniya-postov-na-golose-polnyi-kurs-po-rabote-s-markdown';
 
 export const CHANGE_IMAGE_PROXY_TO_STEEMIT_TIME = 1568627859000

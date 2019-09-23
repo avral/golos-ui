@@ -11,30 +11,30 @@ describe('normalizeProfile', () => {
 
     it('should return a profile object with profile_image and cover_image', () => {
         const account = {
-            json_metadata: "{\"profile\":{\"profile_image\":\"https://golos.io/profile_image.jpeg\",\"select_tags\":[],\"cover_image\":\"https://golos.io/cover_image.jpeg\"}}"
+            json_metadata: "{\"profile\":{\"profile_image\":\"https://golos.id/profile_image.jpeg\",\"select_tags\":[],\"cover_image\":\"https://golos.id/cover_image.jpeg\"}}"
         }
 
         let name
         let about
         let location
         let website
-        let profile_image = 'https://golos.io/profile_image.jpeg'
-        let cover_image = 'https://golos.io/cover_image.jpeg'
+        let profile_image = 'https://golos.id/profile_image.jpeg'
+        let cover_image = 'https://golos.id/cover_image.jpeg'
 
         assert.deepEqual(normalizeProfile(account), {name, about, location, website, profile_image, cover_image})
     })
 
     it('should return full profile object', () => {
         const account = {
-            json_metadata: "{\"profile\":{\"name\": \"lyke\", \"about\": \"some info\", \"location\": \"NY\", \"profile_image\":\"https://golos.io/profile_image.jpeg\",\"select_tags\":[],\"cover_image\":\"https://golos.io/cover_image.jpeg\", \"website\":\"https://lyke.me\"}}"
+            json_metadata: "{\"profile\":{\"name\": \"lyke\", \"about\": \"some info\", \"location\": \"NY\", \"profile_image\":\"https://golos.id/profile_image.jpeg\",\"select_tags\":[],\"cover_image\":\"https://golos.id/cover_image.jpeg\", \"website\":\"https://lyke.me\"}}"
         }
 
         let name = 'lyke'
         let about = 'some info'
         let location = 'NY'
         let website = 'https://lyke.me'
-        let profile_image = 'https://golos.io/profile_image.jpeg'
-        let cover_image = 'https://golos.io/cover_image.jpeg'
+        let profile_image = 'https://golos.id/profile_image.jpeg'
+        let cover_image = 'https://golos.id/cover_image.jpeg'
 
         assert.deepEqual(normalizeProfile(account), {name, about, location, website, profile_image, cover_image})
     })

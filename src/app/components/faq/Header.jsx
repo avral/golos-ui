@@ -159,7 +159,7 @@ export default class Header extends PureComponent {
                                 </ButtonLabel>
                             </BlueButton>
                             <WhiteButton
-                                href="mailto:support@golos.io"
+                                href="mailto:support@golos.id"
                                 target="_blank"
                             >
                                 <Icon name="envelope" size="16px" />

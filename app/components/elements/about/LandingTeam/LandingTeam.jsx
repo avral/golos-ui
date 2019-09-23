@@ -18,7 +18,7 @@ export default class LandingTeam extends PureComponent {
                         </h2>
                     </div>
                 </div>
-                {this._renderSection('GOLOS.id', golosTeam, 'golos.io')}
+                {this._renderSection('GOLOS.id', golosTeam, 'golos.id')}
                 {this._renderSection('Golos Core', coreTeam, 'core')}
             </section>
         );
@@ -33,7 +33,7 @@ export default class LandingTeam extends PureComponent {
                     </div>
                 </div>
                 <div className="row align-middle collapse">
-                    {type === 'golos.io' ? (
+                    {type === 'golos.id' ? (
                         <div className="Team__info columns small-12 medium-6">
                             Разработка, поддержка и развитие клиента<br/>
                             <a href="/@golosio">Читать блог Golos.id</a>&nbsp;-&nbsp;

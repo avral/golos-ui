@@ -54,7 +54,7 @@ export default class LandingCountDowns extends React.Component {
         <div className="row CountDowns__blocks" id="docs">
           <div className="small-12 columns">
             <div className="CountDowns__links">
-              <a href="https://golos.io/ru--golos/@golos/golos-russkoyazychnaya-socialno-mediinaya-blokchein-platforma" target="blank" className="CountDowns__button_small text-left">White Paper</a>
+              <a href="https://golos.id/ru--golos/@golos/golos-russkoyazychnaya-socialno-mediinaya-blokchein-platforma" target="blank" className="CountDowns__button_small text-left">White Paper</a>
             </div>
             <center>
               <p>Текущий блок: {addCommas(calculateBlock(this.state.secondsSinceEpoch))}</p>
@@ -64,8 +64,8 @@ export default class LandingCountDowns extends React.Component {
         <div className="row Documentation__buttons text-center">
           <div className="small-12 columns">
             <a href="/welcome" target="blank" className="button">Гид по платформе Голос</a>
-            <a href="https://golos.io/ru--golos/@bitcoinfo/samyi-polnyi-f-a-q-o-golose-spisok-luchshykh-postov-raskryvayushikh-vse-aspekty-proekta-bonusy-v-vide-kreativa" className="button">FAQ</a>
-            <a href="https://wiki.golos.io/" target="blank" className="button">Вики</a>
+            <a href="https://golos.id/ru--golos/@bitcoinfo/samyi-polnyi-f-a-q-o-golose-spisok-luchshykh-postov-raskryvayushikh-vse-aspekty-proekta-bonusy-v-vide-kreativa" className="button">FAQ</a>
+            <a href="https://wiki.golos.id/" target="blank" className="button">Вики</a>
             <a href="https://www.youtube.com/c/golosioru" target="blank" className="button alert">YouTube канал</a>
           </div>
         </div>

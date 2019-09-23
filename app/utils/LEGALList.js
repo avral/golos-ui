@@ -1,6 +1,6 @@
 export default `
 
-/ru--gosloto/@felicita/udachlivyi-den-dlya-golos-io-razygran-super-priz-v-gosloto
+/ru--gosloto/@felicita/udachlivyi-den-dlya-golos.id-razygran-super-priz-v-gosloto
 /ru--gadzhety/@masterokst/zakonno-li-videonablyudenie-v-podezde
 /ru--krymov/@worldcorescam/ico-worldcore-ot-pavla-krymova-okazalos-eshe-bolee-provalnym-chem-vse-ozhidali
 /ico/@worldcorescam/ico-worldcore-prizvan-ukrast-dengi-investorov-mnenie-kriptoanalitika-anatoliya-radchenko

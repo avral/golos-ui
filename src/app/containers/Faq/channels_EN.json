@@ -18,7 +18,7 @@
   {
     "inscription": "Facebook",
     "thumbnail": "ic_facebook",
-    "link": "https://www.facebook.com/www.golos.io/\n",
+    "link": "https://www.facebook.com/www.golos.id/\n",
     "width": "14",
     "height": "30",
     "showOnMobile": false
@@ -66,7 +66,7 @@
   {
     "inscription": "Partnership, press and media enquiries",
     "thumbnail": "ic_mail",
-    "link": "mailto:pr@golos.io",
+    "link": "mailto:pr@golos.id",
     "width": "28",
     "height": "19",
     "showOnMobile": true

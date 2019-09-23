@@ -52,7 +52,7 @@ export default class LandingJoinUs extends React.Component {
 				</div>
 				<div className="row JoinUs__action">
 					<div className="small-12 columns text-center">
-						<a href="https://wiki.golos.io/2-rewards/posting_rewards.html" target="blank" className="button">Узнай больше!</a>
+						<a href="https://wiki.golos.id/2-rewards/posting_rewards.html" target="blank" className="button">Узнай больше!</a>
 					</div>
 				</div>
 				<hr />

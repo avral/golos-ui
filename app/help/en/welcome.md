@@ -1,4 +1,4 @@
-# Добро пожаловать на golos.io!
+# Добро пожаловать на golos.id!
 Этот небольшой, но информативный гид, поможет Вам разобраться в лучшей платформе для блогеров на просторах рунета. 
 
 **Возьмут ли с меня деньги за публикацию или лайки (апвоуты) на платформе?**
@@ -79,49 +79,49 @@
 
 #### Ниже, Вы можете найти F.A.Q. любезно предоставленный @bitcoinfo
 **О Голосе в целом: что это такое и как работает**
-    •   [Бумага о Голосе](https://golos.io/ru--golos/@golos/golos-russkoyazychnaya-socialno-mediinaya-blokchein-platforma)
+    •   [Бумага о Голосе](https://golos.id/ru--golos/@golos/golos-russkoyazychnaya-socialno-mediinaya-blokchein-platforma)
     •   [Бумага про Стим](https://steemit.com/ru/@hipster/bumaga-pro-stim-chast-1)
-    •   [Голос: общественное медиа как база для социальной активности](https://golos.io/ru--golos/@marina/golos-obshestvennoe-media-kak-baza-dlya-socialnoi-aktivnosti)
+    •   [Голос: общественное медиа как база для социальной активности](https://golos.id/ru--golos/@marina/golos-obshestvennoe-media-kak-baza-dlya-socialnoi-aktivnosti)
     •   [План развития блокчейн Голос и клиента Golos.id](https://docs.google.com/document/d/1WQF1xxmCMxzEA95Gnxw4FHViX_6pjVoUlBnItCepOmE/edit)
-    •   [Делегаты и их роль на платформе Голос](https://golos.io/ru--golos/@on0tole/delegaty-i-ikh-rol-na-platforme-golos)
-    •   [Официальная Вики проекта Голос](https://wiki.golos.io/)
+    •   [Делегаты и их роль на платформе Голос](https://golos.id/ru--golos/@on0tole/delegaty-i-ikh-rol-na-platforme-golos)
+    •   [Официальная Вики проекта Голос](https://wiki.golos.id/)
     •   [Официальный репозиторий на GitHub](https://github.com/GolosChain)
-    •   [Отчёты о проделанной работе команды Голоса](https://golos.io/@golos)
+    •   [Отчёты о проделанной работе команды Голоса](https://golos.id/@golos)
 
 **Публикация и оформление постов в Голосе**
-    •   [Как создать пост на платформе Голос?](https://golos.io/ru--knigagolos/@aleksandraz/kniga-pro-golos-kak-sozdat-post-na-platforme-golos)
-    •   [Основы оформления постов на Голосе + полный курс по работе с Markdown](https://golos.io/ru--golos/@on0tole/osnovy-oformleniya-postov-na-golose-polnyi-kurs-po-rabote-s-markdown)
-    •   [Дополнительные мультимедийные возможности Голоса: музыка и видео в ваших записях]( https://golos.io/ru--golos/@primus/dopolnitelnye-multimediinye-vozmozhnosti-golosa-muzyka-i-video-v-vashikh-zapisyakh)
-    •   [Книга про Голос](https://golos.io/created/ru--knigagolos)
-    •   [Этика поведения. О чём и как писать?](https://golos.io/ru--knigagolos/@katrin/etika-povedeniya-o-chyom-i-kak-pisat)
-    •   [Где брать картинки для своих публикаций: базы изображений для коммерческого использования](https://golos.io/ru--golos/@awispa/gde-brat-kartinki-dlya-svoikh-publikacii-bazy-izobrazhenii-dlya-kommercheskogo-ispolzovaniya)
-    •   [Флаг: как и в каких случаях стоит использовать](https://golos.io/ru--knigagolos/@aleksandraz/kniga-pro-golos-flag-kak-i-v-kakikh-sluchayakh-stoit-ispolzovat)
+    •   [Как создать пост на платформе Голос?](https://golos.id/ru--knigagolos/@aleksandraz/kniga-pro-golos-kak-sozdat-post-na-platforme-golos)
+    •   [Основы оформления постов на Голосе + полный курс по работе с Markdown](https://golos.id/ru--golos/@on0tole/osnovy-oformleniya-postov-na-golose-polnyi-kurs-po-rabote-s-markdown)
+    •   [Дополнительные мультимедийные возможности Голоса: музыка и видео в ваших записях]( https://golos.id/ru--golos/@primus/dopolnitelnye-multimediinye-vozmozhnosti-golosa-muzyka-i-video-v-vashikh-zapisyakh)
+    •   [Книга про Голос](https://golos.id/created/ru--knigagolos)
+    •   [Этика поведения. О чём и как писать?](https://golos.id/ru--knigagolos/@katrin/etika-povedeniya-o-chyom-i-kak-pisat)
+    •   [Где брать картинки для своих публикаций: базы изображений для коммерческого использования](https://golos.id/ru--golos/@awispa/gde-brat-kartinki-dlya-svoikh-publikacii-bazy-izobrazhenii-dlya-kommercheskogo-ispolzovaniya)
+    •   [Флаг: как и в каких случаях стоит использовать](https://golos.id/ru--knigagolos/@aleksandraz/kniga-pro-golos-flag-kak-i-v-kakikh-sluchayakh-stoit-ispolzovat)
 
 **Биржи для торговли токенами Голоса**
     •   Bittrex: [GOLOS](https://www.bittrex.com/Market/Index?MarketName=BTC-GOLOS)
     •   Livecoin: [GOLOS](https://www.livecoin.net/)
     •   Liqui: [GOLOS](https://liqui.io/#/exchange/GOLOS_BTC) и [GBG](https://liqui.io/#/exchange/GBG_BTC)
     •   Kuna: [GOLOS](https://kuna.io/?market=golbtc)
-    •   [Внутренний рынок](https://golos.io/market) - обмен GBG на GOLOS и наоборот
-    •   [Как вывести из Голоса выплаты?](https://golos.io/ru--golos/@qqc/kak-vyvesti-iz-golosa-vyplaty-sovety-ot-qqc)
-    •   [Пошаговая инструкция как вывести заработанные деньги, из Голоса через биржу Livecoin](https://golos.io/ru--akademiya/@mrwww/poshagovaya-instrukciya-kak-vyvesti-zarabotannye-dengi-iz-golosa-cherez-birzhu-livecoin)
-    •   [Выводим Голос в рубли. Подробный мануал для новичков](https://golos.io/ru--golos/@mishka/vyvodim-golos-v-rubli-podrobnyi-manual-dlya-novichkov)
+    •   [Внутренний рынок](https://golos.id/market) - обмен GBG на GOLOS и наоборот
+    •   [Как вывести из Голоса выплаты?](https://golos.id/ru--golos/@qqc/kak-vyvesti-iz-golosa-vyplaty-sovety-ot-qqc)
+    •   [Пошаговая инструкция как вывести заработанные деньги, из Голоса через биржу Livecoin](https://golos.id/ru--akademiya/@mrwww/poshagovaya-instrukciya-kak-vyvesti-zarabotannye-dengi-iz-golosa-cherez-birzhu-livecoin)
+    •   [Выводим Голос в рубли. Подробный мануал для новичков](https://golos.id/ru--golos/@mishka/vyvodim-golos-v-rubli-podrobnyi-manual-dlya-novichkov)
 
 **Текущая экономика Голоса для авторов, кураторов, инвесторов и всех остальных**
     •   [Руководство для новичков: Как чёрт возьми это работает?](https://steemit.com/ru-help/@lehard/rukovodstvo-dlya-novichkov-steemit-kak-chyort-vozmi-eto-rabotaet)
-    •   [Как рассчитывается вознаграждение за пост?](https://golos.io/ru--golos/@lehard/kak-rasschityvaetsya-voznagrazhdenie-za-post)
-    •   [Кураторство на Голосе. Как это работает?](https://golos.io/ru--golos/@haster100/kuratorstvo-na-golose-kak-eto-rabotaet-sait-golos-steemstats-com)
-    •   [Что такое репутация на Голосе и как она работает?](https://golos.io/ru--golos/@arcange/chto-takoe-reputaciya-na-golose-i-kak-ona-rabotaet)
+    •   [Как рассчитывается вознаграждение за пост?](https://golos.id/ru--golos/@lehard/kak-rasschityvaetsya-voznagrazhdenie-za-post)
+    •   [Кураторство на Голосе. Как это работает?](https://golos.id/ru--golos/@haster100/kuratorstvo-na-golose-kak-eto-rabotaet-sait-golos-steemstats-com)
+    •   [Что такое репутация на Голосе и как она работает?](https://golos.id/ru--golos/@arcange/chto-takoe-reputaciya-na-golose-i-kak-ona-rabotaet)
 
 **Новая экономика Голоса после 16 хадфорка**
-    •   [Новая Экономическая Модель ГОЛОСа: перевод поста @hipster на язык простых смертных:)](https://golos.io/ru--golos/@natasha/novaya-ekonomicheskaya-model-golosa-perevod-posta-hipster-na-yazyk-prostykh-smertnykh)
-    •   [Новая экономика Голоса в простых цифрах: что ждёт авторов, инвесторов и делегатов?](https://golos.io/ru--golos/@primus/novaya-ekonomika-golosa-v-prostykh-cifrakh-chto-zhdyot-avtorov-investorov-i-delegatov)
+    •   [Новая Экономическая Модель ГОЛОСа: перевод поста @hipster на язык простых смертных:)](https://golos.id/ru--golos/@natasha/novaya-ekonomicheskaya-model-golosa-perevod-posta-hipster-na-yazyk-prostykh-smertnykh)
+    •   [Новая экономика Голоса в простых цифрах: что ждёт авторов, инвесторов и делегатов?](https://golos.id/ru--golos/@primus/novaya-ekonomika-golosa-v-prostykh-cifrakh-chto-zhdyot-avtorov-investorov-i-delegatov)
 
 **Промо-материалы: баннеры, картинки, креатив про Голос**
-    •   [Комплекты баннеров для рекламы Голоса на ваших сайтах и в социальных сетях](https://golos.io/ru--golos/@primus/komplekty-1-i-2-bannerov-dlya-reklamy-golosa-na-vashikh-saitakh-i-v-socialnykh-setyakh)
-    •   Принты для футболок: [1](https://golos.io/ru--golos/@konti/printy-dlya-futbolok-or-golos) 
-    •   [Изображения Голоса, которые можно использовать для оформления ваших постов](https://golos.io/ru--golos/@acidsun/eshe-parochka-izobrazhenii-dlya-oformleniya-postov-na-golose)
-    •   [О рекламе, позиционировании и продвижении ГОЛОСа](https://golos.io/ru--reklama/@sheriff/o-reklame-pozicionirovanii-i-prodvizhenii-golosa)
+    •   [Комплекты баннеров для рекламы Голоса на ваших сайтах и в социальных сетях](https://golos.id/ru--golos/@primus/komplekty-1-i-2-bannerov-dlya-reklamy-golosa-na-vashikh-saitakh-i-v-socialnykh-setyakh)
+    •   Принты для футболок: [1](https://golos.id/ru--golos/@konti/printy-dlya-futbolok-or-golos) 
+    •   [Изображения Голоса, которые можно использовать для оформления ваших постов](https://golos.id/ru--golos/@acidsun/eshe-parochka-izobrazhenii-dlya-oformleniya-postov-na-golose)
+    •   [О рекламе, позиционировании и продвижении ГОЛОСа](https://golos.id/ru--reklama/@sheriff/o-reklame-pozicionirovanii-i-prodvizhenii-golosa)
 
 **Видео о Голосе**
     •   Канал [Вечер с Голосом](https://www.youtube.com/channel/UCL_XlALJ-2cERfY8m6s8uEA) - регулярный прямой эфир с разработчиками, делегатами и пользователями Голоса. Вещаение с понедельника по четверг в 20:00 по Москве
@@ -138,24 +138,24 @@
     •   [GolosTools](http://golostools.com/) - обзор инструментов и сервисов для Голоса
 
 **Полезные скрипты**
-    •   [GOLOS NOTIFY - Бот уведомлений для golos.io в Telegram](https://golos.io/ru--golos/@on0tole/dolgozhdannyi-anons-golos-notify-bot-uvedomlenii-dlya-golos-io-v-telegram)
-    •   [GolosNotify - расширение для браузера Google Chrome с уведомлениями для golos.io](https://golos.io/ru--golos/@on0tole/anons-golosnotify-rasshirenie-dlya-brauzera-google-chrome-s-uvedomleniyami-dlya-golos-io)
-    •   [Закладка в браузере, для переключения между эксплорером/платформой для Голоса и Стимит, ничего не нужно скачивать](https://golos.io/ru--golos/@anyx/zakladka-v-brauzere-dlya-pereklyucheniya-mezhdu-eksplorerom-platformoi-dlya-golosa-i-stimit-nichego-ne-nuzhno-skachivat)
-    •   [Пользовательские скины, плагины и виджеты для Голоса](https://golos.io/ru--golos/@vik/vstrechaem-polzovatelskie-skiny-plaginy-i-vidzhety-dlya-golosa)
+    •   [GOLOS NOTIFY - Бот уведомлений для golos.id в Telegram](https://golos.id/ru--golos/@on0tole/dolgozhdannyi-anons-golos-notify-bot-uvedomlenii-dlya-golos-io-v-telegram)
+    •   [GolosNotify - расширение для браузера Google Chrome с уведомлениями для golos.id](https://golos.id/ru--golos/@on0tole/anons-golosnotify-rasshirenie-dlya-brauzera-google-chrome-s-uvedomleniyami-dlya-golos-io)
+    •   [Закладка в браузере, для переключения между эксплорером/платформой для Голоса и Стимит, ничего не нужно скачивать](https://golos.id/ru--golos/@anyx/zakladka-v-brauzere-dlya-pereklyucheniya-mezhdu-eksplorerom-platformoi-dlya-golosa-i-stimit-nichego-ne-nuzhno-skachivat)
+    •   [Пользовательские скины, плагины и виджеты для Голоса](https://golos.id/ru--golos/@vik/vstrechaem-polzovatelskie-skiny-plaginy-i-vidzhety-dlya-golosa)
 
 **Альтернативные web-клиенты блокчейна Голос**
     •   [Mapala.net](http://mapala.net/) - портал для самостоятельных путешественников
     •   ["Бизнес Молодость"](https://feed.molodost.bz/)
-    •   [VGolose - анонс альтернативного веб-клиента для блокчейна Golos](https://golos.io/ru--golos/@kocherginji/v-golose-anons-alternativnogo-veb-klienta-dlya-blokcheina-golos)
-    •   [Анонс siski.io](https://golos.io/siski/@siski/10-faktov-o-siski-io-kotorye-vy-khoteli-znat-no-boyalis-sprosit)
+    •   [VGolose - анонс альтернативного веб-клиента для блокчейна Golos](https://golos.id/ru--golos/@kocherginji/v-golose-anons-alternativnogo-veb-klienta-dlya-blokcheina-golos)
+    •   [Анонс siski.io](https://golos.id/siski/@siski/10-faktov-o-siski-io-kotorye-vy-khoteli-znat-no-boyalis-sprosit)
 
 **Альтернативные каналы общения пользователей Голоса**
-    •   [Официальный чат](https://chat.golos.io/home)
-    •   [Канал Telegram(https://t.me/golos_io)
+    •   [Официальный чат](https://chat.golos.id/home)
+    •   [Канал Telegram(https://t.me/golos.id)
     •   [Голосовой чат на Discord](https://discordapp.com/login)
     •   [Голос во Вконтакте](https://vk.com/goloschain)
-    •   [Голос в ФБ](https://www.facebook.com/www.golos.io)
-    •   [Голос в Инстаграм](https://www.instagram.com/golos_io/)
+    •   [Голос в ФБ](https://www.facebook.com/www.golos.id)
+    •   [Голос в Инстаграм](https://www.instagram.com/golos.id/)
     •   [Голос в скайпе](https://join.skype.com/nq4MAXi9rsC0)
     •   [Голос в ОК](https://ok.ru/group/58062155808810)
     •   [Голос в Твитере](https://twitter.com/@goloschain)
@@ -164,31 +164,31 @@
 
 **Полезная статистика**
     •   [Результаты ICO: кто и сколько купил Голосов](http://www.steeme.ru/gf.html)
-    •   [Статистика эффективности работы кураторов в Голосе](https://golos.io/ru--statistika/@primus/2017-01-30-2017-02-05-statistika-kto-samyi-effektivnyi-kurator-v-golose)
-    •   [Ежедневная статистика по новым пользователям, постам и комментариям](https://golos.io/@arcange/)
-    •   [Распределение токенов GOLOS и объем торгов](https://golos.io/@ukrainian)
-    •   [Сравнительная статистика 100 первых дней Голоса и Steem](https://golos.io/ru--golos/@ontofractal/sravnitelnaya-statistika-100-pervykh-dnei-golosa-i-steem)
-    •   [Статистика активности делегатов за неделю](https://golos.io/@sancho.malyutin)
+    •   [Статистика эффективности работы кураторов в Голосе](https://golos.id/ru--statistika/@primus/2017-01-30-2017-02-05-statistika-kto-samyi-effektivnyi-kurator-v-golose)
+    •   [Ежедневная статистика по новым пользователям, постам и комментариям](https://golos.id/@arcange/)
+    •   [Распределение токенов GOLOS и объем торгов](https://golos.id/@ukrainian)
+    •   [Сравнительная статистика 100 первых дней Голоса и Steem](https://golos.id/ru--golos/@ontofractal/sravnitelnaya-statistika-100-pervykh-dnei-golosa-i-steem)
+    •   [Статистика активности делегатов за неделю](https://golos.id/@sancho.malyutin)
 
 **Майнерам и делегатам**
-    •   [Настройка нод майнера и делегата для работы в Голосе: рабочие конфиги и пояснения по установке](https://golos.io/ru--golos/@primus/nastroika-nod-mainera-i-delegata-dlya-raboty-v-golose-rabochie-konfigi-i-poyasneniya-po-ustanovke)
-    •   [Как использовать PoW майнинг-аккаунт для работы в Голосе](https://golos.io/ru--golos/@primus/kak-ispolzovat-pow-maining-akkaunt-dlya-raboty-v-golose)
-    •   [Список всех доступных скриптов обновления цены](https://golos.io/ru--delegaty/@primus/delegatam-cena-zolotogo-na-osnove-birzhi-livecoin-i-spisok-vsekh-dostupnykh-skriptov-obnovleniya-ceny)
+    •   [Настройка нод майнера и делегата для работы в Голосе: рабочие конфиги и пояснения по установке](https://golos.id/ru--golos/@primus/nastroika-nod-mainera-i-delegata-dlya-raboty-v-golose-rabochie-konfigi-i-poyasneniya-po-ustanovke)
+    •   [Как использовать PoW майнинг-аккаунт для работы в Голосе](https://golos.id/ru--golos/@primus/kak-ispolzovat-pow-maining-akkaunt-dlya-raboty-v-golose)
+    •   [Список всех доступных скриптов обновления цены](https://golos.id/ru--delegaty/@primus/delegatam-cena-zolotogo-na-osnove-birzhi-livecoin-i-spisok-vsekh-dostupnykh-skriptov-obnovleniya-ceny)
 
 **Автоматизация работы в Голосе и список полезных библиотек**
-    •   [Разработка персональных ботов для Голоса](https://golos.io/ru--golos/@ontofractal/razrabotka-personalnykh-botov-dlya-golosa-urok-3)
-    •   [Piston - Python библиотека для работы с блокчейном Голоса на уровне протокола](https://golos.io/golos/@chainsquad/pysteempiston-support-for-golos-has-been-added)
-    •   [Golos.js - JavaScript библиотека для работы с блокчейном Голоса](https://golos.io/ru--golos/@dark.sun/golos-js-legkii-sposob-sozdavat-prilozheniya-dlya-golos)
-    •   [[GolosSQL] - База данных SQL со всеми данными блокчейн](https://golos.io/ru--golos/@arcange/golossql-baza-dannykh-sql-so-vsemi-dannymi-blokchein)
-    •   [[Golos.NET] Библиотека .NET library для API Голоса](https://golos.io/ru--golos/@arcange/golos-net-a-microsoft-net-library-for-golos-api)
-    •   [Опен сорс JSONRPC клиент для Голоса на Elixir/Erlang](https://golos.io/ru--golos/@ontofractal/reliz-exgolos-v0-1-open-sors-jsonrpc-klient-dlya-golosa-na-elixir-erlang)
-    •   [Инициатива кибер•Фонда по поддержке открытого исходного кода в Голосе](https://golos.io/ru--otkrytyij-kod/@hipster/iniciativa-kiber-fonda-po-podderzhke-otkrytogo-iskhodnogo-koda-v-golose)
+    •   [Разработка персональных ботов для Голоса](https://golos.id/ru--golos/@ontofractal/razrabotka-personalnykh-botov-dlya-golosa-urok-3)
+    •   [Piston - Python библиотека для работы с блокчейном Голоса на уровне протокола](https://golos.id/golos/@chainsquad/pysteempiston-support-for-golos-has-been-added)
+    •   [Golos.js - JavaScript библиотека для работы с блокчейном Голоса](https://golos.id/ru--golos/@dark.sun/golos-js-legkii-sposob-sozdavat-prilozheniya-dlya-golos)
+    •   [[GolosSQL] - База данных SQL со всеми данными блокчейн](https://golos.id/ru--golos/@arcange/golossql-baza-dannykh-sql-so-vsemi-dannymi-blokchein)
+    •   [[Golos.NET] Библиотека .NET library для API Голоса](https://golos.id/ru--golos/@arcange/golos-net-a-microsoft-net-library-for-golos-api)
+    •   [Опен сорс JSONRPC клиент для Голоса на Elixir/Erlang](https://golos.id/ru--golos/@ontofractal/reliz-exgolos-v0-1-open-sors-jsonrpc-klient-dlya-golosa-na-elixir-erlang)
+    •   [Инициатива кибер•Фонда по поддержке открытого исходного кода в Голосе](https://golos.id/ru--otkrytyij-kod/@hipster/iniciativa-kiber-fonda-po-podderzhke-otkrytogo-iskhodnogo-koda-v-golose)
 
 **Действующие боты сети Голоса**
-    •   [radogost](https://golos.io/ru--golos/@radogost/privet-mir-ya-radogost-i-ya-rozhdyon-chtoby-sdelat-golos-gostepriimnym-mestom) - бот, приветствующий новичков, хозяин @phenom
-    •   [mention.bot](https://golos.io/ru--golos/@mention.bot/pozvolte-predstavitsya-ya-bot-kotoryi-uvedomlyaet-vas-ob-upominaniyakh-v-chuzhikh-postakh) - бот, который уведомляет вас об упоминаниях в чужих постах, хозяин @phenom
-    •   [alcotester](https://golos.io/ru--golos/@primus/vy-eshe-ne-poluchili-flag-za-svoi-post-ochen-zhal-flag-kheitera-prinosit-tolko-polzu-obyasnenie-raboty-moego-bota) - бот, компенсирующий флаги хейтеров, хозяин @primus
-    •   [seraph](https://golos.io/golos/@seraph/privet-ya-serafim-strazhnik) - бот, компенсирующий флаги хейтеров, хозяин @anyx
-    •   [cheetah](https://golos.io/ru--desyatxfaktovobomne/@cheetah/10-faktov-obo-mne-estafeta-ot-dhrms) - бот, преследующий за плагиат и копипасту, хозяин @anyx
+    •   [radogost](https://golos.id/ru--golos/@radogost/privet-mir-ya-radogost-i-ya-rozhdyon-chtoby-sdelat-golos-gostepriimnym-mestom) - бот, приветствующий новичков, хозяин @phenom
+    •   [mention.bot](https://golos.id/ru--golos/@mention.bot/pozvolte-predstavitsya-ya-bot-kotoryi-uvedomlyaet-vas-ob-upominaniyakh-v-chuzhikh-postakh) - бот, который уведомляет вас об упоминаниях в чужих постах, хозяин @phenom
+    •   [alcotester](https://golos.id/ru--golos/@primus/vy-eshe-ne-poluchili-flag-za-svoi-post-ochen-zhal-flag-kheitera-prinosit-tolko-polzu-obyasnenie-raboty-moego-bota) - бот, компенсирующий флаги хейтеров, хозяин @primus
+    •   [seraph](https://golos.id/golos/@seraph/privet-ya-serafim-strazhnik) - бот, компенсирующий флаги хейтеров, хозяин @anyx
+    •   [cheetah](https://golos.id/ru--desyatxfaktovobomne/@cheetah/10-faktov-obo-mne-estafeta-ot-dhrms) - бот, преследующий за плагиат и копипасту, хозяин @anyx
 
 #### Команда Голос выражает благодарность всем авторам контента в выше упомянутом F.A.Q. Огромное спасибо Вам, что помогаете развивать проект!

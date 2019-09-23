@@ -7,14 +7,14 @@ export default class LandingFaq extends React.Component {
 			<section className="Faq" id="faq">
 				<div className="row text-center Faq__headers">
 					<div className="small-12 columns">
-						<h2 className="blue"><a href="https://wiki.golos.io/" target="_blank">Вопросы - ответы</a></h2>
+						<h2 className="blue"><a href="https://wiki.golos.id/" target="_blank">Вопросы - ответы</a></h2>
 						<span className="Faq__supporting-text">Узнай больше о Голосе</span>
 					</div>
 				</div>
 				<div className="row Faq__action text-center">
 					<div className="small-12 columns">
 						<p className="Faq__p">Если у Вас остались вопросы, то</p>
-						<a href="mailto:support@golos.io" target="blank" className="button">Напишите нам и получите ответы</a>
+						<a href="mailto:support@golos.id" target="blank" className="button">Напишите нам и получите ответы</a>
 					</div>
 				</div>
 				<hr />

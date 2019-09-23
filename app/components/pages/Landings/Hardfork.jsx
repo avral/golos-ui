@@ -191,7 +191,7 @@ class Hardfork extends React.Component {
                             <hr/>
                         </div>
                         <div className="column large-12 medium-12 small-12">
-                            <p className='text-block-left'>Принятие хардфорка произойдет после согласования 17 из 21 <a href="/golosio/@golosio/otvety-golos-io-kak-stat-delegatom">делегата</a> всех нововведений. Сам программный код хардфорка полностью готов к запуску.</p>
+                            <p className='text-block-left'>Принятие хардфорка произойдет после согласования 17 из 21 <a href="/golosio/@golosio/otvety-golos.id-kak-stat-delegatom">делегата</a> всех нововведений. Сам программный код хардфорка полностью готов к запуску.</p>
                         </div>
                     </div>
                 </div>
@@ -251,7 +251,7 @@ class Hardfork extends React.Component {
                     <div className='row'>
                         <div>
                             <p>Подробно узнать о составе хардфорка можно <Link className="link" to="/ru--golos/@goloscore/finalnoe-soglasovanie-funkcionala-khf-0-2-11-12-2017">здесь</Link>.</p>
-                            <p>Разобраться с ролью делегата и тем, как им стать, можно прочитав <Link className="link" to="/golosio/@golosio/otvety-golos-io-kak-stat-delegatom">этот текст</Link>.</p>
+                            <p>Разобраться с ролью делегата и тем, как им стать, можно прочитав <Link className="link" to="/golosio/@golosio/otvety-golos.id-kak-stat-delegatom">этот текст</Link>.</p>
                             <p>Понять, почему мы так ждем хардфорк можно <Link className="link" to=" /golosio/@golosio/chto-takoe-khardfork-golosa-i-pochemu-eto-vazhno">тут</Link>.</p>
                         </div>
                     </div>
