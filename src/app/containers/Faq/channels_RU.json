@@ -10,7 +10,7 @@
   {
     "inscription": "канал техподдержки",
     "thumbnail": "ic_support_ru",
-    "link": "https://t.me/golos_support",
+    "link": "https://t.me/golos_id_issue",
     "width": "30",
     "height": "33",
     "showOnMobile": true
@@ -18,15 +18,15 @@
   {
     "inscription": "Новости и анонсы Golos.id",
     "thumbnail": "ic_newspaper",
-    "link": "/@golosio",
+    "link": "/@golos-info",
     "width": "26",
     "height": "26",
     "showOnMobile": false
   },
   {
-    "inscription": "Facebook",
-    "thumbnail": "ic_facebook",
-    "link": "https://www.facebook.com/www.golos.id/\n",
+    "inscription": "Публичный чат телеграм",
+    "thumbnail": "ic_support_ru",
+    "link": "https://t.me/golos_id",
     "width": "14",
     "height": "30",
     "showOnMobile": false
@@ -34,23 +34,15 @@
   {
     "inscription": "github",
     "thumbnail": "ic_github",
-    "link": "https://github.com/GolosChain/tolstoy",
+    "link": "https://github.com/golos-classic",
     "width": "32",
     "height": "31",
     "showOnMobile": false
   },
   {
-    "inscription": "Официальное зеркало",
-    "thumbnail": "ic_mirror",
-    "link": "https://www.golos.blog",
-    "width": "30",
-    "height": "30",
-    "showOnMobile": false
-  },
-  {
     "inscription": "ENG support channel",
     "thumbnail": "ic_support_eng",
-    "link": "https://t.me/golos_eng",
+    "link": "https://t.me/golos_en",
     "width": "30",
     "height": "31",
     "showOnMobile": true
@@ -58,7 +50,7 @@
   {
     "inscription": "Лучшее на Golos.id",
     "thumbnail": "ic_like",
-    "link": "https://t.me/golos_best",
+    "link": "https://golos.id/trending",
     "width": "28",
     "height": "28",
     "showOnMobile": false
