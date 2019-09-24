@@ -92,7 +92,7 @@ export default class Questions extends PureComponent {
                                         </Link>
                                     </div>
                                     <div className="columns">
-                                        <Link href="https://t.me/golos_support">
+                                        <Link href="https://t.me/golos_id_issue">
                                             <Icon
                                                 name="new/telegram"
                                                 size="2x"

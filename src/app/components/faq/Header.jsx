@@ -150,7 +150,7 @@ export default class Header extends PureComponent {
                         </Description>
                         <ButtonsBlock>
                             <BlueButton
-                                href="https://t.me/golos_support"
+                                href="https://t.me/golos_id_issue"
                                 target="_blank"
                             >
                                 <Icon name="telegram" size="16px" fill="#fff" />
