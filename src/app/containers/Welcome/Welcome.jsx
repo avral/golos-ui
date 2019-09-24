@@ -111,7 +111,7 @@ class Welcome extends Component {
                     onTagClick={this._onTagClick}
                 />
                 <Differences />
-                <Mobile />
+                { /* <Mobile /> TODO Mobile app*/} 
                 <Reviews slides={this.slides} />
                 <Questions
                     questionsLoading={questionsLoading}

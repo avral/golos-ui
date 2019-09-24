@@ -14,7 +14,7 @@ export default class LandingFaq extends React.Component {
 				<div className="row Faq__action text-center">
 					<div className="small-12 columns">
 						<p className="Faq__p">Если у Вас остались вопросы, то</p>
-						<a href="mailto:support@golos.id" target="blank" className="button">Напишите нам и получите ответы</a>
+						<a href="mailto:info@golos.id" target="blank" className="button">Напишите нам и получите ответы</a>
 					</div>
 				</div>
 				<hr />

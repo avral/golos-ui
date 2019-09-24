@@ -108,7 +108,7 @@ export default class Questions extends PureComponent {
                                         </Link>
                                     </div>
                                     <div className="columns">
-                                        <Link href="mailto:support@golos.id">
+                                        <Link href="mailto:info@golos.id">
                                             <Icon
                                                 name="new/envelope"
                                                 size="2x"
