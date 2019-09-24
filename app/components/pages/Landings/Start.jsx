@@ -209,7 +209,7 @@ class Start extends React.Component {
                                 <p className='landing-start-block-text landing-start-block-center'>
                                     У нас есть собственная <a href='https://wiki.golos.id/'>Википедия</a>,
                                     со всей информацией про блог-платформу Golos.id. Кроме того, мы
-                                    оперативно ответим на любой технический вопрос в нашей группе в <a href='https://t.me/golos_support'>Телеграме</a>.</p>
+                                    оперативно ответим на любой технический вопрос в нашей группе в <a href='https://t.me/golos_id_issue'>Телеграме</a>.</p>
                             </div>
                         </div>
                     </div>

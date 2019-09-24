@@ -137,7 +137,7 @@
     •   [Steepshot](https://steepshot.io) - инстаграм на блокчейне Голос
 
 **Альтернативные каналы общения пользователей Голоса**
-    •   [Канал Telegram](https://t.me/golos_support)
+    •   [Канал Telegram](https://t.me/golos_id_issue)
     •   [Голос во Вконтакте](https://vk.com/goloschain)
     •   [Голос в ФБ](https://www.facebook.com/www.golos.id)
     •   [Голос в Инстаграм](https://www.instagram.com/golos.id/)

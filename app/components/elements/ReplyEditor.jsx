@@ -482,8 +482,8 @@ class ReplyEditor extends React.Component {
                             </p>
                             <p>
                                 {tt('reply_editor.support_by_telegram')} —{' '}
-                                <a href="https://t.me/golos_support">
-                                    https://t.me/golos_support
+                                <a href="https://t.me/golos_id_issue">
+                                    https://t.me/golos_id_issue
                                 </a>.
                             </p>
                             <p>

@@ -41,7 +41,7 @@ injectGlobal`
 const availableLinks = [
     'https://www.facebook.com/www.golos.id',
     'https://vk.com/goloschain',
-    'https://t.me/golos_support',
+    'https://t.me/golos_id_issue',
 ];
 
 const availableDomains = [
