@@ -76,7 +76,7 @@ const ru = {
   and: 'и',
   are_well_tested_and_known_to_work_with: 'хорошо тестированы и работают с ' + APP_DOMAIN + '.',
   account_creation_succes: 'Твой аккаунт успешно создан!',
-  account_recovery_succes: 'Твой аккаунт успено восстановлен!',
+  account_recovery_succes: 'Твой аккаунт успешно восстановлен!',
   password_update_succes: 'Пароль для {accountName} был успешно обновлен',
   password_is_bound_to_your_accounts_owner_key: "Этот пароль привязан к главному ключу аккаунта и не может быть использован для логинации на сайте",
   however_you_can_use_it_to: "Тем не менее его можно использовать чтобы",
