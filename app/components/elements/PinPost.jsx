@@ -15,6 +15,7 @@ const {string, func, object} = PropTypes
 export default class PinPost extends React.Component {
     static propTypes = {
         account: object,
+        current_user: object,
         author: string,
         permlink: string,
         pinned: func,
@@ -27,21 +28,11 @@ export default class PinPost extends React.Component {
         this.state = {active: false, loading: false}
     }
 
-    componentDidMount() {
-        const {account, permlink, author} = this.props
-
-        if(account) {
-          const pinnedPosts = getPinnedPosts(account.toJS(), true)
-
-          const link = author + '/' + permlink
-
-          this.setState({active: pinnedPosts.includes(link)})
-        }
-    }
-
     pin = (e) => {
       e.preventDefault()
-      const { permlink, author, updateAccount, notify } = this.props
+      const { permlink, current_user, author, updateAccount, notify } = this.props
+
+      if (!current_user || author !== current_user.get('name')) return;
 
       const account = this.props.account.toJS()
       let pinnedPosts = getPinnedPosts(account, true)
@@ -84,23 +75,40 @@ export default class PinPost extends React.Component {
     }
 
     render() {
-      if(!this.props.author == this.props.account || !this.props.account) return null;
+        const {account, current_user, permlink, author} = this.props
 
-      const state = this.state.active ? 'active' : 'inactive'
+        if(!author || !account) return null;
 
-      const loading = this.state.loading ? ' loading' : ''
-      return (
-        <span className={'Reblog__button Reblog__button-'+ state + loading}>
-          <a href="#" onClick={this.pin} title='Закрепить запись'>
-            <Icon name="pin" />
-          </a>
-        </span>)
+        if(account) {
+          const pinnedPosts = getPinnedPosts(account.toJS(), true)
+
+          const link = author + '/' + permlink
+
+          this.setState({active: pinnedPosts.includes(link)})
+        }
+
+        if (!current_user && !this.state.active) return null;
+
+        if (!this.state.active && author !== current_user.get('name')) return null;
+
+        const state = this.state.active ? 'active' : 'inactive'
+
+        const loading = this.state.loading ? ' loading' : ''
+        return (
+          <span className={'Reblog__button PinPost__button-'+ state + loading}>
+            <a href="#" onClick={this.pin} title={this.state.active ? 'Запись закреплена' : 'Закрепить запись'}>
+              <Icon name="pin" />
+            </a>
+          </span>
+        )
     }
 }
 module.exports = connect(
     (state, ownProps) => {
-        const account = state.user.getIn(['current', 'username']) || state.offchain.get('account')
-        return {...ownProps, account: state.global.get('accounts').get(account) || null}
+        const current_user = state.user.getIn(['current', 'username'])
+        const account = state.global.get('accounts').get(ownProps.author) || null
+
+        return {...ownProps, account, current_user: state.global.get('accounts').get(current_user) || null}
     },
 
     dispatch => ({

@@ -160,7 +160,7 @@ class PostSummary extends React.Component {
             <VotesAndComments post={post} commentsLink={comments_link} />
             <span className="PostSummary__time_author_category">
             
-            {p.author == this.props.username ? <PinPost author={p.author} permlink={p.permlink} /> : null}
+            <PinPost author={p.author} permlink={p.permlink} />
 
             {!p.parent_author && <Reblog author={p.author} permlink={p.permlink} />}
                 <span className="show-for-medium">
