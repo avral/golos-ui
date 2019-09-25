@@ -1,445 +1,445 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  <url>
-  <loc>https://golos.io/hot</loc>
+  <loc>https://golos.id/hot</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>hourly</changefreq>
   <priority>1.0</priority>
  </url>
  <url>
-  <loc>https://golos.io/about</loc>
+  <loc>https://golos.id/about</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
  </url>
  <url>
-  <loc>https://golos.io/~witnesses</loc>
+  <loc>https://golos.id/~witnesses</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.5</priority>
  </url>
  <url>
-  <loc>https://golos.io/created</loc>
+  <loc>https://golos.id/created</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>always</changefreq>
   <priority>0.9</priority>
  </url>
  <url>
-  <loc>https://golos.io/active</loc>
+  <loc>https://golos.id/active</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>always</changefreq>
   <priority>0.9</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending</loc>
+  <loc>https://golos.id/trending</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.8</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--golos</loc>
+  <loc>https://golos.id/hot/ru--golos</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/tags/hot</loc>
+  <loc>https://golos.id/tags/hot</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/static/search.html</loc>
+  <loc>https://golos.id/static/search.html</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending/ru--fotografiya</loc>
+  <loc>https://golos.id/trending/ru--fotografiya</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--fotografiya</loc>
+  <loc>https://golos.id/hot/ru--fotografiya</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending/ru--statistika</loc>
+  <loc>https://golos.id/trending/ru--statistika</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--znakomstvo</loc>
+  <loc>https://golos.id/hot/ru--znakomstvo</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending/ru--golos</loc>
+  <loc>https://golos.id/trending/ru--golos</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--bm</loc>
+  <loc>https://golos.id/hot/ru--bm</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending/ru--puteshestviya</loc>
+  <loc>https://golos.id/trending/ru--puteshestviya</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--poyeziya</loc>
+  <loc>https://golos.id/hot/ru--poyeziya</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending/ru--art</loc>
+  <loc>https://golos.id/trending/ru--art</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--delegaty</loc>
+  <loc>https://golos.id/hot/ru--delegaty</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending/ru--obrazovanie</loc>
+  <loc>https://golos.id/trending/ru--obrazovanie</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--puteshestviya</loc>
+  <loc>https://golos.id/hot/ru--puteshestviya</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending/ru--novyijgod</loc>
+  <loc>https://golos.id/trending/ru--novyijgod</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--iskusstvo</loc>
+  <loc>https://golos.id/hot/ru--iskusstvo</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending/ru--eda</loc>
+  <loc>https://golos.id/trending/ru--eda</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--statistika</loc>
+  <loc>https://golos.id/hot/ru--statistika</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending/ru--chaij</loc>
+  <loc>https://golos.id/trending/ru--chaij</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--pifotopremiya</loc>
+  <loc>https://golos.id/hot/ru--pifotopremiya</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending/ru--golosovanie</loc>
+  <loc>https://golos.id/trending/ru--golosovanie</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--stikhi</loc>
+  <loc>https://golos.id/hot/ru--stikhi</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending/ru--iskusstvo</loc>
+  <loc>https://golos.id/trending/ru--iskusstvo</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--art</loc>
+  <loc>https://golos.id/hot/ru--art</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending/ru--blog</loc>
+  <loc>https://golos.id/trending/ru--blog</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--blokcheijn</loc>
+  <loc>https://golos.id/hot/ru--blokcheijn</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending/ru--stikhi</loc>
+  <loc>https://golos.id/trending/ru--stikhi</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--zarabotok</loc>
+  <loc>https://golos.id/hot/ru--zarabotok</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending/ru--sud</loc>
+  <loc>https://golos.id/trending/ru--sud</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--yekonomika</loc>
+  <loc>https://golos.id/hot/ru--yekonomika</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/trending/ru--puteshestvie</loc>
+  <loc>https://golos.id/trending/ru--puteshestvie</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--komanda</loc>
+  <loc>https://golos.id/hot/ru--komanda</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--kriptovalyuty</loc>
+  <loc>https://golos.id/hot/ru--kriptovalyuty</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--eda</loc>
+  <loc>https://golos.id/hot/ru--eda</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--temanedeli</loc>
+  <loc>https://golos.id/hot/ru--temanedeli</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--zhiznx</loc>
+  <loc>https://golos.id/hot/ru--zhiznx</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--puteshestvie</loc>
+  <loc>https://golos.id/hot/ru--puteshestvie</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--foto</loc>
+  <loc>https://golos.id/hot/ru--foto</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--zhenskayabesedka</loc>
+  <loc>https://golos.id/hot/ru--zhenskayabesedka</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--konkurs</loc>
+  <loc>https://golos.id/hot/ru--konkurs</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--rasskaz</loc>
+  <loc>https://golos.id/hot/ru--rasskaz</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--memuarnik</loc>
+  <loc>https://golos.id/hot/ru--memuarnik</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--zadacha-golos</loc>
+  <loc>https://golos.id/hot/ru--zadacha-golos</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--kraudseijl</loc>
+  <loc>https://golos.id/hot/ru--kraudseijl</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--golosvgorode</loc>
+  <loc>https://golos.id/hot/ru--golosvgorode</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--knigagolos</loc>
+  <loc>https://golos.id/hot/ru--knigagolos</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--kulxturagolosa</loc>
+  <loc>https://golos.id/hot/ru--kulxturagolosa</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--obrazovanie</loc>
+  <loc>https://golos.id/hot/ru--obrazovanie</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--privetgolos</loc>
+  <loc>https://golos.id/hot/ru--privetgolos</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--rukodelie</loc>
+  <loc>https://golos.id/hot/ru--rukodelie</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--knigi</loc>
+  <loc>https://golos.id/hot/ru--knigi</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--istoriya</loc>
+  <loc>https://golos.id/hot/ru--istoriya</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--ya</loc>
+  <loc>https://golos.id/hot/ru--ya</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--delegat</loc>
+  <loc>https://golos.id/hot/ru--delegat</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--novosti</loc>
+  <loc>https://golos.id/hot/ru--novosti</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--psikhologiya</loc>
+  <loc>https://golos.id/hot/ru--psikhologiya</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--fotografii</loc>
+  <loc>https://golos.id/hot/ru--fotografii</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/golos</loc>
+  <loc>https://golos.id/hot/golos</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--rasskazy</loc>
+  <loc>https://golos.id/hot/ru--rasskazy</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--razum</loc>
+  <loc>https://golos.id/hot/ru--razum</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--pomoshchx</loc>
+  <loc>https://golos.id/hot/ru--pomoshchx</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--reczepty</loc>
+  <loc>https://golos.id/hot/ru--reczepty</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/witness-category</loc>
+  <loc>https://golos.id/hot/witness-category</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/ru--marketing</loc>
+  <loc>https://golos.id/hot/ru--marketing</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/en</loc>
+  <loc>https://golos.id/hot/en</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/hot/goloszoofund</loc>
+  <loc>https://golos.id/hot/goloszoofund</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>daily</changefreq>
   <priority>0.3</priority>
  </url>
  <url>
-  <loc>https://golos.io/ru--golos/@golos/golos-russkoyazychnaya-socialno-mediinaya-blokchein-platforma</loc>
+  <loc>https://golos.id/ru--golos/@golos/golos-russkoyazychnaya-socialno-mediinaya-blokchein-platforma</loc>
   <lastmod>2016-12-22</lastmod>
   <changefreq>never</changefreq>
   <priority>0.5</priority>
