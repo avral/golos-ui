@@ -26,6 +26,7 @@ export default function useNotificationsApi(app) {
         if (!account || account !== this.session.a) {
             this.body = []; return;
         }
+
         try {
             const res = yield Tarantool.instance('tarantool').select('notifications', 0, 1, 0, 'eq', account);
             this.body = toResArray(res);

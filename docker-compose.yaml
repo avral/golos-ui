@@ -4,9 +4,11 @@ services:
     restart: always
     build: .
     image: golos-ui
-    command: yarn run production
+    command: bash -c "cd db && ../node_modules/.bin/sequelize db:migrate && cd .. && yarn run production"
+
     environment:
       SDC_TARANTOOL_HOSTNAME: datastore
+      SDC_DATABASE_URL: mysql://golosdev:golosdev@db:3306/golosdev
     ports:
       - 127.0.0.1:8080:8080
 
@@ -26,6 +28,7 @@ services:
 
     volumes:
       - ./data/mysql:/var/lib/mysql
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d/:ro
 
   datafeed:
     image: golosnotify/datafeed
@@ -48,3 +51,5 @@ services:
       dockerfile: Dockerfile-datastore
     volumes:
       - ./data/tarantool:/var/lib/tarantool
+    ports:
+      - 127.0.0.1:3001:3001
