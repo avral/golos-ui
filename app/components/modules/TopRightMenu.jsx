@@ -122,7 +122,7 @@ function TopRightMenu({account, savings_withdraws, price_per_golos, globalprops,
         { link: 'https://ropox.app/', value: 'Инструмент ropox.app', target: 'blank' },
         { link: 'https://explorer.golos.id/', value: 'Обозреватель GOLOS', target: 'blank' },
         { link: 'https://golos.cf/', value: 'Инструмент golos.cf', target: 'blank' },
-        { link: 'https://worthless-man.github.io/GolosMultisig/', value: 'Пропозалы для подписантов', target: 'blank' },
+        { link: 'https://worthless-man.github.io/GolosMultisig/index.html?page=dashboard&multisig=gc-transit', value: 'Пропозалы для подписантов', target: 'blank' },
 
     );
     const navAdditional = <LinkWithDropdown
