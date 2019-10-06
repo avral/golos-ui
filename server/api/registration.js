@@ -5,6 +5,7 @@ import models from 'db/models';
 import { checkCSRF, getRemoteIp, rateLimitReq } from 'server/utils/misc';
 import { hash } from 'golos-js/lib/auth/ecc';
 import secureRandom from 'secure-random';
+import gmailSend from 'gmail-send'
 
 function digits(text) {
     const digitArray = text.match(/\d+/g);
@@ -14,8 +15,8 @@ function digits(text) {
 /**
  * return status types:
  * session - new user without identity in DB
- * waiting - user verification phone in progress
- * done - user verification phone is successfuly done
+ * waiting - user verification email in progress
+ * done - user verification email is successfuly done
  * already_used -
  * attempts_10 - Confirmation was attempted a moment ago. You can try again only in 10 seconds
  * attempts_300 - Confirmation was attempted a moment ago. You can try again only in 5 minutes
@@ -27,60 +28,81 @@ export default function useRegistrationApi(app) {
     const koaBody = koa_body();
 
     router.post('/verify_code', koaBody, function*() {
+        if (rateLimitReq(this, this.req, 20)) return;
+
         if (!this.request.body) {
             this.status = 400;
             this.body = 'Bad Request';
             return;
         }
 
-        const accountSid = this.request.body.AccountSid
-            ? this.request.body.AccountSid
-            : '';
-        if (accountSid.localeCompare(config.get('twilio.account_sid')) != 0) {
-            this.status = 401;
-            this.body = 'Unauthorized';
-            return;
+        const body = this.request.body;
+        let params = {};
+
+        let error = false
+
+        if (typeof body === 'string') {
+            try {
+                params = JSON.parse(body);
+            } catch (e) {}
+        } else {
+            params = body;
         }
 
-        let phone;
-        if (this.request.body.From) {
-            phone = this.request.body.From.substr(1);
-        } else if (this.request.body.phone) {
-            phone = this.request.body.phone;
-        }
-        if (!phone || digits(phone).length === 0) {
-            this.status = 401;
-            this.body = 'Bad Request Data from';
-            return;
-        }
+        if (!checkCSRF(this, params.csrf)) return;
 
-        let confirmation_code;
-        if (this.request.body.Body) {
-            confirmation_code = this.request.body.Body.substr(0, 4);
-        } else if (this.request.body.mes) {
-            confirmation_code = this.request.body.mes.substr(0, 4);
-        }
-        if (!confirmation_code || digits(confirmation_code).length !== 4) {
-            this.status = 400;
-            this.body = 'Bad Request Data body';
-            return;
-        }
+        const { confirmation_code, email } = params
+
+        //let mid = yield models.Identity.findOne({
+        //    attributes: [
+        //        'id',
+        //        'email',
+        //        'verified',
+        //        'updated_at',
+        //        'confirmation_code',
+        //    ],
+        //    where: { user_id, confirmation_code: code },
+        //    order: 'id DESC',
+        //});
+
+        //if (mid) {
+        //  console.log('verif: mid exists')
+        //    if (mid.verified) {
+        //      this.body = JSON.stringify({ status: 'done' });
+        //      return;
+        //    } else {
+        //      yield mid.update({ verified: true });
+        //    }
+
+        //    this.body = JSON.stringify({ status: 'done' });
+        //    return;
+        //} else {
+        //    this.status = 401;
+        //    this.body = 'Bad Request Data from';
+        //    return;
+        //}
+
+        //    this.status = 401;
+        //    this.body = 'Bad Request Data from';
+        //    return;
+        //}
 
         console.log(
             '-- /api/v1/confirm_provider -->',
-            phone,
+            email,
             confirmation_code
         );
 
         let mid = yield models.Identity.findOne({
-            attributes: ['id', 'user_id', 'verified', 'updated_at', 'phone'],
+            attributes: ['id', 'user_id', 'verified', 'updated_at', 'email'],
             where: {
-                phone: hash.sha256(phone, 'hex'),
+                email: hash.sha256(email, 'hex'),
                 confirmation_code,
-                provider: 'phone',
+                provider: 'email',
             },
             order: 'id DESC',
         });
+
         if (!mid) {
             this.status = 401;
             this.body = 'Wrong confirmation code';
@@ -88,74 +110,35 @@ export default function useRegistrationApi(app) {
         }
         if (mid.verified) {
             this.status = 401;
-            this.body = 'Phone number has already been verified';
+            this.body = 'Email has already been verified';
             return;
         }
 
         const hours_ago = (Date.now() - mid.updated_at) / 1000.0 / 3600.0;
         if (hours_ago > 24.0) {
             this.status = 401;
-            this.body = 'Confirmation code has been expired';
+            this.body = 'Confirmation code has been expired, try again';
             return;
         }
+
         yield mid.update({ verified: true });
         this.body =
-            'GOLOS.id \nСпасибо за подтверждение вашего номера телефона';
-    });
-
-    router.post('/check_code', koaBody, function*() {
-        if (rateLimitReq(this, this.req)) return;
-        const body = this.request.body;
-        let params = {};
-        if (typeof body === 'string') {
-            try {
-                params = JSON.parse(body);
-            } catch (e) {}
-        } else {
-            params = body;
-        }
-        if (!checkCSRF(this, params.csrf)) return;
-
-        this.body = JSON.stringify({ status: 'session' });
-
-        let user_id = this.session.user;
-        if (!user_id) {
-            return;
-        }
-
-        let mid = yield models.Identity.findOne({
-            attributes: [
-                'id',
-                'phone',
-                'verified',
-                'updated_at',
-                'confirmation_code',
-            ],
-            where: { user_id, provider: 'phone' },
-            order: 'id DESC',
-        });
-        if (mid) {
-            if (mid.verified) {
-                this.body = JSON.stringify({ status: 'done' });
-                return;
-            }
-            this.body = JSON.stringify({
-                status: 'waiting',
-                code: mid.confirmation_code,
-            });
-            const seconds_ago = (Date.now() - mid.updated_at) / 1000.0;
-            const timeAgo = 10;
-            if (seconds_ago < timeAgo) {
-                this.body = JSON.stringify({ status: 'attempts_10' });
-                return;
-            }
-        }
+            'GOLOS.id \nСпасибо за подтверждение вашей почты';
     });
 
     router.post('/send_code', koaBody, function*() {
         if (rateLimitReq(this, this.req)) return;
+
+        if (!config.gmail_send.user || !config.gmail_send.pass) {
+          this.status = 401;
+          this.body = 'Mail service disabled';
+          return;
+        }
+
         const body = this.request.body;
         let params = {};
+        let error = false
+
         if (typeof body === 'string') {
             try {
                 params = JSON.parse(body);
@@ -163,39 +146,35 @@ export default function useRegistrationApi(app) {
         } else {
             params = body;
         }
+
         if (!checkCSRF(this, params.csrf)) return;
 
-        const country = params.country ? params.country : null;
-        const localPhone = params.phone ? params.phone : null;
-        const retry = params.retry ? params.retry : null;
+        const { email } = params
+
+        //const retry = params.retry ? params.retry : null;
         console.log(params);
 
-        if (!country || country === '') {
-            this.body = JSON.stringify({ status: 'select_country' });
+        if (!email || !/^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$/.test(email)) {
+            this.body = JSON.stringify({ status: 'provide_email' });
             return;
         }
 
-        if (!localPhone || digits(localPhone).length === 0) {
-            this.body = JSON.stringify({ status: 'provide_phone' });
-            return;
-        }
+        const emailHash = hash.sha256(email, 'hex');
 
-        const phone = digits(parseInt(country) + localPhone);
-        const phoneHash = hash.sha256(phone, 'hex');
-        const existing_phone = yield models.Identity.findOne({
+        const existing_email = yield models.Identity.findOne({
             attributes: ['user_id'],
-            where: { phone: phoneHash, provider: 'phone', verified: true },
+            where: { email: emailHash, provider: 'email', verified: true },
             order: 'id DESC',
         });
 
         let user_id = this.session.user;
-        if (existing_phone && existing_phone.user_id != user_id) {
+        if (existing_email && existing_email.user_id != user_id) {
             console.log(
-                '-- /send_code existing_phone -->',
+                '-- /send_code existing_email -->',
                 user_id,
                 this.session.uid,
-                phoneHash,
-                existing_phone.user_id
+                emailHash,
+                existing_email.user_id
             );
             this.body = JSON.stringify({ status: 'already_used' });
             return;
@@ -204,39 +183,42 @@ export default function useRegistrationApi(app) {
         let confirmation_code = parseInt(
             secureRandom.randomBuffer(8).toString('hex'),
             16
-        )
-            .toString(10)
-            .substring(0, 4); // 4 digit code
+        ).toString(10).substring(0, 4); // 4 digit code
+
         let mid = yield models.Identity.findOne({
             attributes: [
                 'id',
-                'phone',
+                'email',
                 'verified',
                 'updated_at',
                 'confirmation_code',
             ],
-            where: { user_id, provider: 'phone' },
+            where: { email: emailHash, user_id, provider: 'email' },
             order: 'id DESC',
         });
+
         if (mid) {
             if (mid.verified) {
-                if (mid.phone === phoneHash) {
+                if (mid.email === emailHash) {
                     this.body = JSON.stringify({ status: 'done' });
                     return;
                 }
-                yield mid.update({ verified: false, phone: phoneHash });
+                yield mid.update({ verified: false, email: emailHash });
             }
-            const seconds_ago = (Date.now() - mid.updated_at) / 1000.0;
-            const timeAgo = process.env.NODE_ENV === 'production' ? 300 : 10;
-            if (retry) {
-                confirmation_code = mid.confirmation_code;
-            } else {
-                if (seconds_ago < timeAgo) {
-                    this.body = JSON.stringify({ status: 'attempts_300' });
-                    return;
-                }
-                yield mid.update({ confirmation_code, phone: phoneHash });
-            }
+
+            // TODO возможно сделать срок активности для кодов
+            //const seconds_ago = (Date.now() - mid.updated_at) / 1000.0;
+            //const timeAgo = process.env.NODE_ENV === 'production' ? 300 : 10;
+
+            //if (retry) {
+            //    confirmation_code = mid.confirmation_code;
+            //} else {
+            //    if (seconds_ago < timeAgo) {
+            //        this.body = JSON.stringify({ status: 'attempts_300' });
+            //        return;
+            //    }
+            //    yield mid.update({ confirmation_code, email: emailHash });
+            //}
         } else {
             let user;
             if (user_id) {
@@ -252,18 +234,42 @@ export default function useRegistrationApi(app) {
                 });
                 this.session.user = user_id = user.id;
             }
-            mid = yield models.Identity.create({
-                provider: 'phone',
-                user_id,
-                uid: this.session.uid,
-                phone: phoneHash,
-                verified: false,
-                confirmation_code,
+
+            // Send mail
+            const send = gmailSend({
+              user: config.gmail_send.user,
+              pass: config.gmail_send.pass,
+              from: 'registrator@golos.id',
+              to: email,
+              subject: 'Golos.id verification code',
             });
+
+            send({
+              html: `Registration code: <h4>${confirmation_code}</h4>`
+            }).then(async () => {
+              mid = await models.Identity.create({
+                  provider: 'email',
+                  user_id,
+                  uid: this.session.uid,
+                  email: emailHash,
+                  verified: false,
+                  confirmation_code,
+              });
+            }).catch((e) => {
+              console.log(e)
+              error = true
+
+              this.body = JSON.stringify({
+                  status: 'error',
+                  error: 'Send code error ' + e,
+              });
+          })
         }
+
+      if (!error) {
         this.body = JSON.stringify({
             status: 'waiting',
-            code: confirmation_code,
         });
+      }
     });
 }

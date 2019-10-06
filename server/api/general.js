@@ -91,6 +91,7 @@ export default function useGeneralApi(app) {
                 where: {user_id, ignored: false},
                 order: 'id DESC'
             });
+
             if (existing_account) {
                 throw new Error("Only one Golos account per user is allowed in order to prevent abuse");
             }
@@ -110,18 +111,8 @@ export default function useGeneralApi(app) {
                 throw new Error('You are on the waiting list. We will get back to you at the earliest possible opportunity.');
             }
 
-            // check email
-            // const eid = yield models.Identity.findOne(
-            //     {attributes: ['id'], where: {user_id, provider: 'email', verified: true}, order: 'id DESC'}
-            // );
-            // if (!eid) {
-            //     console.log(`api /accounts: not confirmed email for user ${this.session.uid} #${user_id}`);
-            //     throw new Error('Email address is not confirmed');
-            // }
-
-            // // check phone
             const mid = yield models.Identity.findOne(
-                {attributes: ['id'], where: {user_id, provider: 'phone', verified: true}, order: 'id DESC'}
+                {attributes: ['id'], where: {user_id, provider: 'email', verified: true}, order: 'id DESC'}
             );
             if (!mid) {
                 console.log(`api /accounts: not confirmed sms for user ${this.session.uid} #${user_id}`);

@@ -34,11 +34,14 @@ class CreateAccount extends React.Component {
         country: 7,
         name: '',
         email: '',
+        code: '',
         password: '',
         passwordValid: '',
         nameError: '',
-        phoneHint: '',
-        phoneError: '',
+        emailHint: '',
+        emailError: '',
+        codeError: '',
+        codeHint: '',
         serverError: '',
         loading: false,
         cryptographyFailure: false,
@@ -57,7 +60,6 @@ class CreateAccount extends React.Component {
             );
             this.setState({ cryptographyFailure: true });
         }
-        this.onCheckCode();
     }
 
     componentWillUnmount() {
@@ -83,8 +85,8 @@ class CreateAccount extends React.Component {
             name,
             passwordValid,
             nameError,
-            phoneHint,
-            phoneError,
+            emailHint,
+            emailError,
             serverError,
             loading,
             cryptographyFailure,
@@ -108,7 +110,7 @@ class CreateAccount extends React.Component {
         }
 
         let phoneStep = null;
-        let showMobileForm =
+        let showMailForm =
             fetchState.status !== 'waiting' && fetchState.status !== 'done';
 
         if (fetchState.status === 'waiting') {
@@ -167,7 +169,7 @@ class CreateAccount extends React.Component {
             !allBoxChecked ||
             !okStatus;
 
-        const disableGetCode = okStatus || !phoneHint;
+        const disableGetCode = okStatus || !emailHint;
 
         return (
             <div>
@@ -187,103 +189,74 @@ class CreateAccount extends React.Component {
                             <div className="CreateAccount__hello">
                                 {tt('createaccount_jsx.dont_close')}
                             </div>
-                            {showMobileForm && (
+                            {showMailForm && (
                                 <div>
                                     <div>
                                         <label>
                                             <span style={{ color: 'red' }}>
                                                 *
                                             </span>{' '}
-                                            {tt(
-                                                'createaccount_jsx.country_code'
-                                            )}
-                                            <CountryCode
-                                                onChange={this.onCountryChange}
-                                                disabled={fetchState.checking}
-                                                name="country"
-                                                value={country}
-                                            />
-                                        </label>
-                                        <p />
-                                    </div>
-                                    <div
-                                        className={cn({
-                                            error: phoneError,
-                                            success: phoneHint,
-                                        })}
-                                    >
-                                        <label>
-                                            <span style={{ color: 'red' }}>
-                                                *
-                                            </span>{' '}
-                                            {tt(
-                                                'createaccount_jsx.phone_number'
-                                            )}{' '}
-                                            <span style={{ color: 'red' }}>
-                                                {tt(
-                                                    'createaccount_jsx.without_country_code'
-                                                )}
-                                            </span>
+                                            {'Введите вашу gmail.com почту'}
                                             <input
                                                 type="text"
-                                                name="phone"
+                                                name="email"
                                                 autoComplete="off"
                                                 disabled={fetchState.checking}
-                                                onChange={this.onMobileChange}
-                                                onBlur={this._onMobileBlur}
-                                                value={phone}
+                                                onChange={this.onEmailChange}
+                                                value={email}
                                             />
+                                            <div
+                                                className={cn({
+                                                    error: emailError,
+                                                    success: emailHint,
+                                                })}
+                                            >
+                                                <p>{emailError || emailHint}</p>
+                                            </div>
                                         </label>
-                                        <p>{phoneError || phoneHint}</p>
                                     </div>
                                 </div>
                             )}
                             {phoneStep}
-                            {showMobileForm && (
-                                <p>
-                                    <a
-                                        className={cn('button', {
-                                            disabled: disableGetCode,
-                                        })}
-                                        onClick={
-                                            !disableGetCode
-                                                ? this.onClickSendCode
-                                                : null
-                                        }
-                                    >
-                                        {tt('g.continue')}
-                                    </a>
-                                </p>
+                            {showMailForm && (
+                                <div>
+                                    <p>
+                                        <a
+                                            className={cn('button', {
+                                                disabled: disableGetCode,
+                                            })}
+                                            onClick={
+                                                !disableGetCode
+                                                    ? this.onClickSendCode
+                                                    : null
+                                            }
+                                        >
+                                            {tt('g.continue')}
+                                        </a>
+                                    </p>
+                                </div>
                             )}
                             {fetchState.showCheckInfo
                                 ? this._renderCheckInfo()
                                 : null}
 
-                            <div className="success">
-                                <label>
-                                    {tt('createaccount_jsx.enter_email')}
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        autoComplete="off"
-                                        disabled={!okStatus}
-                                        onChange={this.onEmailChange}
-                                        value={email}
-                                    />
-                                </label>
-                                <p />
-                            </div>
                             <div className={nameError ? 'error' : ''}>
                                 <label>
                                     {tt('createaccount_jsx.enter_account_name')}
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        autoComplete="off"
-                                        disabled={!okStatus}
-                                        onChange={this.onNameChange}
-                                        value={name}
-                                    />
+
+                                    <div className="input-group">
+                                        <span className="input-group-label">id-</span>
+                                        <input
+                                            className="input-group-field"
+                                            type="text"
+                                            name="name"
+                                            autoComplete="off"
+                                            disabled={!okStatus}
+                                            onChange={this.onNameChange}
+                                            value={name}
+                                        />
+                                    </div>
+
                                     <div className="CreateAccount__account-name-hint">
                                         {tt(
                                             'createaccount_jsx.account_name_hint'
@@ -368,35 +341,22 @@ class CreateAccount extends React.Component {
     }
 
     _renderCodeWaiting() {
-        const { country, fetchState, iSent, showHowMuchHelp } = this.state;
+        const { country, codeError, codeHint, fetchState, iSent, showHowMuchHelp } = this.state;
 
         return (
             <div className="callout">
                 <div className="CreateAccount__send-sms-block">
-                    {tt('g.please')},{' '}
-                    <b>
-                        {tt('mobilevalidation_js.waiting_from_you_line_1', {
-                            code: fetchState.code,
-                            phone:
-                                SMS_SERVICES[country] ||
-                                SMS_SERVICES['default'],
-                        })}
-                    </b>
+                    {'Введите проверочный код отправленный на вашу почту'}
+                    <input
+                        type="email"
+                        name="email"
+                        autoComplete="off"
+                        onChange={this.onCodeChange}
+                    />
                 </div>
                 <div>{tt('mobilevalidation_js.waiting_from_you_line_2')}</div>
-                <div className="CreateAccount__hint-block">
-                    <span
-                        className="CreateAccount__hint"
-                        onClick={this._onHowMuchClick}
-                    >
-                        {tt('createaccount_jsx.sms_how_much')}
-                    </span>
-                    {showHowMuchHelp ? (
-                        <div className="CreateAccount__how-much-text">
-                            {tt('createaccount_jsx.sms_how_much_answer')}
-                        </div>
-                    ) : null}
-                </div>
+
+
                 <p>
                     <small>
                         {tt('mobilevalidation_js.you_can_change_your_number') +
@@ -406,27 +366,20 @@ class CreateAccount extends React.Component {
                         </a>.
                     </small>
                 </p>
-                <div>
-                    <label className="CreateAccount__check-section">
-                        <input
-                            type="checkbox"
-                            checked={iSent}
-                            disabled={iSent}
-                            onChange={this._onISendClick}
-                        />
-                        {tt('createaccount_jsx.sent_sms')}
-                    </label>
-                    {iSent ? (
-                        <div>
-                            <div>
-                                {tt('createaccount_jsx.sent_sms_description')}
-                            </div>
-                            <div className="CreateAccount__loader">
-                                <LoadingIndicator type="circle" size="40px" />
-                            </div>
-                        </div>
-                    ) : null}
+
+
+                <div className={cn({ error: codeError, success: codeHint })}>
+                    <p>{codeError || codeHint}</p>
                 </div>
+
+                <a
+                    className={cn('button', {
+                        disabled: false,
+                    })}
+                    onClick={this.onCheckCode}
+                >
+                    {tt('g.continue')}
+                </a>
             </div>
         );
     }
@@ -512,7 +465,7 @@ class CreateAccount extends React.Component {
         return (
             <p className="CreateAccount__check-info">
                 {tt('createaccount_jsx.check_code')}{' '}
-                <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>.
+                <a href={'mailto:' + SUPPORT_EMAIL}>{SUPPORT_EMAIL}</a>.
             </p>
         );
     }
@@ -541,7 +494,7 @@ class CreateAccount extends React.Component {
             publicKeys = [1, 2, 3, 4].map(() => pk.toPublicKey().toString());
         } catch (err) {
             publicKeys = ['owner', 'active', 'posting', 'memo'].map(role =>
-                PrivateKey.fromSeed(`${name}${role}${password}`)
+                PrivateKey.fromSeed(`id-${name}${role}${password}`)
                     .toPublicKey()
                     .toString()
             );
@@ -552,7 +505,7 @@ class CreateAccount extends React.Component {
             const res = await callApi('/api/v1/accounts', {
                 csrf: $STM_csrf,
                 email,
-                name,
+                name: 'id-' + name,
                 owner_key: publicKeys[0],
                 active_key: publicKeys[1],
                 posting_key: publicKeys[2],
@@ -569,7 +522,7 @@ class CreateAccount extends React.Component {
                 });
             } else {
                 successReg();
-                window.location = `/login.html#account=${name}&msg=accountcreated`;
+                window.location = `/login.html#account=id-${name}&msg=accountcreated`;
             }
         } catch (err) {
             console.error('Caught CreateAccount server error', err);
@@ -584,50 +537,42 @@ class CreateAccount extends React.Component {
         this.setState({ password, passwordValid, allBoxChecked });
     };
 
+    onCodeChange = e => {
+        const code = e.target.value.trim().toLowerCase();
+        this.setState({ code });
+    };
+
     onCountryChange = e => {
         const country = e.target.value.trim().toLowerCase();
-        const phoneHint = this.state.phone.length
+        const emailHint = this.state.phone.length
             ? tt('createaccount_jsx.will_be_send_to_phone_number') +
               country +
               this.state.phone
             : '';
-        this.setState({ country, phoneHint });
+        this.setState({ country, emailHint });
     };
 
-    onMobileChange = e => {
-        const phone = e.target.value.trim().toLowerCase();
-        this.validateMobilePhone(phone);
-        this.setState({ phone });
-    };
+    validateEmail = (value, isFinal) => {
+        let emailError = null;
+        let emailHint = null;
 
-    _onMobileBlur = () => {
-        const { phone } = this.state;
-        this.validateMobilePhone(phone, true);
-    };
-
-    validateMobilePhone = (value, isFinal) => {
-        let phoneError = null;
-        let phoneHint = null;
-
+        // TODO добавить перевод для подсказки для google email
         if (!value) {
-            phoneError = tt('mobilevalidation_js.not_be_empty');
-        } else if (!/^[0-9]{1,45}$/.test(value)) {
-            phoneError = tt('mobilevalidation_js.have_only_digits');
-        } else if (value.length < 7 && isFinal) {
-            phoneError = tt('mobilevalidation_js.be_longer');
+            emailError = 'Google email не может быть пустым';
+        } else if (!/^[a-z0-9](\.?[a-z0-9]){5,}@g(oogle)?mail\.com$/.test(value)) {
+            // TODO добавить перевод для подсказки для google email
+            //emailError = tt('mobilevalidation_js.have_only_digits');
+            emailError = 'Email должен принадлежать Google Mail (gmail.com)';
         }
 
-        if (phoneError) {
-            phoneError =
-                tt('createaccount_jsx.phone_number') + ' ' + phoneError;
+        if (emailError) {
+            emailError =
+                '' + emailError;
         } else {
-            phoneHint =
-                tt('createaccount_jsx.will_be_send_to_phone_number') +
-                this.state.country +
-                value;
+            emailHint = 'Google email: ' + value;
         }
 
-        this.setState({ phoneError, phoneHint });
+        this.setState({ emailError, emailHint });
     };
 
     updateFetchingState(res) {
@@ -648,8 +593,8 @@ class CreateAccount extends React.Component {
                 fetchState.message = 'Please select a country code';
                 break;
 
-            case 'provide_phone':
-                fetchState.message = 'Please provide a phone number';
+            case 'provide_email':
+                fetchState.message = 'Please provide a correct gmail';
                 break;
 
             case 'already_used':
@@ -663,10 +608,9 @@ class CreateAccount extends React.Component {
                 break;
 
             case 'waiting':
-                fetchState.checking = true;
+                //fetchState.checking = true;
                 fetchState.showCheckInfo = this.state.fetchState.showCheckInfo;
                 fetchState.code = res.code;
-                this._startWaitingTimer();
                 break;
 
             case 'done':
@@ -705,7 +649,7 @@ class CreateAccount extends React.Component {
     };
 
     onClickSendCode = async () => {
-        const { phone, country } = this.state;
+        const { email } = this.state;
 
         this.setState({
             fetchCounter: 0,
@@ -715,8 +659,7 @@ class CreateAccount extends React.Component {
         try {
             const res = await callApi('/api/v1/send_code', {
                 csrf: $STM_csrf,
-                phone,
-                country,
+                email
             });
 
             let data = null;
@@ -749,23 +692,21 @@ class CreateAccount extends React.Component {
 
     onCheckCode = async () => {
         try {
-            const res = await callApi('/api/v1/check_code', {
+            const res = await callApi('/api/v1/verify_code', {
                 csrf: $STM_csrf,
+                confirmation_code: this.state.code,
+                email: this.state.email
             });
 
             let data;
             if (res.status === 200) {
-                data = await res.json();
+                this.updateFetchingState({status: 'done'})
             } else {
-                data = {
-                    status: 'error',
-                    error: res.status + ' ' + res.statusText,
-                };
+                console.log(res.status, + res.body)
+                this.setState({ codeError: res.status + ' ' + await res.text(), codeHint: '' })
             }
-
-            this.updateFetchingState(data);
         } catch (err) {
-            console.error('Caught /check_code server error:', err);
+            console.error('Caught /verify_code server error:', err);
             this.updateFetchingState({
                 status: 'error',
                 error: err.message ? err.message : err,
@@ -774,8 +715,8 @@ class CreateAccount extends React.Component {
     };
 
     onNameChange = e => {
-        const name = e.target.value.trim().toLowerCase();
-        this.validateAccountName(name);
+        const name = e.target.value.trim().toLowerCase(); // Add prefix here
+        this.validateAccountName('id-' + name);
         this.setState({ name });
     };
 
@@ -804,8 +745,12 @@ class CreateAccount extends React.Component {
     }
 
     onEmailChange = e => {
+        // продолжаем let 
+        let email = e.target.value.trim().toLowerCase()
+        this.validateEmail(email)
+
         this.setState({
-            email: e.target.value.trim().toLowerCase(),
+            email
         });
     };
 
@@ -813,27 +758,6 @@ class CreateAccount extends React.Component {
         e.preventDefault();
         this.props.logout();
     };
-
-    _startWaitingTimer() {
-        const fetchCounter = this.state.fetchCounter + 1;
-
-        if (fetchCounter < 429) {
-            this.setState({ fetchCounter });
-            this._timeoutId = setTimeout(
-                this.onCheckCode,
-                1000 * Math.ceil(11 + Math.sqrt(fetchCounter))
-            );
-        }
-
-        this._waitTimeout = setTimeout(() => {
-            const { fetchState } = this.state;
-
-            if (fetchState.status === 'waiting' && fetchState.checking) {
-                fetchState.showCheckInfo = true;
-                this.forceUpdate();
-            }
-        }, 60 * 1000);
-    }
 }
 
 function callApi(apiName, data) {
