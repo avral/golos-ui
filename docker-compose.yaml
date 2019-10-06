@@ -9,6 +9,13 @@ services:
     environment:
       SDC_TARANTOOL_HOSTNAME: datastore
       SDC_DATABASE_URL: mysql://golosdev:golosdev@db:3306/golosdev
+
+      # Registrator
+      SDC_REGISTRAR_ACCOUNT: ${SDC_REGISTRAR_ACCOUNT}
+      #SDC_REGISTRAR_AMOUNT:  ${SDC_REGISTRAR_AMOUNT}
+      SDC_REGISTRAR_SIGNINGKEY: ${SDC_REGISTRAR_SIGNINGKEY}
+      SDC_GMAIL_SEND_USER: ${SDC_GMAIL_SEND_USER}
+      SDC_GMAIL_SEND_PASS: ${SDC_GMAIL_SEND_PASS}
     ports:
       - 127.0.0.1:8080:8080
 
@@ -23,6 +30,9 @@ services:
       MYSQL_USER: 'golosdev'
       MYSQL_PASSWORD: 'golosdev'
       MYSQL_ROOT_PASSWORD: 'golosdev'
+
+    ports:
+      - 3306:3306
 
     command: --default-authentication-plugin=mysql_native_password
 
