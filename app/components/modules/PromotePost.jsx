@@ -82,12 +82,12 @@ class PromotePost extends Component {
                                <label>{tt('g.amount')}</label>
                                <div className="input-group">
                                    <input className="input-group-field" type="text" placeholder={tt('g.amount')} value={amount} ref="amount" autoComplete="off" disabled={loading} onChange={this.amountChange} />
-                                   <span className="input-group-label">{DEBT_TOKEN_SHORT + ' '} ({CURRENCY_SIGN})</span>
+                                   <span className="input-group-label">{DEBT_TOKEN_SHORT + ' '} </span>
                                    <div className="error">{amountError}</div>
                                </div>
                            </div>
                        </div>
-                       <div>{`${tt('transfer_jsx.balance')}: ${balance} ${DEBT_TOKEN_SHORT} (${CURRENCY_SIGN})`}</div>
+                       <div>{`${tt('transfer_jsx.balance')}: ${balance} ${DEBT_TOKEN_SHORT} `}</div>
                        <br />
                        {loading && <span><LoadingIndicator type="circle" /><br /></span>}
                        {!loading && <span>
