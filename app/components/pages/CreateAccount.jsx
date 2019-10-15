@@ -667,7 +667,7 @@ class CreateAccount extends React.Component {
             if (res.status === 200) {
                 data = await res.json();
             } else {
-                let message = res.status + ' ' + res.statusText;
+                let message = res.status + ' ' + await res.text();
 
                 if (res.status === 429) {
                     message += '. Please wait a moment and try again.';
