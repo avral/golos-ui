@@ -6,6 +6,7 @@ import cn from 'classnames';
 import { api } from 'golos-js';
 import { PrivateKey } from 'golos-js/lib/auth/ecc';
 import LoadingIndicator from '@elements/LoadingIndicator';
+import Icon from 'app/components/elements/Icon';
 import user from 'app/redux/User';
 import { validate_account_name } from 'app/utils/ChainValidation';
 import runTests from 'app/utils/BrowserTests';
@@ -179,6 +180,13 @@ class CreateAccount extends React.Component {
                         style={{ maxWidth: '36rem', margin: '0 auto' }}
                     >
                         <h2>{tt('g.sign_up')}</h2>
+                        <p>
+                            <Icon name="vk" size="1_25x" />  
+
+                            <span> Доступна</span>
+                            <a href="https://golos.id/ru--golos/@ksantoprotein/besplatnaya-registraciya-na-blokcheine-golos-bez-sms"> регистрация через бота Вконтакте </a>
+                            от <a href="/@ksantoprotein">@ksantoprotein</a>
+                        </p>
                         <hr />
                         <form
                             onSubmit={this._onSubmit}
@@ -389,11 +397,7 @@ class CreateAccount extends React.Component {
             <div className="row">
                 <div className="column">
                     <div className="callout alert">
-                        <p>
-                            {tt('g.membership_invitation_only', {
-                                APP_DOMAIN,
-                            })}
-                        </p>
+                        <p>Registration is disabled for a while. </p>
                     </div>
                 </div>
             </div>
