@@ -243,7 +243,7 @@ class PostsIndex extends React.Component {
                 <div className="PostsIndex__topics column shrink show-for-large">
 
                 <div className="coinmarketcap-currency-widget"
-                    data-currencyid={this.state.currencyid}
+                    data-currencyid="1542" // Only GBG
                     data-base="BTC"
                     data-secondary="USD"
                     data-ticker="false"
