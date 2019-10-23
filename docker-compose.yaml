@@ -51,7 +51,7 @@ services:
       context: https://github.com/avral/golosnotify.git
       dockerfile: Dockerfile-datafeed
     environment:
-      NODE_URL: http://api.golos.blckchnd.com
+      NODE_URL: ${SDC_SERVER_WEBSOCKET_URL}
       TARANTOOL_HOST: datastore
 
     depends_on:
