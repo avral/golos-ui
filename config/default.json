@@ -48,7 +48,7 @@
       "styleSrc": "'self' 'unsafe-inline' cdnjs.cloudflare.com fonts.googleapis.com",
       "imgSrc": "* data:",
       "fontSrc": "data: fonts.gstatic.com",
-      "connectSrc": "'self' images.golos.io wss://api.golos.blckchnd.com/ws *.facebook.com *.coinmarketcap.com *.googleapis.com kwww.google-analytics.com api.segment.io api.blocktrades.us query.yahooapis.com api.blockcypher.com api.mixpanel.com mc.yandex.ru mc.yandex.ru",
+      "connectSrc": "'self' images.golos.io wss://api.golos.blckchnd.com/ws *.golos.id *.facebook.com *.coinmarketcap.com *.googleapis.com kwww.google-analytics.com api.segment.io api.blocktrades.us query.yahooapis.com api.blockcypher.com api.mixpanel.com mc.yandex.ru mc.yandex.ru",
       "reportUri": "/api/v1/csp_violation",
       "objectSrc": "'self'",
       "pluginTypes": "application/pdf",
