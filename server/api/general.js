@@ -152,7 +152,21 @@ export default function useGeneralApi(app) {
                 console.error('Error in /accounts get_chain_properties', error);
             }
 
-            const accountInstance = yield models.Account.create(escAttrs({
+            yield createAccount({
+                signingKey: config.get('registrar.signing_key'),
+                fee: `${fee.toFixed(3)} ${fee_currency}`,
+                creator: config.registrar.account,
+                new_account_name: account.name,
+                owner: account.owner_key,
+                active: account.active_key,
+                posting: account.posting_key,
+                memo: account.memo_key,
+                delegation
+            });
+
+            console.log('-- create_account_with_keys created -->', this.session.uid, account.name, user_id, account.owner_key);
+
+            models.Account.create(escAttrs({
                 user_id,
                 name: account.name,
                 owner_key: account.owner_key,
@@ -164,28 +178,15 @@ export default function useGeneralApi(app) {
             })).catch(error => {
                 console.error('!!! Can\'t create account model in /accounts api', this.session.uid, error);
             });
-            if (accountInstance) {
-                const chainAccount = yield createAccount({
-                    signingKey: config.get('registrar.signing_key'),
-                    fee: `${fee.toFixed(3)} ${fee_currency}`,
-                    creator: config.registrar.account,
-                    new_account_name: account.name,
-                    owner: account.owner_key,
-                    active: account.active_key,
-                    posting: account.posting_key,
-                    memo: account.memo_key,
-                    delegation
-                });
-                console.log('-- create_account_with_keys created -->', this.session.uid, account.name, user_id, account.owner_key);
-                // if (mixpanel) {
-                //     mixpanel.track('Signup', {
-                //         distinct_id: this.session.uid,
-                //         ip: remote_ip
-                //     });
-                //     mixpanel.people.set(this.session.uid, {ip: remote_ip});
-                // }
-                this.body = JSON.stringify({status: 'ok'});
-            }
+
+            // if (mixpanel) {
+            //     mixpanel.track('Signup', {
+            //         distinct_id: this.session.uid,
+            //         ip: remote_ip
+            //     });
+            //     mixpanel.people.set(this.session.uid, {ip: remote_ip});
+            // }
+            this.body = JSON.stringify({status: 'ok'});
         } catch (error) {
             console.error('Error in /accounts api call', this.session.uid, error.toString());
             this.body = JSON.stringify({error: error.message});
