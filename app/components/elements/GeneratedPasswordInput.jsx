@@ -5,7 +5,7 @@ import tt from 'counterpart';
 import { APP_NAME_UP, TERMS_OF_SERVICE_URL } from 'app/client_config';
 
 function allChecked(confirmCheckboxes) {
-    return confirmCheckboxes.box1 && confirmCheckboxes.box2 && confirmCheckboxes.box3;
+    return confirmCheckboxes.box1 && confirmCheckboxes.box2;
 }
 
 export default class GeneratedPasswordInput extends React.Component {
@@ -20,7 +20,7 @@ export default class GeneratedPasswordInput extends React.Component {
         generatedPassword: 'P' + key_utils.get_random_key().toWif(),
         confirmPassword: '',
         confirmPasswordError: '',
-        confirmCheckboxes: {box1: false, box2: false, box3: false},
+        confirmCheckboxes: {box1: false, box2: false},
         showRules: false,
     };
 
@@ -73,10 +73,6 @@ export default class GeneratedPasswordInput extends React.Component {
                     </label>
                     <label><input type="checkbox" name="box2" onChange={this.confirmCheckChange} checked={confirmCheckboxes.box2} disabled={disabled} />
                         {tt('g.i_saved_password')}.
-                    </label>
-                    <label><input type="checkbox" name="box3" onChange={this.confirmCheckChange} checked={confirmCheckboxes.box3} disabled={disabled} />
-                        {tt('generated_password_input.i_have_read_and_agree_to_the')}&nbsp;
-                        <a href={TERMS_OF_SERVICE_URL} target="_blank">{tt('generated_password_input.terms_of_service')}</a>.
                     </label>
                 </div>
             </div>
