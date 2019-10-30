@@ -28,7 +28,7 @@ export default function useRegistrationApi(app) {
     const koaBody = koa_body();
 
     router.post('/verify_code', koaBody, function*() {
-        if (rateLimitReq(this, this.req, 20)) return;
+        if (rateLimitReq(this, this.req, 10)) return;
 
         if (!this.request.body) {
             this.status = 400;
