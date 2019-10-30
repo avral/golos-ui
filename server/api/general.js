@@ -136,6 +136,8 @@ export default function useGeneralApi(app) {
             });
 
             const [fee_value, fee_currency] = config.get('registrar.fee').split(' ');
+            const delegation = config.get('registrar.delegation')
+
             let fee = parseFloat(fee_value);
             try {
                 const chain_properties = yield api.getChainPropertiesAsync();
@@ -171,7 +173,8 @@ export default function useGeneralApi(app) {
                     owner: account.owner_key,
                     active: account.active_key,
                     posting: account.posting_key,
-                    memo: account.memo_key
+                    memo: account.memo_key,
+                    delegation
                 });
                 console.log('-- create_account_with_keys created -->', this.session.uid, account.name, user_id, account.owner_key);
                 // if (mixpanel) {
@@ -399,14 +402,14 @@ export default function useGeneralApi(app) {
  */
 export function* createAccount({
     signingKey, fee, creator, new_account_name, json_metadata = '',
-    owner, active, posting, memo
+    owner, active, posting, memo, delegation
 }) {
-    const operations = [['account_create', {
-        fee, creator, new_account_name, json_metadata,
+    const operations = [['account_create_with_delegation', {
+        fee, delegation, creator, new_account_name, json_metadata,
         owner: {weight_threshold: 1, account_auths: [], key_auths: [[owner, 1]]},
         active: {weight_threshold: 1, account_auths: [], key_auths: [[active, 1]]},
         posting: {weight_threshold: 1, account_auths: [], key_auths: [[posting, 1]]},
-        memo_key: memo,
+        memo_key: memo, extensions: []
     }]]
     yield broadcast.sendAsync({
         extensions: [],
