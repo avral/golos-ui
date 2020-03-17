@@ -78,7 +78,7 @@
     "libsodium-wrappers": "0.4.8",
     "lodash": "^4.17.10",
     "medium-editor-insert-plugin": "^2.3.2",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.2",
     "multistream": "^2.1.1",
     "mysql": "^2.15.0",
     "net": "^1.0.2",
